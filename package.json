@@ -2,17 +2,9 @@
   "scripts": {
     "build": "webpack",
     "dev": "webpack-dev-server",
-    "format": "prettier --write --single-quote --print-width=120 --tab-width=2 \"js/**/*.{js,jsx}\"",
+    "format": "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\"",
     "lint": "eslint **/*.{js,jsx} --quiet",
-    "test": "jest",
-    "test:coverage": "jest --coverage",
-    "test:update": "jest -u",
     "watch": "webpack --watch"
-  },
-  "jest": {
-    "snapshotSerializers": [
-      "jest-serializer-enzyme"
-    ]
   },
   "dependencies": {
     "axios": "^0.16.2",
@@ -25,9 +17,10 @@
     "react-addons-css-transition-group": "^15.6.0",
     "react-addons-transition-group": "^15.6.0",
     "react-dom": "^15.6.1",
+    "react-intl": "^2.3.0",
     "react-redux": "5.0.5",
-    "react-router-dom": "4.1.1",
-    "redux": "3.7.1",
+    "react-router-dom": "^4.1.2",
+    "redux": "^3.7.2",
     "redux-thunk": "2.2.0",
     "webpack": "2.6.1",
     "webpack-dev-middleware": "1.12.0",
@@ -36,14 +29,14 @@
   "devDependencies": {
     "babel-core": "6.25.0",
     "babel-eslint": "^7.2.3",
-    "babel-loader": "7.1.0",
+    "babel-loader": "^7.1.1",
     "babel-plugin-dynamic-import-node": "1.0.2",
     "babel-plugin-syntax-dynamic-import": "6.18.0",
     "babel-plugin-transform-class-properties": "6.24.1",
     "babel-plugin-transform-es2015-modules-commonjs": "6.24.1",
-    "babel-preset-env": "1.5.2",
+    "babel-preset-env": "^1.6.0",
     "babel-preset-react": "6.24.1",
-    "eslint": "4.3.0",
+    "eslint": "^4.4.0",
     "eslint-config-airbnb": "15.1.0",
     "eslint-config-prettier": "2.3.0",
     "eslint-config-react": "1.1.7",
@@ -57,7 +50,7 @@
     "flow-bin": "0.52.0",
     "jest": "^20.0.4",
     "moxios": "0.4.0",
-    "prettier": "^1.5.2",
+    "prettier": "^1.5.3",
     "react-hot-loader": "3.0.0-beta.7",
     "react-test-renderer": "15.6.1",
     "webpack-dev-server": "2.6.1"
