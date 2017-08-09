@@ -1,20 +1,32 @@
 export default {
   'en-US': {
-    navigation: {
-      aboutUs: 'about us',
-      medHelp: 'medical assistance',
-      animalsList: 'asylum animals',
-      lost: 'lost/ found',
-      shop: 'shop'
+    header: {
+      navigation: {
+        adoption: 'Adopt A Pet',
+        lost: 'lost/ found',
+        volunteer: 'Volunteer',
+        aboutUs: 'About Us',
+        webcams: 'Webcams',
+        register: 'Sign Up',
+        donate: 'Donate',
+        news: 'News & Events',
+        shop: 'Shop'
+      }
     }
   },
   uk: {
-    navigation: {
-      aboutUs: 'про нас',
-      medHelp: 'медична допомога',
-      animalsList: 'тварини притулку',
-      lost: 'загублені/ знайдені',
-      shop: 'інтернет крамничка'
+    header: {
+      navigation: {
+        adoption: 'Опіка',
+        lost: 'Загублені/ знайдені',
+        volunteer: 'Допомога',
+        aboutUs: 'Про нас',
+        webcams: 'Камери',
+        register: 'Реєстрація',
+        donate: 'Пожертви',
+        news: 'Новини та події',
+        shop: 'Крамничка'
+      }
     }
   }
 }
