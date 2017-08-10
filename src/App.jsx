@@ -9,12 +9,20 @@ import Header from './components/Header'
 
 const FourOhFour = () => <h1>404</h1>
 
-const App = () =>
+
+
+
+const App = (props) =>
   <BrowserRouter>
       <div className="app">
-        <Header />
+        <Header {...props}/>
         <Switch>
           <Route exact path="/" component={Landing} />
+          <Authenticated exact path="/documents" component={FourOhFour} {...props} />
+          <Public path="/signup" component={FourOhFour} {...props} />
+          <Public path="/login" component={FourOhFour} {...props} />
+          <Route name="recover-password" path="/recover-password" component={FourOhFour} />
+          <Route name="reset-password" path="/reset-password/:token" component={FourOhFour} />
           <Route path="/adoption" component={FourOhFour} />
           <Route path="/lost" component={FourOhFour} />
           <Route path="/volunteer" component={FourOhFour} />
