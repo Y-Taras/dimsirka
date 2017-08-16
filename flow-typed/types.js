@@ -4,17 +4,19 @@ export type PostListItem = {
   articleId: string,
   author: string,
   datePublished: string,
-  datemodified: string,
+  dateModified: string,
   headline: string,
   articleSection: string,
-  image: any
+  image: {
+    url: string
+  }
 };
 
 export type Post = {
   articleId: string,
   author: string,
   datePublished: string,
-  datemodified: string,
+  dateModified: string,
   headline: string,
   articleBody: string
 };
@@ -32,4 +34,4 @@ declare type ActionT<A: ActionType, P> = {|
   payload: P
 |};
 
-export type Action = ActionT<'ADD_POST_DATA', Array<Post>> | ActionT<'ADD_POSTLIST_DATA', Array<PostListItem>>;
+export type Action = ActionT<'ADD_POST_DATA', Post> | ActionT<'ADD_POSTLIST_DATA', Array<PostListItem>>;

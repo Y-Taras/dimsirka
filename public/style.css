@@ -19,3 +19,8 @@ li a {
 .active {
   background-color: #34afa0;
 }
+
+.newsItem {
+  display: block;
+  margin-top: 30px;
+}

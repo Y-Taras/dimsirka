@@ -2,42 +2,42 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import type { Match } from 'react-router-dom';
 
 import { getPost } from '../redux/actionCreators';
 
 class Post extends Component {
-
   componentDidMount() {
-    if (!this.props.post[0]) {
+    if (!this.props.post[this.props.match.params.id]) {
       this.props.getPostData();
     }
   }
 
   props: {
-    post: Array<Post>,
-    getPostData: Function
-  }
+    post: { [key: ?string]: Post } ,
+    getPostData: Function,
+    match: Match
+  };
 
   render() {
     return (
       <pre>
         <code>
-          {JSON.stringify(this.props.post, null, 4)}
+          {JSON.stringify(this.props.post[this.props.match.params.id], null, 4)}
         </code>
       </pre>
     );
   }
 }
 
-
 const mapStateToProps = state => {
-  const post = state.postData ? state.postData : [];
+  const post = state.postData ? state.postData : {};
   return { post };
 };
 
-const mapDispatchToProps = (dispatch: Function) => ({
+const mapDispatchToProps = (dispatch: Function, ownProps) => ({
   getPostData() {
-    dispatch(getPost());
+    dispatch(getPost(ownProps.match.params.id));
   }
 });
 

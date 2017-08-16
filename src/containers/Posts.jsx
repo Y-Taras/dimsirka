@@ -2,10 +2,12 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import {Link} from 'react-router-dom';
 
 import { getPostList } from '../redux/actionCreators';
 
 class Posts extends Component {
+
   componentDidMount() {
     if (!this.props.postList[0]) {
       this.props.getPostListData();
@@ -22,9 +24,11 @@ class Posts extends Component {
       <div>
         {this.props.postList.map(post => (
             <div key={post.articleId}>
-              <h2 dangerouslySetInnerHTML={{ __html: post.headline }} />
+              <Link to={`/news/${post.articleId}`} >
+              <span className="newsItem" dangerouslySetInnerHTML={{ __html: post.headline }} />
               <img src={post.image.url} alt={`${post.headline}`} />
-              <p dangerouslySetInnerHTML={{ __html: post.articleSection }} />
+              <span className="newsItem" dangerouslySetInnerHTML={{ __html: post.articleSection }} />
+              </Link>
             </div>
           ))}
       </div>

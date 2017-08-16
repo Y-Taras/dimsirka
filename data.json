@@ -6,12 +6,12 @@
             "articleId": "a001",
             "author": "Author1",
             "datePublished": "2016-1-1",
-            "datemodified": "2016-1-2",
-            "headline": "Headline",
-            "articleSection": "If you have a section like Sports or Clothes, add this.",
+            "dateModified": "2016-1-2",
+            "headline": "Headline of news",
+            "articleSection": "Short description of this particular news",
             "image": {
                 "@type": "imageObject",
-                "url": "http://example.com/images/image.png",
+                "url": "http://via.placeholder.com/350x150",
                 "height": "600",
                 "width": "800"
             }
@@ -22,12 +22,12 @@
             "articleId": "a002",
             "author": "Author2",
             "datePublished": "2016-1-1",
-            "datemodified": "2016-1-2",
+            "dateModified": "2016-1-2",
             "headline": "Headline",
             "articleSection": "If you have a section like Sports or Clothes, add this.",
             "image": {
                 "@type": "imageObject",
-                "url": "http://example.com/images/image.png",
+                "url": "http://via.placeholder.com/350x150",
                 "height": "600",
                 "width": "800"
             }
@@ -38,12 +38,12 @@
             "articleId": "a003",
             "author": "Author3",
             "datePublished": "2016-1-1",
-            "datemodified": "2016-1-2",
+            "dateModified": "2016-1-2",
             "headline": "Headline",
             "articleSection": "If you have a section like Sports or Clothes, add this.",
             "image": {
                 "@type": "imageObject",
-                "url": "http://example.com/images/image.png",
+                "url": "http://via.placeholder.com/350x150",
                 "height": "600",
                 "width": "800"
             }
@@ -54,12 +54,12 @@
             "articleId": "a004",
             "author": "Author4",
             "datePublished": "2016-1-1",
-            "datemodified": "2016-1-2",
+            "dateModified": "2016-1-2",
             "headline": "Headline",
             "articleSection": "If you have a section like Sports or Clothes, add this.",
             "image": {
                 "@type": "imageObject",
-                "url": "http://example.com/images/image.png",
+                "url": "http://via.placeholder.com/350x150",
                 "height": "600",
                 "width": "800"
             }
@@ -70,7 +70,7 @@
             "articleId": "a001",
             "author": "Author4",
             "datePublished": "2016-1-1",
-            "datemodified": "2016-1-2",
+            "dateModified": "2016-1-2",
             "headline": "Headline",
             "articleBody": "<p>The whole article copyed here</p><ul><li>1</li></ul>"
         },
@@ -78,7 +78,7 @@
             "articleId": "a002",
             "author": "Author4",
             "datePublished": "2016-1-1",
-            "datemodified": "2016-1-2",
+            "dateModified": "2016-1-2",
             "headline": "Headline",
             "articleBody": "<p>The whole article copyed here</p><ul><li>2</li></ul>"
         },
@@ -86,7 +86,7 @@
             "articleId": "a003",
             "author": "Author4",
             "datePublished": "2016-1-1",
-            "datemodified": "2016-1-2",
+            "dateModified": "2016-1-2",
             "headline": "Headline",
             "articleBody": "<p>The whole article copyed here</p><ul><li>3</li></ul>"
         },
@@ -94,7 +94,7 @@
             "articleId": "a004",
             "author": "Author4",
             "datePublished": "2016-1-1",
-            "datemodified": "2016-1-2",
+            "dateModified": "2016-1-2",
             "headline": "Headline",
             "articleBody": "<p>The whole article copyed here</p><ul><li>4</li></ul>"
         }

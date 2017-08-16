@@ -7,7 +7,7 @@ export function addPostListData(apiData: Array<PostListItem>) {
   return { type: ADD_POSTLIST_DATA, payload: apiData };
 }
 
-export function addPostData(apiData: Array<Post>) {
+export function addPostData(apiData: Post) {
   return { type: ADD_POST_DATA, payload: apiData };
 }
 
@@ -24,10 +24,10 @@ export function getPostList() {
   };
 }
 
-export function getPost() {
+export function getPost(postId: string ) {
   return (dispatch: Function) => {
     axios
-      .get('http://localhost:3000/articles')
+      .get(`http://localhost:3000/articles/${postId}`)
       .then(response => {
         dispatch(addPostData(response.data));
       })

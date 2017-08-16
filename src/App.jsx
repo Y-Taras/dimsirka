@@ -45,7 +45,7 @@ const App = () =>
           <Route path="/register" component={FourOhFour} />
           <Route path="/donate" component={FourOhFour} />
           <Route exact path="/news" component={Posts} />
-          <Route exact path="/news:id" component={Post} />
+          <Route exact path="/news/:id" component={Post} />
           <Route path="/shop" component={FourOhFour} />
           <Route component={FourOhFour} />
         </Switch>
