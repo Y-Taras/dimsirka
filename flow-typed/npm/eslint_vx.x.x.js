@@ -1393,7 +1393,7 @@ declare module 'eslint/conf/eslint-recommended.js' {
   declare module.exports: $Exports<'eslint/conf/eslint-recommended'>;
 }
 declare module 'eslint/lib/api.js' {
-  declare module.exports: $Exports<'eslint/lib/api'>;
+  declare module.exports: $Exports<'eslint/lib/constants'>;
 }
 declare module 'eslint/lib/ast-utils.js' {
   declare module.exports: $Exports<'eslint/lib/ast-utils'>;

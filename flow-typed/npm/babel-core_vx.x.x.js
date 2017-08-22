@@ -142,10 +142,10 @@ declare module 'babel-core/index.js' {
   declare module.exports: $Exports<'babel-core'>;
 }
 declare module 'babel-core/lib/api/browser.js' {
-  declare module.exports: $Exports<'babel-core/lib/api/browser'>;
+  declare module.exports: $Exports<'babel-core/lib/constants/browser'>;
 }
 declare module 'babel-core/lib/api/node.js' {
-  declare module.exports: $Exports<'babel-core/lib/api/node'>;
+  declare module.exports: $Exports<'babel-core/lib/constants/node'>;
 }
 declare module 'babel-core/lib/helpers/get-possible-plugin-names.js' {
   declare module.exports: $Exports<'babel-core/lib/helpers/get-possible-plugin-names'>;

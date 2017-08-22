@@ -1,0 +1,27 @@
+.header {
+  &__top {
+    background-color: $color-secondary-header-top-background-green;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+.contacts-flex{
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts-left{
+  text-align: left;
+}
+.contacts-right{
+  text-align: right;
+}
+.contact{
+  display: inline-block;
+}

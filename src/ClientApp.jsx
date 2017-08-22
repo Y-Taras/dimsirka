@@ -8,16 +8,19 @@ import en from 'react-intl/locale-data/en'
 import uk from 'react-intl/locale-data/uk'
 
 import flattenMessages from './utils'
-import messages from './api/messages'
+import messages from './constants/messages'
 
 import App from './App'
+
+import './scss/main.scss';
 
 const renderApp = () => {
   addLocaleData([...en, ...uk])
 
-  const locale = (navigator.languages && navigator.languages[0]) || navigator.language || navigator.userLanguage || 'uk'
+  /* const locale = (navigator.languages && navigator.languages[0]) || navigator.language || navigator.userLanguage || 'uk' */
+  const locale = 'uk'
 
-  render(
+    render(
     <IntlProvider locale={locale} messages={flattenMessages(messages[locale])}>
       <App />
     </IntlProvider>,

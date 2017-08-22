@@ -1,7 +1,7 @@
 // @flow
 
 import axios from 'axios';
-import { ADD_POSTLIST_DATA, ADD_POST_DATA } from './actions';
+import { ADD_POSTLIST_DATA, ADD_POST_DATA } from '../constants/actions';
 
 export function addPostListData(apiData: Array<PostListItem>) {
   return { type: ADD_POSTLIST_DATA, payload: apiData };

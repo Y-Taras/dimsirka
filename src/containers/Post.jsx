@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import type { Match } from 'react-router-dom';
 
-import { getPost } from '../redux/actionCreators';
+import { getPost } from '../actions/actionCreators';
 
 class Post extends Component {
   componentDidMount() {

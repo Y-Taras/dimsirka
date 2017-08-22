@@ -4,7 +4,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
-import store from './redux/store';
+import store from './store/store';
 import Landing from './containers/Landing';
 import Webcams from './containers/Webcams';
 /* import Login from './containers/Login'
@@ -44,6 +44,7 @@ const App = () =>
           <Route path="/webcams" component={Webcams} />
           <Route path="/register" component={FourOhFour} />
           <Route path="/donate" component={FourOhFour} />
+          <Route path="/search" component={FourOhFour} />
           <Route exact path="/news" component={Posts} />
           <Route exact path="/news/:id" component={Post} />
           <Route path="/shop" component={FourOhFour} />

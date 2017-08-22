@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {Link} from 'react-router-dom';
 
-import { getPostList } from '../redux/actionCreators';
+import { getPostList } from '../actions/actionCreators';
 
 class Posts extends Component {
 
@@ -21,7 +21,7 @@ class Posts extends Component {
 
   render() {
     return (
-      <div>
+      <div className="postList">
         {this.props.postList.map(post => (
             <div key={post.articleId}>
               <Link to={`/news/${post.articleId}`} >

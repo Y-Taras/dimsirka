@@ -4,7 +4,7 @@
 
 
 import { combineReducers } from 'redux';
-import { ADD_POSTLIST_DATA, ADD_POST_DATA } from './actions';
+import { ADD_POSTLIST_DATA, ADD_POST_DATA } from '../constants/actions';
 
 const postlistData = (state = [], action: Action) => {
   if (action.type === ADD_POSTLIST_DATA) {
