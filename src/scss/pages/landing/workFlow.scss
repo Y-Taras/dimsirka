@@ -16,6 +16,9 @@
     &:hover {
       background: darken(#fff, 7%);
     }
+    &:link, &:visited{
+      color: $color-main-landing-workFlow-header-blue;
+    }
   }
   &__main {
     padding: 77px 0 80px;
