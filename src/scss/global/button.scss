@@ -1,0 +1,35 @@
+.button {
+  display: inline-block;
+  border-radius: 9px;
+  width: 100%;
+  padding: 18px 0 20px;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+
+  &--orange {
+    background: $color-main-landing-workFlow-button-orange;
+
+    &:hover {
+      background: lighten($color-main-landing-workFlow-button-orange, 7%);
+    }
+  }
+
+  &--text-uppercase {
+    text-transform: uppercase;
+  }
+}
+
+.button-card{
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: 0 79px;
+  margin: auto 28px;
+  border-radius: 10px;
+  background-color: $color-main-landing-workFlow-button-orange;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 2.65;
+  text-align: center;
+}

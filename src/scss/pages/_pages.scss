@@ -1,9 +1,9 @@
 /**
  * Front page
  */
-@import "home";
+@import "landing/hero";
+@import "landing/workFlow";
+@import "landing/animalCard";
+@import "landing/achievements";
+@import "landing/partners";
 
-/**
- * About Us page
- */
-@import "about-us";

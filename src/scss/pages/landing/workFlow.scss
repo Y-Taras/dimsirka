@@ -1,0 +1,61 @@
+.work-flow {
+  &__header {
+    color: $color-main-landing-workFlow-header-blue;
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+    padding-left: 60px;
+  }
+  &__header-link {
+    display: inline-block;
+    margin: 60px 40px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+    &:hover {
+      background: darken(#fff, 7%);
+    }
+  }
+  &__main {
+    padding: 77px 0 80px;
+    text-align: left;
+  }
+  &__title {
+    text-align: center;
+    color: $color-main-landing-text-black;
+    margin: 0 0 45px;
+    font-size: 2.625rem;
+    font-weight: bold;
+    line-height: 0.74;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    width: 28.5%;
+    padding: 21px 26px 30px;
+    box-shadow: 1px 2px 9px 1px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    background-color: #fff;
+  }
+  &__item-header{
+    color: $color-secondary-workFlow-title-green;
+  }
+
+  &__description {
+    color: $color-main-landing-text-black;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.29;
+  }
+
+}
+
+

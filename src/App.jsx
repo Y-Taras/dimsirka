@@ -7,11 +7,11 @@ import { Provider } from 'react-redux';
 import store from './store/store';
 import Landing from './containers/Landing';
 import Webcams from './containers/Webcams';
-/* import Login from './containers/Login'
-import Signup from './containers/Signup' */
+
 import Posts from './containers/Posts';
 import Post from './containers/Post';
 import Header from './containers/Header';
+import Footer from './components/Footer';
 
 const FourOhFour = () => <h1>404</h1>;
 
@@ -22,10 +22,10 @@ const App = () =>
         <Header />
         <Switch>
           <Route exact path="/" component={Landing} />
-          {/*        <Authenticated path="/admin" component={FourOhFour} {...props} />
-        <Authenticated path="/logout" component={FourOhFour} {...props} />
-        <Public path="/signup" component={Signup} {...props} />
-        <Public path="/login" component={Login} {...props} /> */}
+          { /*
+            <Authenticated path="/logout" component={FourOhFour} {...props} />
+            < Public path="/login" component={Login} {...props} />
+          */ }
           <Route exact path="/custody" component={FourOhFour} />
           <Route exact path="/custody/virtual" component={FourOhFour} />
           <Route exact path="/custody/permanent" component={FourOhFour} />
@@ -50,6 +50,7 @@ const App = () =>
           <Route path="/shop" component={FourOhFour} />
           <Route component={FourOhFour} />
         </Switch>
+        <Footer />
       </div>
     </Provider>
   </Router>;

@@ -1,0 +1,50 @@
+.nav {
+  display: inline-block;
+  vert-align: top;
+
+  &__link {
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+    padding: 16px 15px;
+    color: #000;
+    transition: 0.3s;
+
+    &:first-child{
+      padding-left: 0px;
+    }
+
+    &:after {
+      content: '';
+      border: solid $color-secondary-header-top-lang-orange;
+      border-width: 0 2px 2px 0;
+      vertical-align: middle;
+      display: inline-block;
+      margin: 0 0 5px 6px;
+      padding: 3px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+    }
+
+    &:hover {
+      background: darken(#fff, 7%);
+    }
+
+    .nav-left &:last-child:after,
+    .nav-right &:nth-child(2n+1):after {
+      display: none;
+    }
+  }
+
+  &__button{
+    padding: 16px 22px;
+    color: #fff;
+    background: $color-secondary-header-bottom-button-orange;
+
+    &:hover {
+      background: lighten($color-secondary-header-bottom-button-orange, 7%);
+    }
+  }
+}
+
+

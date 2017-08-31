@@ -29,25 +29,6 @@ Please contribute, file issues, and make PRs. More than anything I'm sure there 
 
 # Directory Layout
 ```
-??? dist                           # q
-??? src
-?   ??? component                  # q
-?   ??? actions                    # Redux Actions q
-?   ??? reducers                   # Redux reducers q
-?   ??? assets                     # q
-?   ??? themes                     # q
-?   ??? template                   # q
-?   ??? utils                      # Utility and helper classes
-?   ??? views                      # q
-?   ??? entry.jsx                  # q
-?   ??? routers.jsx                # React Router q
-?   ??? normalize.scss             # normalize
-?   ??? withStyles.js              # withStyles
-??? index.html                     # devServer q
-??? package-lock.json              # package q
-??? package.json                   # package
-??? postcss.config.js              # postCSS q
-??? webpack.config.js              # Webpack q
-??? webpack.dev.config.js          # Webpack q
-??? webpack.prod.config.js         # Webpack q
+planning
+
 ```

@@ -1,9 +1,33 @@
+.header-cont {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+}
+.header-block {
+  height: 83px;
+}
 .header {
+  text-transform: uppercase;
+  background-color: #fff;
+
+  &__logo {
+    position: fixed;
+    left: 50%;
+    top: 22px;
+    transform: translateX(-50%);
+  }
   &__top {
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 2;
     background-color: $color-secondary-header-top-background-green;
   }
 
   &__bottom {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.714;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -11,17 +35,33 @@
   }
 }
 
-.contacts-flex{
+.contacts {
   display: flex;
   justify-content: space-between;
 }
 
-.contacts-left{
+.contacts-left {
   text-align: left;
+
+  .contact:first-child {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
-.contacts-right{
+.contacts-right {
   text-align: right;
+
+  .contact:last-child {
+    padding-right: 160px;
+  }
 }
-.contact{
+.contact {
+  color: $color-secondary-header-top-font-gray;
   display: inline-block;
+  vertical-align: top;
+  padding: 3px 11px 2px 11px;
+
+  &--lang {
+    color: $color-secondary-header-top-lang-orange;
+  }
 }
