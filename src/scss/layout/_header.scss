@@ -1,4 +1,4 @@
-.header-cont {
+.header-container {
   width: 100%;
   position: fixed;
   z-index: 1;
@@ -60,6 +60,7 @@
   display: inline-block;
   vertical-align: top;
   padding: 3px 11px 2px 11px;
+  cursor: pointer;
 
   &--lang {
     color: $color-secondary-header-top-lang-orange;

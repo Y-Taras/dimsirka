@@ -1,36 +1,26 @@
 // @flow
 
-import React from 'react'
-import { render } from 'react-dom'
+import React from 'react';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
 
-import { addLocaleData, IntlProvider } from 'react-intl'
-import en from 'react-intl/locale-data/en'
-import uk from 'react-intl/locale-data/uk'
-
-import flattenMessages from './utils'
-import messages from './constants/messages'
-
-import App from './App'
+import AppI18n from './AppI18n'
+import store from './store/store';
 
 import './scss/main.scss';
 
 const renderApp = () => {
-  addLocaleData([...en, ...uk])
-
-  /* const locale = (navigator.languages && navigator.languages[0]) || navigator.language || navigator.userLanguage || 'uk' */
-  const locale = 'uk'
-
-    render(
-    <IntlProvider locale={locale} messages={flattenMessages(messages[locale])}>
-      <App />
-    </IntlProvider>,
+  render(
+    <Provider store={store}>
+      <AppI18n/>
+    </Provider>,
     document.getElementById('app')
-  )
-}
-renderApp()
+  );
+};
+renderApp();
 
 if (module.hot) {
-  module.hot.accept('./App', () => {
-    renderApp()
-  })
+  module.hot.accept('./AppI18n', () => {
+    renderApp();
+  });
 }

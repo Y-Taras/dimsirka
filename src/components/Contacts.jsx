@@ -3,26 +3,35 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
+import { connect } from 'react-redux';
 
-const Contacts = () => {
-/*  const locale =
-    (navigator.languages && navigator.languages[0])
-    || navigator.language || navigator.userLanguage || 'uk';
-  */
-  const locale = 'uk';
-  const langClass = 'contact contact--lang';
+import { getLang } from '../reducers/locale';
+import { setLocale } from '../actions/actionCreators';
 
+const Contacts = ({ lang, setLocaleData }: { lang: string, setLocaleData: Function }) => {
+  const changeLang = locale => () => {
+    setLocaleData(locale);
+  };
+
+  const langClass = 'contact--lang';
   return (
     <div className="container contacts">
       <div className="contacts-left">
-        <span className={(locale === 'uk') ? langClass : 'contact'}>укр</span>
-        <span className={(locale === 'us') ? langClass : 'contact'}>eng</span>
-        <Link className="contact" to="tel:+380997124680">
+        <div className="contact" onClick={changeLang('uk')} role={'button'} tabIndex={0}>
+          <span className={lang === 'uk' ? langClass : ''}>укр</span>
+        </div>
+        <div className="contact" onClick={changeLang('en-US')} role={'button'} tabIndex={0}>
+          <span className={lang === 'en' ? langClass : ''}>eng</span>
+        </div>
+        <div className="contact" onClick={changeLang('ru')} role={'button'} tabIndex={0}>
+          <span className={lang === 'ru' ? langClass : ''}>рус</span>
+        </div>
+        <a className="contact" href="tel:+380997124680">
           <span className="contact__text">(099)71 24 680</span>
-        </Link>
-        <Link className="contact" to="mailto:dimsirka@gmail.com">
+        </a>
+        <a className="contact" href="mailto:dimsirka@gmail.com">
           <span className="contact__text">dimsirka@gmail.com</span>
-        </Link>
+        </a>
       </div>
       <div className="contacts-right">
         <Link className="contact" to="/webcams">
@@ -40,4 +49,12 @@ const Contacts = () => {
   );
 };
 
-export default Contacts;
+const mapStateToProps = state => ({ lang: getLang(state.locale) });
+
+const mapDispatchToProps = (dispatch: Function) => ({
+  setLocaleData(locale) {
+    dispatch(setLocale(locale));
+  }
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Contacts);

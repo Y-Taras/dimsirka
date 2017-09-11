@@ -10,7 +10,7 @@ Please contribute, file issues, and make PRs. More than anything I'm sure there 
 
 2. **Install dependencies**
 
-    npm install or yarn install
+    npm install
 
 3. **Run API server**
 
@@ -18,17 +18,16 @@ Please contribute, file issues, and make PRs. More than anything I'm sure there 
 
 4. **Make build**
 
-   npm run build or yarn run build
+   npm run build
 
 5. **Run development server**
 
-   npm run dev or yarn run dev
+   npm run dev
 
    Development server should be running at http://localhost:8080/
 
 
 # Directory Layout
 ```
-planning
 
 ```

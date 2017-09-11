@@ -5,16 +5,10 @@ import { Link } from 'react-router-dom';
 
 import Contacts from '../components/Contacts';
 import Navigation from '../components/Navigation';
-/*
-import PublicNavigation from './PublicNavigation.js'
-import AuthenticatedNavigation from './AuthenticatedNavigation.js'
 
-const renderNavigation = authenticated => (authenticated ? <AuthenticatedNavigation /> : <PublicNavigation />)
-*/
-
-const Header = (/* { authenticated }: { authenticated: Boolean } */) =>
+const Header = (props: { location: {} }) =>
   <div>
-    <div className="header-cont">
+    <div className="header-container">
       <header className="header">
         <div className="header__logo">
           <Link to="/">
@@ -22,7 +16,7 @@ const Header = (/* { authenticated }: { authenticated: Boolean } */) =>
           </Link>
         </div>
         <div className="header__top">
-          <Contacts />
+          <Contacts {...props} />
         </div>
         <div className="container">
           <Navigation />
