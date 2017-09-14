@@ -1,11 +1,14 @@
-import React from 'react';
+import React from 'react'
+/*
 import NewsCardItem from './NewsCardItem'
+*/
 
-const NewsCards = () =>
+const NewsCards = (props) =>
   <section className={'news__cards'}>
     <div className="container">
-      <NewsCardItem />
+      <pre><code>{props}</code></pre>
+      {/*    <NewsCardItem/> */}
     </div>
-  </section>;
+  </section>
 
-export default NewsCards;
+export default NewsCards

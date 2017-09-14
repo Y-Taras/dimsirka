@@ -1,5 +1,5 @@
 export default {
-  'en-US': {
+  'en': {
     header: {
       navigation: {
         webcams: 'surveillance camera',
