@@ -6,18 +6,18 @@ import LandingWorkFlow from '../components/LandingWorkFlow';
 import LandingAchievements from '../components/LandingAchievements';
 import LandingPartners from '../components/LandingPartners';
 
-
 const animalsNumber = {
   cats: 123,
   dogs: 529
 };
 
-const Landing = () =>
+const Landing = () => (
   <div>
     <LandingHero animalsNumber={animalsNumber} />
     <LandingWorkFlow />
     <LandingAchievements />
-    <LandingPartners/>
-  </div>;
+    <LandingPartners />
+  </div>
+);
 
 export default Landing;

@@ -4,7 +4,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 
-import AppI18n from './AppI18n'
+import AppI18n from './AppI18n';
 import store from './store/store';
 
 import './scss/main.scss';
@@ -12,7 +12,7 @@ import './scss/main.scss';
 const renderApp = () => {
   render(
     <Provider store={store}>
-      <AppI18n/>
+      <AppI18n />
     </Provider>,
     document.getElementById('app')
   );

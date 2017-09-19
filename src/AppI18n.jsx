@@ -9,7 +9,7 @@ import ru from 'react-intl/locale-data/ru';
 import { connect } from 'react-redux';
 import { setLocale } from './actions/actionCreators';
 
-import {flattenMessages} from './utils';
+import { flattenMessages } from './utils';
 import messages from './constants/messages';
 
 import Routes from './AppRoutes';

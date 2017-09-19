@@ -3,7 +3,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
-const LandingPartners = () =>
+const LandingPartners = () => (
   <section className="partners">
     <div className="container">
       <h3 className="partners__title">
@@ -28,6 +28,7 @@ const LandingPartners = () =>
         </a>
       </div>
     </div>
-  </section>;
+  </section>
+);
 
 export default LandingPartners;

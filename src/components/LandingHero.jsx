@@ -3,9 +3,9 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
-import AnimalCard from '../components/AnimalCard'
+import AnimalCard from '../components/AnimalCard';
 
-const LandingHero = ({ animalsNumber }: { animalsNumber: { cats: number, dogs: number } }) =>
+const LandingHero = ({ animalsNumber }: { animalsNumber: { cats: number, dogs: number } }) => (
   <section className="hero">
     <div className="container container--flex">
       <div className="hero--left">
@@ -29,6 +29,7 @@ const LandingHero = ({ animalsNumber }: { animalsNumber: { cats: number, dogs: n
         <AnimalCard />
       </div>
     </div>
-  </section>;
+  </section>
+);
 
 export default LandingHero;

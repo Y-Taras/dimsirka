@@ -23,7 +23,10 @@ const Routes = ({ urlPrefix }: { urlPrefix: string }) => (
       <Switch>
         <RootRouter exact path={'/:lang(en|ru)?'} urlPrefix={urlPrefix} component={Landing} />
         <Route path={'/:lang(en|ru)?/webcams'} component={Webcams} />
-        <Route exact path={'/:lang(en|ru)?/news'} render = {(props) => <News {...props} urlPrefix={urlPrefix} />} />
+{/*
+        <Route exact path={'/:lang(en|ru)?/news'} render={props => <News {...props} urlPrefix={urlPrefix} />} />
+*/}
+        <Route exact path={'/:lang(en|ru)?/news'} component={News} />
         <Route exact path={'/:lang(en|ru)?/news/:id'} component={Post} />
         <Route path={'/:lang(en|ru)?/shop'} component={FourOhFour} />
         <Route component={FourOhFour} />

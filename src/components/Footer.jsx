@@ -5,12 +5,13 @@ import React from 'react';
 import FooterContacts from './FooterContacts';
 import FooterSitemap from './FooterSitemap';
 
-const Footer = () =>
+const Footer = () => (
   <footer className="footer">
     <div className="container">
-      <FooterContacts/>
+      <FooterContacts />
       <FooterSitemap />
     </div>
-  </footer>;
+  </footer>
+);
 
 export default Footer;

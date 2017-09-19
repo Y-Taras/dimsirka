@@ -1,61 +1,91 @@
+/* eslint-disable no-console,no-debugger */
 // @flow
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { NavLink } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
+import Pagination from 'rc-pagination';
 
 import NewsCards from '../components/NewsCards';
 import { getPostList } from '../actions/actionCreators';
-import { getLang } from '../reducers/locale';
+import { getLang, getPrefix } from '../reducers/locale';
 
 class News extends Component {
   componentDidMount() {
-    if (!this.props.postList[0]) {
-      this.props.getPostListData(this.props.lang);
-    }
+    this.props.getPostListData(this.props.lang);
   }
+
+  onPageChange = current => {
+    this.props.getPostListData(this.props.lang, current);
+  };
+  onCategoryChange = category => {
+    this.props.getPostListData(this.props.lang, null, category);
+  };
 
   props: {
     urlPrefix: string,
     lang: string,
-    postList: Array<PostListItem>,
+    postList: Array<Content>,
     getPostListData: Function
   };
 
   render() {
-    const { postList, urlPrefix, lang } = this.props;
+    const { postList, urlPrefix } = this.props;
+    let renderNewsCards;
+
+    if (postList.length) {
+      renderNewsCards = <NewsCards posts={postList} urlPrefix={urlPrefix} />;
+    } else {
+      renderNewsCards = <p style={{ textAlign: 'center' }}>Loader...</p>;
+    }
     return (
       <section className={'news'}>
         <div className={'news__title'}>
           <FormattedMessage id={'news.title'} />
         </div>
         <div className={'news__nav-links'}>
-          <NavLink className={'news__nav-link'} to={`${urlPrefix}interesting`}>
+          <span
+            className={'news__nav-link'}
+            onClick={this.onCategoryChange.bind(this, '4')}
+            role={'button'}
+            tabIndex={0}
+          >
             <FormattedMessage id={'news.navigation.interesting'} />
-          </NavLink>
-          <NavLink className={'news__nav-link'} to={'#'}>
+          </span>
+          <span
+            className={'news__nav-link'}
+            onClick={this.onCategoryChange.bind(this, '5')}
+            role={'button'}
+            tabIndex={0}
+          >
             <FormattedMessage id={'news.navigation.info'} />
-          </NavLink>
-          <NavLink className={'news__nav-link'} to={'#'}>
+          </span>
+          <span
+            className={'news__nav-link'}
+            onClick={this.onCategoryChange.bind(this, '6')}
+            role={'button'}
+            tabIndex={0}
+          >
             <FormattedMessage id={'news.navigation.action'} />
-          </NavLink>
+          </span>
         </div>
-        <NewsCards posts={postList} lang={lang} newsType={'Information'} />
+        {renderNewsCards}
+        <Pagination defaultCurrent={1} onChange={this.onPageChange} total={25} />
       </section>
     );
   }
 }
 
 const mapStateToProps = state => {
-  const postList = state.postlistData ? state.postlistData : [];
+  const urlPrefix = getPrefix(state.locale);
+  const postList = state.postlistData;
   const lang = getLang(state.locale);
-  return { postList, lang };
+  return { postList, lang, urlPrefix };
 };
 
 const mapDispatchToProps = (dispatch: Function) => ({
-  getPostListData(locale) {
-    dispatch(getPostList(locale));
+  getPostListData(locale, page, category) {
+    dispatch(getPostList(locale, page, category));
   }
 });
 

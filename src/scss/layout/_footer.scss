@@ -1,35 +1,44 @@
 .footer {
   background-color: $color-main-landing-hero-green;
+
   &__top {
     padding: 25px 0 85px;
   }
+
   &__contacts-left {
     display: flex;
   }
+
   &__logo {
     text-align: center;
   }
+
   &__logo-image {
-    background-image: url("/dist/images/footer_logo.png");
+    background-image: url('/dist/images/footer_logo.png');
     display: inline-block;
     height: 66px;
     width: 78px;
   }
+
   &__logo-lines {
-    width: 166px;
     display: flex;
     justify-content: space-between;
+    width: 166px;
   }
+
   &__logo-line {
+    background-color: #6f6f6f;
     height: 4px;
     width: 47px;
-    background-color: #6f6f6f;
+
     &--1st {
       opacity: 0.65;
     }
+
     &--2nd {
       opacity: 0.95;
     }
+
     &--3rd {
       opacity: 0.35;
     }
@@ -38,18 +47,19 @@
   &__contacts-phone {
     margin: 5px 0;
   }
+
   &__contacts-email {
     margin-top: 20px;
   }
 
   &__contacts-title {
     color: #006c55;
+    display: inline-block;
     font-size: 1rem;
     font-weight: bold;
-    vertical-align: middle;
-    display: inline-block;
-    min-width: 72px;
     margin-left: 42px;
+    min-width: 72px;
+    vertical-align: middle;
   }
 
   &__contacts-data {
@@ -67,7 +77,8 @@
     display: inline-block;
     margin: 0 21px;
   }
-  &__table{
+
+  &__table {
     padding-bottom: 68px;
   }
 
@@ -78,11 +89,12 @@
       color: #fff;
     }
   }
+
   &__sitemap-head {
     td {
-      text-transform: uppercase;
       font-weight: 500;
       padding-bottom: 18px;
+      text-transform: uppercase;
     }
   }
 

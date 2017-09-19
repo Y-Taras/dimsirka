@@ -1,30 +1,32 @@
 .hero {
-  text-align: left;
   background-color: $color-main-landing-hero-green;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%),
-    url("/dist/images/green_stars.png");
-  &--left{
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), url('/dist/images/green_stars.png');
+  text-align: left;
+
+  &--left {
     padding-top: 133px;
   }
+
   &__title {
     color: #fff;
-    max-width: 563px;
-    margin: 0;
     font-size: 103px;
     font-weight: 700;
     line-height: 0.83;
+    margin: 0;
+    max-width: 563px;
   }
+
   &__animals-number {
     max-width: 563px;
-    padding: 82px 60px 46px 60px;
+    padding: 82px 60px 46px;
+
     &--text {
-      display: inline-block;
-      margin: 0 23px;
       color: #fff;
+      display: inline-block;
       font-size: 1rem;
       font-weight: bold;
       line-height: 1;
+      margin: 0 23px;
     }
   }
 }
-

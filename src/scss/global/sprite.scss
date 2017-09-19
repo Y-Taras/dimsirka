@@ -1,34 +1,43 @@
 .sprites {
-  background: url(/dist/images/sprites.png) no-repeat;
+  background: url('/dist/images/sprites.png') no-repeat;
 }
-.units_cat {
-  display: inline-block;
-  margin: 0 9px;
-  vertical-align: middle;
-  width: 43px;
-  height: 42px;
-  background-position: -232px 0;
+
+.units {
+  &_cat {
+    background-position: -232px 0;
+    display: inline-block;
+    height: 42px;
+    margin: 0 9px;
+    vertical-align: middle;
+    width: 43px;
+  }
+
+  &_dog {
+    background-position: -187px 0;
+    display: inline-block;
+    height: 43px;
+    margin: 0 9px;
+    vertical-align: middle;
+    width: 44px;
+  }
 }
-.units_dog {
-  display: inline-block;
-  margin: 0 9px;
-  vertical-align: middle;
-  width: 44px;
-  height: 43px;
-  background-position: -187px 0;
-}
-.icon_cross {
-  width: 61px;
-  height: 61px;
-  background-position: -66px 0;
-}
-.icon_house {
-  width: 58px;
-  height: 58px;
-  background-position: -128px 0;
-}
-.icon_syringe {
-  width: 65px;
-  height: 63px;
-  background-position: 0 0;
+
+.icon {
+  &_cross {
+    background-position: -66px 0;
+    height: 61px;
+    width: 61px;
+  }
+
+  &_house {
+    background-position: -128px 0;
+    height: 58px;
+    width: 58px;
+  }
+
+  &__syringe {
+    background-position: 0 0;
+    height: 63px;
+    width: 65px;
+  }
 }

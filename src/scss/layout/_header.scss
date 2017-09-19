@@ -1,37 +1,40 @@
 .header-container {
-  width: 100%;
   position: fixed;
-  z-index: 1;
   top: 0;
+  width: 100%;
+  z-index: 1;
 }
+
 .header-block {
   height: 83px;
 }
+
 .header {
-  text-transform: uppercase;
   background-color: #fff;
+  text-transform: uppercase;
 
   &__logo {
-    position: fixed;
     left: 50%;
+    position: fixed;
     top: 22px;
     transform: translateX(-50%);
   }
+
   &__top {
+    background-color: $color-secondary-header-top-background-green;
     font-size: 0.75rem;
     font-weight: 400;
     line-height: 2;
-    background-color: $color-secondary-header-top-background-green;
   }
 
   &__bottom {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
     font-size: 0.875rem;
     font-weight: 400;
-    line-height: 1.714;
-    display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
+    line-height: 1.714;
   }
 }
 
@@ -48,6 +51,7 @@
     padding-right: 0;
   }
 }
+
 .contacts-right {
   text-align: right;
 
@@ -55,12 +59,13 @@
     padding-right: 160px;
   }
 }
+
 .contact {
   color: $color-secondary-header-top-font-gray;
-  display: inline-block;
-  vertical-align: top;
-  padding: 3px 11px 2px 11px;
   cursor: pointer;
+  display: inline-block;
+  padding: 3px 11px 2px;
+  vertical-align: top;
 
   &--lang {
     color: $color-secondary-header-top-lang-orange;

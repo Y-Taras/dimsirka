@@ -1,62 +1,69 @@
 .achievements {
-  background-image: url("/dist/images/achievements_background.png");
   /*
   background-color: $color-main-landing-hero-green;
   */
   background-color: #daf9f4;
-  &__success{
+  background-image: url('/dist/images/achievements_background.png');
+
+  &__success {
     text-align: center;
   }
 
   &__icon {
+    background: url('/dist/images/achievements_sign.png') no-repeat;
     display: inline-block;
-    background: url("/dist/images/achievements_sign.png") no-repeat;
     height: 109px;
-    width: 107px;
     margin: 41px 0 33px;
+    width: 107px;
   }
-  &__stats{
+
+  &__stats {
     width: 64.25%;
   }
-  &__success{
-    width: 28.5%;
 
+  &__success {
+    width: 28.5%;
   }
-  &__success-title{
+
+  &__success-title {
     color: $color-main-landing-text-black;
     font-size: 2.625rem;
     font-weight: bold;
     line-height: 0.74;
     margin: 0;
   }
-  &__success-text{
+
+  &__success-text {
     color: $color-main-landing-text-black;
     font-size: 1.25rem;
     font-weight: bold;
     line-height: 1.55;
     margin: 57px 0 21px;
   }
-  &__success-million{
+
+  &__success-million {
     color: $color-secondary-achieves-million-orange;
     font-size: 3.5rem;
     font-weight: bold;
     line-height: 0.55;
     margin-bottom: 67px;
   }
-  &__category-data{
+
+  &__category-data {
     color: $color-secondary-achieves-data-green;
-    padding-left: 75px;
     font-size: 5.125rem;
     font-weight: bold;
     line-height: 1.59;
+    padding-left: 75px;
     vertical-align: middle;
   }
-  &__category{
+
+  &__category {
     color: $color-main-landing-text-black;
-    padding-left: 50px;
     font-size: 1.5rem;
     font-weight: bold;
     line-height: 1.29;
+    padding-left: 50px;
     vertical-align: middle;
   }
 }

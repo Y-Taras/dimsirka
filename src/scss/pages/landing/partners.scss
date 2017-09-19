@@ -1,34 +1,33 @@
-.partners{
-
-  &__title{
+.partners {
+  &__title {
     color: $color-main-landing-text-black;
     font-size: 2.625rem;
     font-weight: bold;
     line-height: 0.74;
-    text-align: center;
     margin: 66px 0 0;
+    text-align: center;
   }
-  &__logos{
+
+  &__logos {
     display: flex;
     justify-content: center;
   }
 
-  &__logo{
-    vertical-align: top;
-    margin: 8px 55px 90px;
+  &__logo {
     display: inline-block;
+    margin: 8px 55px 90px;
+    vertical-align: top;
   }
 
-  &__logo--1st{
-    background-image: url("/dist/images/logo_uteam.png");
+  &__logo--1st {
+    background-image: url('/dist/images/logo_uteam.png');
     height: 171px;
     width: 174px;
   }
-  &__logo--2nd{
-    background-image: url("/dist/images/logo_coax.png");
+
+  &__logo--2nd {
+    background-image: url('/dist/images/logo_coax.png');
     height: 167px;
     width: 192px;
   }
 }
-
-

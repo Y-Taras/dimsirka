@@ -1,22 +1,23 @@
-.news{
-  &__title{
-    font-size: 2.625rem;
-    font-weight: bold;
-    color: #fff;
-    padding: 3.75rem 0;
-    text-align: center;
+.news {
+  &__title {
     background-color: $color-main-landing-hero-green;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.02) 0%, rgba(255, 255, 255, 0.02) 100%);
+    color: #fff;
+    font-size: 2.625rem;
+    font-weight: bold;
+    padding: 3.75rem 0;
+    text-align: center;
   }
-  &__nav-links{
+
+  &__nav-links {
     display: flex;
     justify-content: center;
   }
-  &__nav-link{
-    display: inline-block;
-    padding: 40px 36px;
-    flex-wrap: wrap;
-    color: $color-secondary-news-menu-gray;
-  }
 
+  &__nav-link {
+    color: $color-secondary-news-menu-gray;
+    display: inline-block;
+    flex-wrap: wrap;
+    padding: 40px 36px;
+  }
 }

@@ -9,7 +9,7 @@ const achievs = {
   cured: 159
 };
 
-const LandingAchievements = () =>
+const LandingAchievements = () => (
   <section className="achievements">
     <div className="container container--flex">
       <div className="achievements__success">
@@ -27,25 +27,19 @@ const LandingAchievements = () =>
       <div className="achievements__stats">
         <ul className="achievments__list">
           <li className="achievements__item">
-            <span className="achievements__category-data">
-              {achievs.placed}
-            </span>
+            <span className="achievements__category-data">{achievs.placed}</span>
             <span className="achievements__category">
               <FormattedMessage id="landing.achievements.placed" />
             </span>
           </li>
           <li className="achievements__item">
-            <span className="achievements__category-data">
-              {achievs.sterilized}
-            </span>
+            <span className="achievements__category-data">{achievs.sterilized}</span>
             <span className="achievements__category">
               <FormattedMessage id="landing.achievements.sterilized" />
             </span>
           </li>
           <li className="achievements__item">
-            <span className="achievements__category-data">
-              {achievs.cured}
-            </span>
+            <span className="achievements__category-data">{achievs.cured}</span>
             <span className="achievements__category">
               <FormattedMessage id="landing.achievements.cured" />
             </span>
@@ -53,6 +47,7 @@ const LandingAchievements = () =>
         </ul>
       </div>
     </div>
-  </section>;
+  </section>
+);
 
 export default LandingAchievements;

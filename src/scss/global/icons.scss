@@ -1,16 +1,17 @@
-.icon{
-  &__facebook{
+.icon {
+  &__facebook {
+    background-image: url('/dist/images/icon_facebook.png');
     display: inline-block;
     height: 42px;
-    width: 42px;
-    background-image: url("/dist/images/icon_facebook.png");
     opacity: 0.42;
+    width: 42px;
   }
-  &__instagram{
+
+  &__instagram {
+    background-image: url('/dist/images/icon_instagram.png');
     display: inline-block;
     height: 42px;
-    width: 42px;
-    background-image: url("/dist/images/icon_instagram.png");
     opacity: 0.42;
+    width: 42px;
   }
 }

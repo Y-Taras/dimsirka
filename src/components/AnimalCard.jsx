@@ -2,7 +2,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
 
-const AnimalCard = () =>
+const AnimalCard = () => (
   <div className="animal-card">
     <div className="animal-card__image" />
     <span className="animal-card__icon--dog" />
@@ -37,6 +37,7 @@ const AnimalCard = () =>
     <Link to="#" className="button-card button--text-uppercase">
       <FormattedMessage id="landing.animalCard.toHelp" />
     </Link>
-  </div>;
+  </div>
+);
 
 export default AnimalCard;

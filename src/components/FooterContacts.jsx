@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 
-const FooterContacts = () =>
+const FooterContacts = () => (
   <div className="footer__top container--flex">
     <div className="footer__contacts-left">
       <div className="footer__logo">
@@ -50,6 +50,7 @@ const FooterContacts = () =>
         <span className={'visuallyhidden'}>facebook page link</span>
       </a>
     </div>
-  </div>;
+  </div>
+);
 
 export default FooterContacts;

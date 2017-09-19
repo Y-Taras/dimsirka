@@ -1,17 +1,17 @@
 .button {
-  display: inline-block;
   border-radius: 9px;
-  width: 100%;
-  padding: 18px 0 20px;
-  text-decoration: none;
   color: #fff;
+  display: inline-block;
+  padding: 18px 0 20px;
   text-align: center;
+  text-decoration: none;
+  width: 100%;
 
   &--orange {
-    background: $color-main-landing-workFlow-button-orange;
+    background: $color-main-landing-workflow-button-orange;
 
     &:hover {
-      background: lighten($color-main-landing-workFlow-button-orange, 7%);
+      background: lighten($color-main-landing-workflow-button-orange, 7%);
     }
   }
 
@@ -20,16 +20,16 @@
   }
 }
 
-.button-card{
-  display: inline-block;
-  text-decoration: none;
-  color: #fff;
-  padding: 0 79px;
-  margin: auto 28px;
+.button-card {
+  background-color: $color-main-landing-workflow-button-orange;
   border-radius: 10px;
-  background-color: $color-main-landing-workFlow-button-orange;
+  color: #fff;
+  display: inline-block;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 2.65;
+  margin: auto 28px;
+  padding: 0 79px;
   text-align: center;
+  text-decoration: none;
 }

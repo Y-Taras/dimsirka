@@ -6,7 +6,7 @@ import { FormattedMessage } from 'react-intl';
 
 const icons = ['house', 'syringe', 'cross'];
 
-const LandingWorkFlow = () =>
+const LandingWorkFlow = () => (
   <section className="work-flow">
     <div className="container">
       <div className="work-flow__header">
@@ -22,7 +22,7 @@ const LandingWorkFlow = () =>
           <FormattedMessage id="landing.workFlow.title" />
         </h2>
         <ul className="work-flow__list">
-          {icons.map((iconName, index) =>
+          {icons.map((iconName, index) => (
             <li className="work-flow__item" key={iconName}>
               <div className={`icon sprites icon_${iconName}`} />
               <h3 className="work-flow__item-header">
@@ -35,10 +35,11 @@ const LandingWorkFlow = () =>
                 <FormattedMessage id="landing.workFlow.card.buttonText" />
               </Link>
             </li>
-          )}
+          ))}
         </ul>
       </div>
     </div>
-  </section>;
+  </section>
+);
 
 export default LandingWorkFlow;

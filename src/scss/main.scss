@@ -1,16 +1,15 @@
-@import "../../node_modules/normalize.scss/normalize";
+@import '../../node_modules/normalize.scss/normalize';
 
-@import "global/mixins";
-@import "global/fonts";
-@import "global/vars";
-@import "global/base";
-@import "global/common";
-@import "global/sprite";
-@import "global/icons";
-@import "global/button";
-@import "global/navigation";
-@import "global/pagers";
+@import 'global/mixins';
+@import 'global/fonts';
+@import 'global/vars';
+@import 'global/base';
+@import 'global/common';
+@import 'global/sprite';
+@import 'global/icons';
+@import 'global/button';
+@import 'global/navigation';
+@import 'global/pagination';
 
-
-@import "layout/layout";
-@import "pages/pages";
+@import 'layout/layout';
+@import 'pages/pages';

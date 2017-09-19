@@ -16,11 +16,13 @@ class Post extends Component {
 
   props: {
     // post: {[key: ?string]: Post}
-    post: { [?string]: {
-      articleBody: string
-    } },
+    post: {
+      [?string]: {
+        articleBody: string
+      }
+    },
     getPostData: Function,
-    match: Match,
+    match: Match
   };
 
   render() {

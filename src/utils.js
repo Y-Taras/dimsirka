@@ -12,20 +12,23 @@ export function flattenMessages(nestedMessages, prefix = '') {
     return messages;
   }, {});
 }
-
 export function switchLangHepler(oldLang, newLang, path) {
-  const extractedPath = path
-    .split('/')
-    .slice(2)
-    .join('/');
-
+  const extractedPath = n =>
+    path
+      .split('/')
+      .slice(n)
+      .join('/');
   switch (newLang) {
     case 'uk':
-      return `/${newLang}/${extractedPath}`;
+      return `/${extractedPath(2)}`;
     case 'en':
     case 'ru':
-      return oldLang === 'uk' ? `/${extractedPath}/` : `/${newLang}/${extractedPath}`;
+      return oldLang === 'uk' ? `/${newLang}/${extractedPath(1)}` : `/${newLang}/${extractedPath(2)}`;
     default:
       return '/nowhere';
   }
+}
+// function that checks two arrays without duplicates
+export function checkDuplicates (array1, array2) {
+  return array1.filter(obj => obj.id === array2[0].id).length;
 }

@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 // @flow
 
 import React from 'react';
@@ -29,10 +28,8 @@ const Contacts = ({
       const newUrl = switchLangHepler(lang, newLang, location.pathname);
       setLocaleData(newLang);
       localStorage.setItem('lang', String(newLang));
-      console.log('newUrl=', newUrl);
       history.replace(newUrl);
     }
-    console.log('location:', location, 'history:', history);
   };
 
   const langClass = 'contact--lang';

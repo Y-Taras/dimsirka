@@ -1,24 +1,58 @@
 // @flow
 
-export type PostListItem = {
-  articleId: string,
-  author: string,
-  datePublished: string,
-  dateModified: string,
-  headline: string,
-  articleSection: string,
-  image: {
-    url: string
+type Image = {
+  id: number,
+  imageable_type: string,
+  imageable_id: number,
+  file: {
+    url: string,
+    thumb: {
+      url: string
+    }
+  },
+  hint: string | null,
+  alt: string | null,
+  created_at: string,
+  updated_at: string,
+  primary: boolean
+};
+
+export type Content = {
+  id: number,
+  type: string,
+  attributes: {
+    image: Image,
+    title: string,
+    'short-description': string,
+    description: string,
+    'category-id': number
+  },
+  urlPrefix?: string
+};
+
+type Posts = Array<Content>;
+
+export type PostListData = {
+  data: Posts,
+  links: {
+    self: string,
+    next: string,
+    last: string
   }
 };
 
 export type Post = {
-  articleId: string,
-  author: string,
-  datePublished: string,
-  dateModified: string,
-  headline: string,
-  articleBody: string
+  data: {
+    id: string,
+    type: string,
+    attributes: {
+      image: Image,
+      title: string,
+      'short-description': string,
+      description: string,
+      'category-id': number
+    }
+  }
 };
 
 declare var module: {
@@ -34,4 +68,4 @@ declare type ActionT<A: ActionType, P> = {|
   payload: P
 |};
 
-export type Action = ActionT<'ADD_POST_DATA', Post> | ActionT<'ADD_POSTLIST_DATA', Array<PostListItem>>;
+export type Action = ActionT<'ADD_POST_DATA', Post> | ActionT<'ADD_POSTLIST_DATA', Array<Post>>;

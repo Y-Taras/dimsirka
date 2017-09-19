@@ -1,5 +1,5 @@
 export default {
-  'en': {
+  en: {
     header: {
       navigation: {
         webcams: 'surveillance camera',
@@ -8,10 +8,10 @@ export default {
         search: 'search',
         news: 'news',
         shop: 'store',
-        reg_animals: 'animals\' registration',
+        reg_animals: "animals' registration",
         aboutUs: 'about us',
-        toHelp: 'help',
-      },
+        toHelp: 'help'
+      }
     },
     landing: {
       animalCard: {
@@ -19,19 +19,19 @@ export default {
         sex: 'sex',
         color: 'coloration',
         birthday: 'Date of birth',
-        toHelp: 'help',
+        toHelp: 'help'
       },
       hero: {
         title: 'Допомагай тваринкам онлайн',
         unit_cats: 'котики',
         unit_dogs: 'песики',
         care: 'опіка',
-        adoption: 'адопція',
+        adoption: 'адопція'
       },
       workFlow: {
         header: {
           link1: 'опіка',
-          link2: 'адопція',
+          link2: 'адопція'
         },
         title: 'Як це працює?',
         card: {
@@ -44,38 +44,38 @@ export default {
             'Притулок у с.Загвіздя – тут знайшли прихисток 160 песиків. Наш притулок утримується виключно за рахунок благодійних внесків і силами лише декількох волонтерів, тому постійно потребує допомоги: руками грошима, їжею, ліками… Будь-яка допомога – безцінна!',
           text3:
             'Притулок у с.Загвіздя – тут знайшли прихисток 160 песиків. Наш притулок утримується виключно за рахунок благодійних внесків і силами лише декількох волонтерів, тому постійно потребує допомоги: руками грошима, їжею, ліками… Будь-яка допомога – безцінна!',
-          buttonText: 'Детальніше',
-        },
+          buttonText: 'Детальніше'
+        }
       },
       achievements: {
         title: {
           header: 'Наші успіхи',
           text: 'Витрачено на лікування',
-          money: '1 млн грн',
+          money: '1 млн грн'
         },
         placed: 'тваринок прилаштовано',
         sterilized: 'стерилізовано',
-        cured: 'пройшли лікування',
+        cured: 'пройшли лікування'
       },
       partners: {
-        title: 'Партнери',
-      },
+        title: 'Партнери'
+      }
     },
     footer: {
       contacts: {
-        tel: 'тел.',
+        tel: 'тел.'
       },
       sitemap: {
         care: {
           title: 'опіка',
           careOnline: 'Опіка онлайн',
           adoption: 'Адопція',
-          homeBoarding: 'Перетримка',
+          homeBoarding: 'Перетримка'
         },
         search: {
           title: 'пошук',
           lostAnimals: 'Загублені тварини',
-          foundedAnimals: 'Знайдені тварини',
+          foundedAnimals: 'Знайдені тварини'
         },
         shop: {
           title: 'Крамничка',
@@ -85,7 +85,7 @@ export default {
           notepads: 'Блокноти',
           bags: 'Сумки',
           magnetStickers: 'Магніти',
-          badges: 'Значки',
+          badges: 'Значки'
         },
         aboutUs: {
           title: 'про нас',
@@ -93,7 +93,7 @@ export default {
           history: 'Історія',
           team: 'Команда',
           partners: 'Партнери',
-          projects: 'Проекти',
+          projects: 'Проекти'
         },
         help: {
           title: 'допомога',
@@ -101,24 +101,24 @@ export default {
           stuff: 'Речі',
           volunteers: 'Волонтери',
           seriouslyIll: 'Тяжко хворі',
-          contractSocial: 'Договір соціального опікуна',
+          contractSocial: 'Договір соціального опікуна'
         },
         reg_animals: 'реєстрація тварин',
         webcams: 'камери спостреження',
-        news: 'новини',
-      },
+        news: 'новини'
+      }
     },
     news: {
       title: 'Новини',
       navigation: {
         interesting: 'Цікаве',
         info: 'Інформація',
-        action: 'Акція',
+        action: 'Акція'
       },
-      readMore: 'читати далі',
-    },
+      readMore: 'читати далі'
+    }
   },
-  'ru': {
+  ru: {
     header: {
       navigation: {
         webcams: 'камеры наблюдения',
@@ -129,8 +129,8 @@ export default {
         shop: 'магазин',
         reg_animals: 'регистрация животных',
         aboutUs: 'о нас',
-        toHelp: 'помочь',
-      },
+        toHelp: 'помочь'
+      }
     },
     landing: {
       animalCard: {
@@ -138,19 +138,19 @@ export default {
         sex: 'Пол',
         color: 'Окраска',
         birthday: 'Дата рождения',
-        toHelp: 'помочь',
+        toHelp: 'помочь'
       },
       hero: {
         title: 'Допомагай тваринкам онлайн',
         unit_cats: 'котики',
         unit_dogs: 'песики',
         care: 'опіка',
-        adoption: 'адопція',
+        adoption: 'адопція'
       },
       workFlow: {
         header: {
           link1: 'опіка',
-          link2: 'адопція',
+          link2: 'адопція'
         },
         title: 'Як це працює?',
         card: {
@@ -163,38 +163,38 @@ export default {
             'Притулок у с.Загвіздя – тут знайшли прихисток 160 песиків. Наш притулок утримується виключно за рахунок благодійних внесків і силами лише декількох волонтерів, тому постійно потребує допомоги: руками грошима, їжею, ліками… Будь-яка допомога – безцінна!',
           text3:
             'Притулок у с.Загвіздя – тут знайшли прихисток 160 песиків. Наш притулок утримується виключно за рахунок благодійних внесків і силами лише декількох волонтерів, тому постійно потребує допомоги: руками грошима, їжею, ліками… Будь-яка допомога – безцінна!',
-          buttonText: 'Детальніше',
-        },
+          buttonText: 'Детальніше'
+        }
       },
       achievements: {
         title: {
           header: 'Наші успіхи',
           text: 'Витрачено на лікування',
-          money: '1 млн грн',
+          money: '1 млн грн'
         },
         placed: 'тваринок прилаштовано',
         sterilized: 'стерилізовано',
-        cured: 'пройшли лікування',
+        cured: 'пройшли лікування'
       },
       partners: {
-        title: 'Партнери',
-      },
+        title: 'Партнери'
+      }
     },
     footer: {
       contacts: {
-        tel: 'тел.',
+        tel: 'тел.'
       },
       sitemap: {
         care: {
           title: 'опіка',
           careOnline: 'Опіка онлайн',
           adoption: 'Адопція',
-          homeBoarding: 'Перетримка',
+          homeBoarding: 'Перетримка'
         },
         search: {
           title: 'пошук',
           lostAnimals: 'Загублені тварини',
-          foundedAnimals: 'Знайдені тварини',
+          foundedAnimals: 'Знайдені тварини'
         },
         shop: {
           title: 'Крамничка',
@@ -204,7 +204,7 @@ export default {
           notepads: 'Блокноти',
           bags: 'Сумки',
           magnetStickers: 'Магніти',
-          badges: 'Значки',
+          badges: 'Значки'
         },
         aboutUs: {
           title: 'про нас',
@@ -212,7 +212,7 @@ export default {
           history: 'Історія',
           team: 'Команда',
           partners: 'Партнери',
-          projects: 'Проекти',
+          projects: 'Проекти'
         },
         help: {
           title: 'допомога',
@@ -220,24 +220,24 @@ export default {
           stuff: 'Речі',
           volunteers: 'Волонтери',
           seriouslyIll: 'Тяжко хворі',
-          contractSocial: 'Договір соціального опікуна',
+          contractSocial: 'Договір соціального опікуна'
         },
         reg_animals: 'реєстрація тварин',
         webcams: 'камери спостреження',
-        news: 'новини',
-      },
+        news: 'новини'
+      }
     },
     news: {
       title: 'Новини',
       navigation: {
         interesting: 'Цікаве',
         info: 'Інформація',
-        action: 'Акція',
+        action: 'Акція'
       },
-      readMore: 'читати далі',
-    },
+      readMore: 'читати далі'
+    }
   },
-  'uk': {
+  uk: {
     header: {
       navigation: {
         webcams: 'камери спостереження',
@@ -248,8 +248,8 @@ export default {
         shop: 'крамниця',
         reg_animals: 'реєстрація тварин',
         aboutUs: 'про нас',
-        toHelp: 'допомогти',
-      },
+        toHelp: 'допомогти'
+      }
     },
     landing: {
       animalCard: {
@@ -257,19 +257,19 @@ export default {
         sex: 'Стать',
         color: 'Окрас',
         birthday: 'Дата народження',
-        toHelp: 'допомогти',
+        toHelp: 'допомогти'
       },
       hero: {
         title: 'Допомагай тваринкам онлайн',
         unit_cats: 'котики',
         unit_dogs: 'песики',
         care: 'опіка',
-        adoption: 'адопція',
+        adoption: 'адопція'
       },
       workFlow: {
         header: {
           link1: 'опіка',
-          link2: 'адопція',
+          link2: 'адопція'
         },
         title: 'Як це працює?',
         card: {
@@ -282,38 +282,38 @@ export default {
             'Притулок у с.Загвіздя – тут знайшли прихисток 160 песиків. Наш притулок утримується виключно за рахунок благодійних внесків і силами лише декількох волонтерів, тому постійно потребує допомоги: руками грошима, їжею, ліками… Будь-яка допомога – безцінна!',
           text3:
             'Притулок у с.Загвіздя – тут знайшли прихисток 160 песиків. Наш притулок утримується виключно за рахунок благодійних внесків і силами лише декількох волонтерів, тому постійно потребує допомоги: руками грошима, їжею, ліками… Будь-яка допомога – безцінна!',
-          buttonText: 'Детальніше',
-        },
+          buttonText: 'Детальніше'
+        }
       },
       achievements: {
         title: {
           header: 'Наші успіхи',
           text: 'Витрачено на лікування',
-          money: '1 млн грн',
+          money: '1 млн грн'
         },
         placed: 'тваринок прилаштовано',
         sterilized: 'стерилізовано',
-        cured: 'пройшли лікування',
+        cured: 'пройшли лікування'
       },
       partners: {
-        title: 'Партнери',
-      },
+        title: 'Партнери'
+      }
     },
     footer: {
       contacts: {
-        tel: 'тел.',
+        tel: 'тел.'
       },
       sitemap: {
         care: {
           title: 'опіка',
           careOnline: 'Опіка онлайн',
           adoption: 'Адопція',
-          homeBoarding: 'Перетримка',
+          homeBoarding: 'Перетримка'
         },
         search: {
           title: 'пошук',
           lostAnimals: 'Загублені тварини',
-          foundedAnimals: 'Знайдені тварини',
+          foundedAnimals: 'Знайдені тварини'
         },
         shop: {
           title: 'Крамничка',
@@ -323,7 +323,7 @@ export default {
           notepads: 'Блокноти',
           bags: 'Сумки',
           magnetStickers: 'Магніти',
-          badges: 'Значки',
+          badges: 'Значки'
         },
         aboutUs: {
           title: 'про нас',
@@ -331,7 +331,7 @@ export default {
           history: 'Історія',
           team: 'Команда',
           partners: 'Партнери',
-          projects: 'Проекти',
+          projects: 'Проекти'
         },
         help: {
           title: 'допомога',
@@ -339,21 +339,21 @@ export default {
           stuff: 'Речі',
           volunteers: 'Волонтери',
           seriouslyIll: 'Тяжко хворі',
-          contractSocial: 'Договір соціального опікуна',
+          contractSocial: 'Договір соціального опікуна'
         },
         reg_animals: 'реєстрація тварин',
         webcams: 'камери спостреження',
-        news: 'новини',
-      },
+        news: 'новини'
+      }
     },
     news: {
       title: 'Новини',
       navigation: {
         interesting: 'Цікаве',
         info: 'Інформація',
-        action: 'Акція',
+        action: 'Акція'
       },
-      readMore: 'читати далі',
-    },
-  },
-}
+      readMore: 'читати далі'
+    }
+  }
+};

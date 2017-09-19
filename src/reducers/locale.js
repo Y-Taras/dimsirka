@@ -1,42 +1,42 @@
 // @flow
 
-import { SET_LOCALE } from '../constants/actions'
+import { SET_LOCALE } from '../constants/actions';
 
 const initialState = {
-  locale: '',
-}
+  locale: ''
+};
 
 const locale = (state: string = initialState.locale, action: Action) => {
   if (action.type === SET_LOCALE) {
-    return action.payload
+    return action.payload;
   }
-  return state
-}
+  return state;
+};
 
 export const getPrefix = (state: string) => {
-  switch (state.substr(0,2)) {
+  switch (state.substr(0, 2)) {
     case 'en':
-      return 'en/'
+      return 'en/';
     case 'uk':
-      return ''
+      return '';
     case 'ru':
-      return 'ru/'
+      return 'ru/';
     default:
-      return ''
+      return '';
   }
-}
+};
 
 export const getLang = (state: string) => {
-  switch (state.substr(0,2)) {
+  switch (state.substr(0, 2)) {
     case 'en':
-      return 'en'
+      return 'en';
     case 'uk':
-      return 'uk'
+      return 'uk';
     case 'ru':
-      return 'ru'
+      return 'ru';
     default:
-      return 'uk'
+      return 'uk';
   }
-}
+};
 
-export default locale
+export default locale;

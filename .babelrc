@@ -11,8 +11,9 @@
 	],
   "plugins": [
     "react-hot-loader/babel",
-    "babel-plugin-transform-class-properties"
-  ],
+    "babel-plugin-transform-class-properties",
+    "sitrep"
+      ],
   "env": {
     "test": {
       "plugins": [
