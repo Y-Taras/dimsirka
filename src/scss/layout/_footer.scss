@@ -1,107 +1,51 @@
 .footer {
   background-color: $color-main-landing-hero-green;
+  color: #fff;
+  font-size: 0.875rem;
+  padding-top: 60px;
+  text-align: left;
 
-  &__top {
-    padding: 25px 0 85px;
+  a:link {
+    color: #fff;
   }
 
-  &__contacts-left {
+  &--flex {
     display: flex;
   }
 
-  &__logo {
-    text-align: center;
+  &__category-title {
+    font-weight: 500;
+    text-transform: uppercase;
   }
 
-  &__logo-image {
-    background-image: url('/dist/images/footer_logo.png');
-    display: inline-block;
-    height: 66px;
-    width: 78px;
+  &__contacts {
+    flex: 3 3 0;
   }
 
-  &__logo-lines {
+  &__address-content {
     display: flex;
-    justify-content: space-between;
-    width: 166px;
-  }
-
-  &__logo-line {
-    background-color: #6f6f6f;
-    height: 4px;
-    width: 47px;
-
-    &--1st {
-      opacity: 0.65;
-    }
-
-    &--2nd {
-      opacity: 0.95;
-    }
-
-    &--3rd {
-      opacity: 0.35;
-    }
-  }
-
-  &__contacts-phone {
-    margin: 5px 0;
-  }
-
-  &__contacts-email {
-    margin-top: 20px;
-  }
-
-  &__contacts-title {
-    color: #006c55;
-    display: inline-block;
-    font-size: 1rem;
-    font-weight: bold;
-    margin-left: 42px;
-    min-width: 72px;
-    vertical-align: middle;
-  }
-
-  &__contacts-data {
-    color: #006c55;
-    font-size: 2.375rem;
-    font-weight: 700;
-    vertical-align: middle;
-  }
-
-  &__contacts-right {
-    padding: 12px 50px;
-  }
-
-  &__socials {
-    display: inline-block;
-    margin: 0 21px;
-  }
-
-  &__table {
-    padding-bottom: 68px;
+    flex-direction: column;
+    font-style: normal;
   }
 
   &__sitemap {
-    width: 100%;
-
-    a {
-      color: #fff;
-    }
+    display: flex;
+    flex: 9 9 0;
   }
 
-  &__sitemap-head {
-    td {
+  &__sitemap-col {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+
+    &--bold {
       font-weight: 500;
-      padding-bottom: 18px;
       text-transform: uppercase;
     }
   }
 
-  &__sitemap-body {
-    td {
-      font-weight: 400;
-      padding: 10px 0;
-    }
+  &__social {
+    margin: 55px 0;
   }
 }

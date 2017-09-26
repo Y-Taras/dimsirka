@@ -29,6 +29,6 @@ export function switchLangHepler(oldLang, newLang, path) {
   }
 }
 // function that checks two arrays without duplicates
-export function checkDuplicates (array1, array2) {
+export function checkDuplicates(array1, array2) {
   return array1.filter(obj => obj.id === array2[0].id).length;
 }

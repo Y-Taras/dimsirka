@@ -34,7 +34,7 @@ const Contacts = ({
 
   const langClass = 'contact--lang';
   return (
-    <div className="container contacts">
+    <div className="contacts">
       <div className="contacts-left">
         <div className="contact" onClick={changeLang('uk')} role={'button'} tabIndex={0}>
           <span className={lang === 'uk' ? langClass : ''}>укр</span>
@@ -55,12 +55,12 @@ const Contacts = ({
       <div className="contacts-right">
         <Link className="contact" to={`/${urlPrefix}webcams`}>
           <span className="contact__text">
-            <FormattedMessage id="header.navigation.webcams" />
+            <FormattedMessage id="header.webcams" />
           </span>
         </Link>
         <Link className="contact" to="#">
           <span className="contact__text">
-            <FormattedMessage id="header.navigation.register" />
+            <FormattedMessage id="header.register" />
           </span>
         </Link>
       </div>

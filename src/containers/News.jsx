@@ -1,40 +1,54 @@
-/* eslint-disable no-console,no-debugger */
+/* eslint-disable no-console */
 // @flow
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
-import Pagination from 'rc-pagination';
 
 import NewsCards from '../components/NewsCards';
-import { getPostList } from '../actions/actionCreators';
+import { getPostList, setNewsCategory } from '../actions/actionCreators';
 import { getLang, getPrefix } from '../reducers/locale';
+import NewsNavigationItem from '../components/NewsNavigationItem';
+
+type Props = {
+  urlPrefix: string,
+  lang: string,
+  postList: { apiData: Array<Content>, total: string },
+  category: string | null,
+  getPostListData: Function,
+  setCategory: Function
+};
 
 class News extends Component {
+  static defaultProps = {
+    postList: { apiData: [], total: '3' }
+  };
+
   componentDidMount() {
-    this.props.getPostListData(this.props.lang);
+    this.props.getPostListData(this.props.lang, null, this.props.category);
   }
 
   onPageChange = current => {
-    this.props.getPostListData(this.props.lang, current);
+    this.props.getPostListData(this.props.lang, current, this.props.category);
   };
-  onCategoryChange = category => {
-    this.props.getPostListData(this.props.lang, null, category);
+  onCategoryChange = (evt: SyntheticMouseEvent & { currentTarget: HTMLButtonElement }) => {
+    if (evt.currentTarget.id !== '6') {
+      this.props.setCategory(evt.currentTarget.id);
+      this.props.getPostListData(this.props.lang, null, evt.currentTarget.id);
+    } else {
+      this.props.setCategory(null);
+      this.props.getPostListData(this.props.lang, null, null);
+    }
   };
 
-  props: {
-    urlPrefix: string,
-    lang: string,
-    postList: Array<Content>,
-    getPostListData: Function
-  };
+  props: Props;
 
   render() {
     const { postList, urlPrefix } = this.props;
     let renderNewsCards;
 
-    if (postList.length) {
-      renderNewsCards = <NewsCards posts={postList} urlPrefix={urlPrefix} />;
+    if (!(Object.keys(postList).length === 0 && postList.constructor === Object)) {
+      renderNewsCards = <NewsCards onChange={this.onPageChange} posts={postList} urlPrefix={urlPrefix} />;
     } else {
       renderNewsCards = <p style={{ textAlign: 'center' }}>Loader...</p>;
     }
@@ -44,33 +58,11 @@ class News extends Component {
           <FormattedMessage id={'news.title'} />
         </div>
         <div className={'news__nav-links'}>
-          <span
-            className={'news__nav-link'}
-            onClick={this.onCategoryChange.bind(this, '4')}
-            role={'button'}
-            tabIndex={0}
-          >
-            <FormattedMessage id={'news.navigation.interesting'} />
-          </span>
-          <span
-            className={'news__nav-link'}
-            onClick={this.onCategoryChange.bind(this, '5')}
-            role={'button'}
-            tabIndex={0}
-          >
-            <FormattedMessage id={'news.navigation.info'} />
-          </span>
-          <span
-            className={'news__nav-link'}
-            onClick={this.onCategoryChange.bind(this, '6')}
-            role={'button'}
-            tabIndex={0}
-          >
-            <FormattedMessage id={'news.navigation.action'} />
-          </span>
+          {['interesting', 'info', 'action', 'all'].map((item, index) => (
+            <NewsNavigationItem key={item} id={index + 3} text={item} onCategoryChange={this.onCategoryChange} />
+          ))}
         </div>
         {renderNewsCards}
-        <Pagination defaultCurrent={1} onChange={this.onPageChange} total={25} />
       </section>
     );
   }
@@ -80,12 +72,16 @@ const mapStateToProps = state => {
   const urlPrefix = getPrefix(state.locale);
   const postList = state.postlistData;
   const lang = getLang(state.locale);
-  return { postList, lang, urlPrefix };
+  const category = state.newsCategory;
+  return { postList, lang, urlPrefix, category };
 };
 
 const mapDispatchToProps = (dispatch: Function) => ({
   getPostListData(locale, page, category) {
     dispatch(getPostList(locale, page, category));
+  },
+  setCategory(category) {
+    dispatch(setNewsCategory(category));
   }
 });
 

@@ -19,7 +19,17 @@ const config = {
   devServer: {
     hot: true,
     publicPath: '/dist/',
-    historyApiFallback: true
+    historyApiFallback: true,
+    proxy: {
+      '/uploads': {
+        target: 'http://localhost:3000',
+        secure: false
+      },
+      '/api': {
+        target: 'http://localhost:3000',
+        secure: false
+      },
+    }
   },
   resolve: {
     modules: ['node_modules', 'src'],
@@ -45,7 +55,8 @@ const config = {
       },
       {
         test: /\.jsx?$/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
+        exclude: /(node_modules|bower_components)/
       },
       {
         test: /\.scss$/,

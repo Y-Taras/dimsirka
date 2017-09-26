@@ -1,6 +1,7 @@
 .hero {
   background-color: $color-main-landing-hero-green;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), url('/dist/images/green_stars.png');
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%),
+    url('/dist/images/green_stars.png');
   text-align: left;
 
   &--left {
@@ -9,7 +10,7 @@
 
   &__title {
     color: #fff;
-    font-size: 103px;
+    font-size: 6.4375rem;
     font-weight: 700;
     line-height: 0.83;
     margin: 0;
@@ -30,3 +31,24 @@
     }
   }
 }
+
+@media only screen and (max-width: 999px) {
+  .hero--left,
+  .hero--right {
+    margin: 0 auto;
+  }
+
+  .hero__title {
+    font-size: 4rem;
+    text-align: center;
+
+  }
+}
+
+@media only screen and (max-width: 399px) {
+  .hero__title {
+    font-size: 3rem;
+  }
+}
+
+

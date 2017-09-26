@@ -31,3 +31,9 @@
     padding-left: 18px;
   }
 }
+
+@media only screen and (max-width: 999px) {
+  .animal-card {
+    position: static;
+  }
+}

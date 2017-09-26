@@ -1,6 +1,20 @@
 .nav {
-  display: inline-block;
-  vertical-align: top;
+
+  &-container {
+    display: flex;
+    flex-basis: 50%;
+  }
+
+  &-left {
+    flex-basis: 555px;
+    margin-left: auto;
+  }
+
+  &-right {
+    display: flex;
+    flex-basis: 462px;
+    justify-content: flex-end;
+  }
 
   &__link {
     color: #000;
@@ -9,40 +23,87 @@
     text-decoration: none;
     transition: 0.3s;
     vertical-align: top;
+  }
 
-    &:first-child {
-      padding-left: 0;
-    }
+  &__link:first-child::after {
+    border: solid $color-secondary-header-top-lang-orange;
+    border-width: 0 2px 2px 0;
+    content: '';
+    display: inline-block;
+    margin: 0 0 5px 6px;
+    padding: 3px;
+    transform: rotate(45deg);
+    vertical-align: middle;
+  }
 
-    &:after {
-      border: solid $color-secondary-header-top-lang-orange;
-      border-width: 0 2px 2px 0;
-      content: '';
-      display: inline-block;
-      margin: 0 0 5px 6px;
-      padding: 3px;
-      -webkit-transform: rotate(45deg);
-      transform: rotate(45deg);
-      vertical-align: middle;
-    }
-
-    &:hover {
-      background: darken(#fff, 7%);
-    }
-
-    .nav-left &:last-child:after,
-    .nav-right &:nth-child(2n + 1):after {
-      display: none;
-    }
+  &__link:hover {
+    background: darken(#fff, 7%);
   }
 
   &__button {
     background: $color-secondary-header-bottom-button-orange;
     color: #fff;
-    padding: 16px 22px;
+    flex-basis: 193px;
+    text-align: center;
+  }
 
-    &:hover {
-      background: lighten($color-secondary-header-bottom-button-orange, 7%);
-    }
+  &__button:hover {
+    background: lighten($color-secondary-header-bottom-button-orange, 7%);
   }
 }
+
+@media only screen and (max-width: 999px) {
+  .nav-container {
+    align-items: center;
+    flex-basis: auto;
+    flex-direction: column;
+  }
+
+  .nav-left {
+    flex-basis: auto;
+    margin-left: 0;
+  }
+
+  .nav-right,
+  .nav__button {
+    flex-basis: auto;
+  }
+}
+
+@media only screen and (max-width: 399px) {
+  .nav__link {
+    padding: 7px;
+  }
+}
+
+.dropdown {
+  display: inline-block;
+
+  &__content {
+    background-color: darken(#fff, 4%);
+    display: none;
+    min-width: 160px;
+    position: absolute;
+    text-decoration: none;
+    z-index: 1;
+  }
+
+  &:hover &__content,
+  &:focus &__content {
+    display: block;
+  }
+
+  &__link {
+    display: block;
+    padding: 15px;
+  }
+
+  &__link:hover {
+    background: darken(#fff, 7%);
+  }
+
+  &__link:link {
+    color: #000;
+  }
+}
+

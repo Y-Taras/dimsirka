@@ -14,7 +14,7 @@ const NewsCardItem = (props: any) => {
       <div className="news__card-content">
         <h2 className={'news__card-header'}>{title}</h2>
         <p className={'news__card-shot-text'}>
-          <Link to={'#'}>{props.attributes['short-description']}</Link>
+          <Link to={`/${props.urlPrefix}news/${props.id}`}>{props.attributes['short-description']}</Link>
         </p>
         <span className={'news__card-date'}>
           <FormattedDate value={image.created_at} />

@@ -1,4 +1,4 @@
-.header-container {
+.header-fixed {
   position: fixed;
   top: 0;
   width: 100%;
@@ -6,58 +6,60 @@
 }
 
 .header-block {
-  height: 83px;
+  height: 91px;
 }
 
 .header {
   background-color: #fff;
+  margin: auto;
+  max-width: 1310px;
   text-transform: uppercase;
 
   &__logo {
     left: 50%;
     position: fixed;
-    top: 22px;
+    top: 16px;
     transform: translateX(-50%);
-  }
-
-  &__top {
-    background-color: $color-secondary-header-top-background-green;
-    font-size: 0.75rem;
-    font-weight: 400;
-    line-height: 2;
   }
 
   &__bottom {
     align-items: center;
     display: flex;
-    flex-wrap: wrap;
     font-size: 0.875rem;
     font-weight: 400;
-    justify-content: space-between;
     line-height: 1.714;
   }
 }
 
 .contacts {
+  background-color: $color-secondary-header-top-background-green;
   display: flex;
-  justify-content: space-between;
+  font-size: 0.6875rem;
+  font-weight: 300;
+  line-height: 2.7;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    flex-basis: 100px;
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    flex-basis: 193px;
+  }
 }
 
 .contacts-left {
+  flex-basis: 555px;
   text-align: left;
-
-  .contact:first-child {
-    padding-left: 0;
-    padding-right: 0;
-  }
 }
 
 .contacts-right {
-  text-align: right;
-
-  .contact:last-child {
-    padding-right: 160px;
-  }
+  display: flex;
+  flex-basis: 462px;
+  justify-content: flex-end;
 }
 
 .contact {
@@ -69,5 +71,55 @@
 
   &--lang {
     color: $color-secondary-header-top-lang-orange;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .header__bottom {
+    align-items: center;
+    flex-basis: auto;
+    flex-direction: column;
+  }
+
+  .header__logo {
+    position: static;
+    transform: none;
+  }
+
+  .header-block {
+    height: 284px;
+  }
+
+  .contacts::before,
+  .contacts::after {
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 699px) {
+  .contacts {
+    align-items: center;
+    flex-basis: auto;
+    flex-direction: column;
+  }
+  .contacts-right,
+  .contacts-left {
+    flex-basis: auto;
+  }
+}
+
+@media only screen and (max-width: 399px) {
+  .header__bottom {
+    font-size: 0.75rem;
+  }
+
+  .header-block {
+    height: 289px;
+  }
+
+  .contacts {
+    font-size: 0.55rem;
+    padding: 5px;
   }
 }

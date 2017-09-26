@@ -1,17 +1,34 @@
 export default {
   en: {
     header: {
-      navigation: {
-        webcams: 'surveillance camera',
-        register: 'registration',
-        care: 'guardianship',
-        search: 'search',
-        news: 'news',
-        shop: 'store',
-        reg_animals: "animals' registration",
-        aboutUs: 'about us',
-        toHelp: 'help'
-      }
+        webcams: 'cameras online',
+        register: 'login/register',
+        ourAnimals: {
+          title: 'our animals',
+          takeDog: 'Take dog',
+          takeCat: 'Take cat',
+          careOnline: 'Online care'
+        },
+        projects: 'projects',
+        search: {
+          title: 'search animals',
+          lost: 'Lost',
+          found: 'Found'
+        },
+        news: {
+          title: 'news',
+          ourNews: 'Our news',
+          actions: 'Actions and events',
+          useful: 'Useful info'
+        },
+        shop: 'shop',
+        aboutUs: {
+          title: 'about us',
+          name: 'GO "Dim Sirka"',
+          team: 'Team',
+          partners: 'Partners'
+        },
+        support: 'support'
     },
     landing: {
       animalCard: {
@@ -63,74 +80,81 @@ export default {
     },
     footer: {
       contacts: {
-        tel: 'тел.'
+        title: 'контакти',
+        adr: 'с. Микитинці, вул. Шосейна 7/25'
       },
-      sitemap: {
-        care: {
-          title: 'опіка',
-          careOnline: 'Опіка онлайн',
-          adoption: 'Адопція',
-          homeBoarding: 'Перетримка'
-        },
-        search: {
-          title: 'пошук',
-          lostAnimals: 'Загублені тварини',
-          foundedAnimals: 'Знайдені тварини'
-        },
-        shop: {
-          title: 'Крамничка',
-          cups: 'Чашки',
-          tShirts: 'Футболки',
-          stickers: 'Наліпки',
-          notepads: 'Блокноти',
-          bags: 'Сумки',
-          magnetStickers: 'Магніти',
-          badges: 'Значки'
-        },
-        aboutUs: {
-          title: 'про нас',
-          report: 'Звітність',
-          history: 'Історія',
-          team: 'Команда',
-          partners: 'Партнери',
-          projects: 'Проекти'
-        },
-        help: {
-          title: 'допомога',
-          oneTime: 'Разова',
-          stuff: 'Речі',
-          volunteers: 'Волонтери',
-          seriouslyIll: 'Тяжко хворі',
-          contractSocial: 'Договір соціального опікуна'
-        },
-        reg_animals: 'реєстрація тварин',
-        webcams: 'камери спостреження',
-        news: 'новини'
-      }
+      ourAnimals: {
+        title: 'наші тварини',
+        takeDog: 'Взяти собаку',
+        takeCat: 'Взяти кота',
+        careOnline: 'Онлайн опіка'
+      },
+      search: {
+        title: 'пошук тварин',
+        lost: 'Загублені',
+        found: 'Знайдені'
+      },
+      aboutUs: {
+        title: 'про нас',
+        name: 'ГО "Дім Сірка"',
+        team: 'Команда',
+        partners: 'Партнери'
+      },
+      news: {
+        title: 'новини',
+        ourNews: 'Наші новини',
+        actions: 'Акції та події',
+        useful: 'Корисна інформація'
+      },
+      projects: 'проекти',
+      shop: 'крамниця',
+      webcams: 'онлайн-камери'
     },
     news: {
-      title: 'Новини',
+      title: 'News',
       navigation: {
-        interesting: 'Цікаве',
-        info: 'Інформація',
-        action: 'Акція'
+        interesting: 'Interesting',
+        info: 'Information',
+        action: 'Action',
+        all: 'All'
       },
-      readMore: 'читати далі'
+      readMore: 'more',
+      post: {
+        back: 'Back',
+        share: 'Share'
+      }
     }
   },
   ru: {
     header: {
-      navigation: {
-        webcams: 'камеры наблюдения',
-        register: 'регистрация',
-        care: 'опека',
-        search: 'поиск',
-        news: 'новости',
-        shop: 'магазин',
-        reg_animals: 'регистрация животных',
-        aboutUs: 'о нас',
-        toHelp: 'помочь'
-      }
+      webcams: 'камери наблюдения',
+      register: 'вход/регистрация',
+      ourAnimals: {
+        title: 'наші тварини',
+        takeDog: 'Взяти собаку',
+        takeCat: 'Взяти кота',
+        careOnline: 'Онлайн опіка'
+      },
+      projects: 'проекти',
+      search: {
+        title: 'пошук тварин',
+        lost: 'Загублені',
+        found: 'Знайдені'
+      },
+      news: {
+        title: 'новини',
+        ourNews: 'Наші новини',
+        actions: 'Акції та події',
+        useful: 'Корисна інформація'
+      },
+      shop: 'крамниця',
+      aboutUs: {
+        title: 'про нас',
+        name: 'ГО "Дім Сірка"',
+        team: 'Команда',
+        partners: 'Партнери'
+      },
+      support: 'підтримати'
     },
     landing: {
       animalCard: {
@@ -182,178 +206,175 @@ export default {
     },
     footer: {
       contacts: {
-        tel: 'тел.'
+        title: 'контакти',
+        adr: 'с. Микитинці, вул. Шосейна 7/25'
       },
-      sitemap: {
-        care: {
-          title: 'опіка',
-          careOnline: 'Опіка онлайн',
-          adoption: 'Адопція',
-          homeBoarding: 'Перетримка'
-        },
-        search: {
-          title: 'пошук',
-          lostAnimals: 'Загублені тварини',
-          foundedAnimals: 'Знайдені тварини'
-        },
-        shop: {
-          title: 'Крамничка',
-          cups: 'Чашки',
-          tShirts: 'Футболки',
-          stickers: 'Наліпки',
-          notepads: 'Блокноти',
-          bags: 'Сумки',
-          magnetStickers: 'Магніти',
-          badges: 'Значки'
-        },
-        aboutUs: {
-          title: 'про нас',
-          report: 'Звітність',
-          history: 'Історія',
-          team: 'Команда',
-          partners: 'Партнери',
-          projects: 'Проекти'
-        },
-        help: {
-          title: 'допомога',
-          oneTime: 'Разова',
-          stuff: 'Речі',
-          volunteers: 'Волонтери',
-          seriouslyIll: 'Тяжко хворі',
-          contractSocial: 'Договір соціального опікуна'
-        },
-        reg_animals: 'реєстрація тварин',
-        webcams: 'камери спостреження',
-        news: 'новини'
-      }
+      ourAnimals: {
+        title: 'наші тварини',
+        takeDog: 'Взяти собаку',
+        takeCat: 'Взяти кота',
+        careOnline: 'Онлайн опіка'
+      },
+      search: {
+        title: 'пошук тварин',
+        lost: 'Загублені',
+        found: 'Знайдені'
+      },
+      aboutUs: {
+        title: 'про нас',
+        name: 'ГО "Дім Сірка"',
+        team: 'Команда',
+        partners: 'Партнери'
+      },
+      news: {
+        title: 'новини',
+        ourNews: 'Наші новини',
+        actions: 'Акції та події',
+        useful: 'Корисна інформація'
+      },
+      projects: 'проекти',
+      shop: 'крамниця',
+      webcams: 'онлайн-камери'
     },
     news: {
-      title: 'Новини',
+      title: 'Новости',
       navigation: {
-        interesting: 'Цікаве',
-        info: 'Інформація',
-        action: 'Акція'
+        interesting: 'Интересное',
+        info: 'Информация',
+        action: 'Акция',
+        all: 'Все'
       },
-      readMore: 'читати далі'
+      readMore: 'читать дальше',
+      post: {
+        back: 'Назад',
+        share: 'Поделиться'
+      }
     }
   },
   uk: {
     header: {
-      navigation: {
         webcams: 'камери спостереження',
-        register: 'реєстрація',
-        care: 'опіка',
-        search: 'пошук',
-        news: 'новини',
-        shop: 'крамниця',
-        reg_animals: 'реєстрація тварин',
-        aboutUs: 'про нас',
-        toHelp: 'допомогти'
-      }
-    },
-    landing: {
-      animalCard: {
-        breed: 'Порода',
-        sex: 'Стать',
-        color: 'Окрас',
-        birthday: 'Дата народження',
-        toHelp: 'допомогти'
-      },
-      hero: {
-        title: 'Допомагай тваринкам онлайн',
-        unit_cats: 'котики',
-        unit_dogs: 'песики',
-        care: 'опіка',
-        adoption: 'адопція'
-      },
-      workFlow: {
-        header: {
-          link1: 'опіка',
-          link2: 'адопція'
+        register: 'вхід/реєстрація',
+        ourAnimals: {
+          title: 'наші тварини',
+          takeDog: 'Взяти собаку',
+          takeCat: 'Взяти кота',
+          careOnline: 'Онлайн опіка'
         },
-        title: 'Як це працює?',
-        card: {
-          title1: 'Притулок для тварин',
-          title2: 'Стерилізація',
-          title3: 'Лікування',
-          text1:
-            'Притулок у с.Загвіздя – тут знайшли прихисток 160 песиків. Наш притулок утримується виключно за рахунок благодійних внесків і силами лише декількох волонтерів, тому постійно потребує допомоги: руками грошима, їжею, ліками… Будь-яка допомога – безцінна!',
-          text2:
-            'Притулок у с.Загвіздя – тут знайшли прихисток 160 песиків. Наш притулок утримується виключно за рахунок благодійних внесків і силами лише декількох волонтерів, тому постійно потребує допомоги: руками грошима, їжею, ліками… Будь-яка допомога – безцінна!',
-          text3:
-            'Притулок у с.Загвіздя – тут знайшли прихисток 160 песиків. Наш притулок утримується виключно за рахунок благодійних внесків і силами лише декількох волонтерів, тому постійно потребує допомоги: руками грошима, їжею, ліками… Будь-яка допомога – безцінна!',
-          buttonText: 'Детальніше'
+        projects: 'проекти',
+        search: {
+          title: 'пошук тварин',
+          lost: 'Загублені',
+          found: 'Знайдені'
+        },
+        news: {
+          title: 'новини',
+          ourNews: 'Наші новини',
+          actions: 'Акції та події',
+          useful: 'Корисна інформація'
+        },
+        shop: 'крамниця',
+        aboutUs: {
+          title: 'про нас',
+          name: 'ГО "Дім Сірка"',
+          team: 'Команда',
+          partners: 'Партнери'
+        },
+        support: 'підтримати'
+      },
+      landing: {
+        animalCard: {
+          breed: 'Порода',
+          sex: 'Стать',
+          color: 'Окрас',
+          birthday: 'Дата народження',
+          toHelp: 'допомогти'
+        },
+        hero: {
+          title: 'Допомагай тваринкам онлайн',
+          unit_cats: 'котики',
+          unit_dogs: 'песики',
+          care: 'опіка',
+          adoption: 'адопція'
+        },
+        workFlow: {
+          header: {
+            link1: 'опіка',
+            link2: 'адопція'
+          },
+          title: 'Як це працює?',
+          card: {
+            title1: 'Притулок для тварин',
+            title2: 'Стерилізація',
+            title3: 'Лікування',
+            text1:
+              'Притулок у с.Загвіздя – тут знайшли прихисток 160 песиків. Наш притулок утримується виключно за рахунок благодійних внесків і силами лише декількох волонтерів, тому постійно потребує допомоги: руками грошима, їжею, ліками… Будь-яка допомога – безцінна!',
+            text2:
+              'Притулок у с.Загвіздя – тут знайшли прихисток 160 песиків. Наш притулок утримується виключно за рахунок благодійних внесків і силами лише декількох волонтерів, тому постійно потребує допомоги: руками грошима, їжею, ліками… Будь-яка допомога – безцінна!',
+            text3:
+              'Притулок у с.Загвіздя – тут знайшли прихисток 160 песиків. Наш притулок утримується виключно за рахунок благодійних внесків і силами лише декількох волонтерів, тому постійно потребує допомоги: руками грошима, їжею, ліками… Будь-яка допомога – безцінна!',
+            buttonText: 'Детальніше'
+          }
+        },
+        achievements: {
+          title: {
+            header: 'Наші успіхи',
+            text: 'Витрачено на лікування',
+            money: '1 млн грн'
+          },
+          placed: 'тваринок прилаштовано',
+          sterilized: 'стерилізовано',
+          cured: 'пройшли лікування'
+        },
+        partners: {
+          title: 'Партнери'
         }
       },
-      achievements: {
-        title: {
-          header: 'Наші успіхи',
-          text: 'Витрачено на лікування',
-          money: '1 млн грн'
+      footer: {
+        contacts: {
+          title: 'контакти',
+          adr: 'с. Микитинці, вул. Шосейна 7/25'
         },
-        placed: 'тваринок прилаштовано',
-        sterilized: 'стерилізовано',
-        cured: 'пройшли лікування'
-      },
-      partners: {
-        title: 'Партнери'
-      }
-    },
-    footer: {
-      contacts: {
-        tel: 'тел.'
-      },
-      sitemap: {
-        care: {
-          title: 'опіка',
-          careOnline: 'Опіка онлайн',
-          adoption: 'Адопція',
-          homeBoarding: 'Перетримка'
+        ourAnimals: {
+          title: 'наші тварини',
+          takeDog: 'Взяти собаку',
+          takeCat: 'Взяти кота',
+          careOnline: 'Онлайн опіка'
         },
         search: {
-          title: 'пошук',
-          lostAnimals: 'Загублені тварини',
-          foundedAnimals: 'Знайдені тварини'
-        },
-        shop: {
-          title: 'Крамничка',
-          cups: 'Чашки',
-          tShirts: 'Футболки',
-          stickers: 'Наліпки',
-          notepads: 'Блокноти',
-          bags: 'Сумки',
-          magnetStickers: 'Магніти',
-          badges: 'Значки'
+          title: 'пошук тварин',
+          lost: 'Загублені',
+          found: 'Знайдені'
         },
         aboutUs: {
           title: 'про нас',
-          report: 'Звітність',
-          history: 'Історія',
+          name: 'ГО "Дім Сірка"',
           team: 'Команда',
-          partners: 'Партнери',
-          projects: 'Проекти'
+          partners: 'Партнери'
         },
-        help: {
-          title: 'допомога',
-          oneTime: 'Разова',
-          stuff: 'Речі',
-          volunteers: 'Волонтери',
-          seriouslyIll: 'Тяжко хворі',
-          contractSocial: 'Договір соціального опікуна'
+        news: {
+          title: 'новини',
+          ourNews: 'Наші новини',
+          actions: 'Акції та події',
+          useful: 'Корисна інформація'
         },
-        reg_animals: 'реєстрація тварин',
-        webcams: 'камери спостреження',
-        news: 'новини'
-      }
-    },
-    news: {
-      title: 'Новини',
-      navigation: {
-        interesting: 'Цікаве',
-        info: 'Інформація',
-        action: 'Акція'
+        projects: 'проекти',
+        shop: 'крамниця',
+        webcams: 'онлайн-камери'
       },
-      readMore: 'читати далі'
+      news: {
+        title: 'Новини',
+        navigation: {
+          interesting: 'Цікаве',
+          info: 'Інформація',
+          action: 'Акція',
+          all: 'Все'
+        },
+        readMore: 'читати далі',
+        post: {
+          back: 'Назад',
+          share: 'Поділитись'
+        }
+      }
     }
-  }
 };
