@@ -9,7 +9,9 @@ const Header = (props: { history: RouterHistory, location: Location, urlPrefix: 
   <div>
     <div className="header-fixed">
       <header className="header">
-        <Contacts {...props} />
+        <div className="contacts__background">
+          <Contacts {...props} />
+        </div>
         <Navigation urlPrefix={props.urlPrefix} />
       </header>
     </div>

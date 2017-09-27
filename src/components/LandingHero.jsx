@@ -7,7 +7,7 @@ import AnimalCard from '../components/AnimalCard';
 
 const LandingHero = ({ animalsNumber }: { animalsNumber: { cats: number, dogs: number } }) => (
   <section className="hero">
-    <div className="container container--flex">
+    <div className="container hero__container">
       <div className="hero--left">
         <h1 className="hero__title">
           <FormattedMessage id="landing.hero.title" />
