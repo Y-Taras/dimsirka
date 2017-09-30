@@ -327,7 +327,10 @@ export default {
           cured: 'пройшли лікування'
         },
         partners: {
-          title: 'Партнери'
+          title: 'Партнери',
+          sponsors: '',
+          projectPartners: '',
+          join: ''
         }
       },
       footer: {

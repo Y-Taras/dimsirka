@@ -2,7 +2,7 @@
   &__title {
     color: $color-main-landing-text-black;
     font-size: 2.625rem;
-    font-weight: bold;
+    font-weight: 300;
     line-height: 0.74;
     margin: 66px 0 0;
     text-align: center;
@@ -10,6 +10,7 @@
 
   &__logos {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
   }
 
@@ -29,5 +30,15 @@
     background-image: url('/dist/images/logo_coax.png');
     height: 167px;
     width: 192px;
+  }
+
+  @media only screen and (max-width: 700px) {
+    &__title {
+      margin-top: 25px;
+    }
+
+    &__logo {
+      margin: 10px;
+    }
   }
 }

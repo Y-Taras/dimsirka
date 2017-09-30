@@ -1,17 +1,22 @@
 .icon {
-  &__facebook {
-    background-image: url('/dist/images/icon_facebook.png');
-    display: inline-block;
-    height: 42px;
-    opacity: 0.42;
-    width: 42px;
+  background: url('/dist/images/icons.png') no-repeat top left;
+  height: 32px;
+  width: 32px;
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background: url('/dist/images/icons-retina.png') no-repeat top left;
+    background-size: 99px 32px;
   }
 
-  &__instagram {
-    background-image: url('/dist/images/icon_instagram.png');
-    display: inline-block;
-    height: 42px;
-    opacity: 0.42;
-    width: 42px;
+  &--facebook {
+    background-position: 0 0;
+  }
+
+  &--instagram {
+    background-position: -33px 0;
+  }
+
+  &--me {
+    background-position: -66px 0;
   }
 }

@@ -1,8 +1,11 @@
 // @flow
 
-import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
-import { FormattedMessage } from 'react-intl'
+import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
+/*
+import CSSTransitionGroup from 'react-addons-css-transition-group';
+*/
 
 const Navigation = ({ urlPrefix }: { urlPrefix: string }) => (
   <div className="header__bottom">
@@ -36,14 +39,20 @@ const Navigation = ({ urlPrefix }: { urlPrefix: string }) => (
           <NavLink className="nav__link" to={`/${urlPrefix}ourAnimals`}>
             <FormattedMessage id="header.search.title" />
           </NavLink>
-          <div className="dropdown__content">
-            <NavLink className="dropdown__link" to={`/${urlPrefix}takeDog`}>
-              <FormattedMessage id="header.search.lost" />
-            </NavLink>
-            <NavLink className="dropdown__link" to={`/${urlPrefix}takeCat`}>
-              <FormattedMessage id="header.search.found" />
-            </NavLink>
-          </div>
+{/*          <CSSTransitionGroup transitionName="accordion"
+                              transitionEnterTimeout={300}
+                              transitionLeaveTimeout={300}> */}
+            <div className="dropdown__content">
+              <NavLink className="dropdown__link" to={`/${urlPrefix}takeDog`}>
+                <FormattedMessage id="header.search.lost" />
+              </NavLink>
+              <NavLink className="dropdown__link" to={`/${urlPrefix}takeCat`}>
+                <FormattedMessage id="header.search.found" />
+              </NavLink>
+            </div>
+{/*
+          </CSSTransitionGroup>
+*/}
         </div>
       </nav>
     </div>
@@ -90,6 +99,6 @@ const Navigation = ({ urlPrefix }: { urlPrefix: string }) => (
       </NavLink>
     </div>
   </div>
-)
+);
 
-export default Navigation
+export default Navigation;

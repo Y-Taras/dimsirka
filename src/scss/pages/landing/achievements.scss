@@ -5,6 +5,12 @@
   background-color: #daf9f4;
   background-image: url('/dist/images/achievements_background.png');
 
+  &__flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
   &__success {
     text-align: center;
   }
@@ -17,12 +23,14 @@
     width: 107px;
   }
 
-  &__stats {
-    width: 64.25%;
+  &__success {
+    flex-basis: 29%;
   }
 
-  &__success {
-    width: 28.5%;
+  &__stats {
+    align-items: center;
+    display: flex;
+    flex-basis: 64%;
   }
 
   &__success-title {
@@ -31,6 +39,7 @@
     font-weight: bold;
     line-height: 0.74;
     margin: 0;
+    white-space: nowrap;
   }
 
   &__success-text {
@@ -39,6 +48,7 @@
     font-weight: bold;
     line-height: 1.55;
     margin: 57px 0 21px;
+    white-space: nowrap;
   }
 
   &__success-million {
@@ -47,6 +57,7 @@
     font-weight: bold;
     line-height: 0.55;
     margin-bottom: 67px;
+    white-space: nowrap;
   }
 
   &__category-data {
@@ -65,5 +76,59 @@
     line-height: 1.29;
     padding-left: 50px;
     vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    &__list {
+    }
+
+    &__category-data {
+      font-size: 4rem;
+    }
+
+    &__success-million {
+      font-size: 3rem;
+    }
+  }
+  @media only screen and (max-width: 700px) {
+    &__list {
+      padding-left: 15px;
+    }
+
+    &__category-data {
+      font-size: 3rem;
+      padding-left: 0;
+    }
+
+    &__category {
+      padding-left: 15px;
+    }
+
+    &__success-million {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    &__item {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__category-data,
+    &__category {
+      display: block;
+    }
+
+    &__category {
+      font-size: 1.3rem;
+    }
+
+    &__success-million {
+      margin-bottom: 20px;
+    }
   }
 }

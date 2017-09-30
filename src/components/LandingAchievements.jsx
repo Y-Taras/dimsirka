@@ -11,7 +11,7 @@ const achievs = {
 
 const LandingAchievements = () => (
   <section className="achievements">
-    <div className="container container--flex">
+    <div className="container achievements__flex">
       <div className="achievements__success">
         <div className="achievements__icon" />
         <h3 className="achievements__success-title">
@@ -25,7 +25,7 @@ const LandingAchievements = () => (
         </div>
       </div>
       <div className="achievements__stats">
-        <ul className="achievments__list">
+        <ul className="achievements__list">
           <li className="achievements__item">
             <span className="achievements__category-data">{achievs.placed}</span>
             <span className="achievements__category">

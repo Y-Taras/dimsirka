@@ -45,10 +45,10 @@ const Contacts = ({
         <div className="contact" onClick={changeLang('ru')} role={'button'} tabIndex={0}>
           <span className={lang === 'ru' ? langClass : ''}>рус</span>
         </div>
-        <a className="contact" href="tel:+380997124680">
+        <a className="contact contact--mobile" href="tel:+380997124680">
           <span className="contact__text">(099)71 24 680</span>
         </a>
-        <a className="contact" href="mailto:dimsirka@gmail.com">
+        <a className="contact contact--mobile" href="mailto:dimsirka@gmail.com">
           <span className="contact__text">dimsirka@gmail.com</span>
         </a>
       </div>
