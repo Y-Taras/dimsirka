@@ -1,10 +1,10 @@
-.icon {
-  background: url('/dist/images/icons.png') no-repeat top left;
+.footer__icon {
+  background: url('/dist/images/footer_icons.png') no-repeat top left;
   height: 32px;
   width: 32px;
 
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    background: url('/dist/images/icons-retina.png') no-repeat top left;
+    background: url('/dist/images/footer_icons2x.png') no-repeat top left;
     background-size: 99px 32px;
   }
 
@@ -18,5 +18,60 @@
 
   &--me {
     background-position: -66px 0;
+  }
+}
+
+.landing__icon {
+  background-image: url('/dist/images/landing_sprites.png');
+
+  @media (min--moz-device-pixel-ratio: 1.5),
+    (-o-min-device-pixel-ratio: 3/2),
+    (-webkit-min-device-pixel-ratio: 1.5),
+    (min-device-pixel-ratio: 1.5),
+    (min-resolution: 1.5dppx) {
+    background-image: url('/dist/images/landing_spritesx2.png');
+    background-size: 721px 150px;
+  }
+
+  &--house {
+    width: 80px;
+    height: 80px;
+    background-position: 0 0;
+  }
+
+  &--steril {
+    width: 80px;
+    height: 79px;
+    background-position: -80px 0;
+  }
+
+  &--curing {
+    width: 56px;
+    height: 80px;
+    background-position: -160px 0;
+  }
+
+  &--medal {
+    width: 55px;
+    height: 60px;
+    background-position: -216px 0;
+  }
+
+  &--placed {
+    width: 150px;
+    height: 150px;
+    background-position: -271px 0;
+  }
+
+  &--sterilized {
+    width: 150px;
+    height: 150px;
+    background-position: -421px 0;
+  }
+
+  &--cured {
+    width: 150px;
+    height: 150px;
+    background-position: -571px 0;
   }
 }

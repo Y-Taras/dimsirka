@@ -7,9 +7,10 @@ import { FormattedMessage } from 'react-intl';
 
 import type { RouterHistory } from 'react-router-dom';
 
-import { getPost, setNewsCategory } from '../actions/actionCreators';
+import { setNewsCategory } from '../actions/commonActions';
 import { getLang } from '../reducers/locale';
-import NewsNavigationItem from '../components/NewsNavigationItem';
+import NewsNavigationItem from '../components/PostsNavigation';
+import { getPost } from '../actions/postActions'
 
 class Post extends Component {
   componentDidMount() {

@@ -75,7 +75,10 @@ export default {
         cured: 'пройшли лікування'
       },
       partners: {
-        title: 'Партнери'
+        title: 'Партнери',
+        sponsors: 'головні спонсори',
+        projectPartners: 'партнери проекту',
+        join: 'Долучитися'
       }
     },
     footer: {
@@ -201,7 +204,10 @@ export default {
         cured: 'пройшли лікування'
       },
       partners: {
-        title: 'Партнери'
+        title: 'Партнери',
+        sponsors: 'головні спонсори',
+        projectPartners: 'партнери проекту',
+        join: 'Долучитися'
       }
     },
     footer: {
@@ -328,9 +334,9 @@ export default {
         },
         partners: {
           title: 'Партнери',
-          sponsors: '',
-          projectPartners: '',
-          join: ''
+          sponsors: 'головні спонсори',
+          projectPartners: 'партнери проекту',
+          join: 'Долучитися'
         }
       },
       footer: {

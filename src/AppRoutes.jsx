@@ -8,7 +8,7 @@ import { getPrefix } from './reducers/locale';
 
 import Landing from './containers/Landing';
 import Webcams from './containers/Webcams';
-import News from './containers/News';
+import News from './containers/Posts';
 import Post from './containers/Post';
 import Header from './containers/Header';
 import Footer from './components/Footer';

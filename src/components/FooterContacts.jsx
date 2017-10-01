@@ -24,7 +24,7 @@ const FooterContacts = () => (
     <div className="footer__social">
       <a
         href="https://www.facebook.com/groups/dimsirka"
-        className="footer__social-icon icon icon--facebook"
+        className="footer__social-icon footer__icon footer__icon--facebook"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -32,7 +32,7 @@ const FooterContacts = () => (
       </a>
       <a
         href="https://www.instagram.com/dim__sirka"
-        className="footer__social-icon icon icon--instagram"
+        className="footer__social-icon footer__icon footer__icon--instagram"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -40,7 +40,7 @@ const FooterContacts = () => (
       </a>
       <a
         href="https://www.gofundme.com/DimSirkaIF"
-        className="footer__social-icon icon icon--me"
+        className="footer__social-icon footer__icon footer__icon--me"
         target="_blank"
         rel="noopener noreferrer"
       >

@@ -1,23 +1,55 @@
 // @flow
 
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
 import LandingHero from '../components/LandingHero';
 import LandingWorkFlow from '../components/LandingWorkFlow';
 import LandingAchievements from '../components/LandingAchievements';
 import LandingPartners from '../components/LandingPartners';
+
+import { getRandomAnimalData } from '../actions/landingActions';
+import { getLang } from '../reducers/locale';
+import randomAnimalData from '../reducers/landing'
 
 const animalsNumber = {
   cats: 123,
   dogs: 529
 };
 
-const Landing = () => (
-  <div>
-    <LandingHero animalsNumber={animalsNumber} />
-    <LandingWorkFlow />
-    <LandingAchievements />
-    <LandingPartners />
-  </div>
-);
+type Props = {
+  getRandomAnimal: Function,
+  lang: string,
+  randomAnimal: randomAnimalData
+};
 
-export default Landing;
+class Landing extends Component {
+  componentDidMount() {
+    this.props.getRandomAnimal(this.props.lang, 'dog');
+  }
+
+  props: Props;
+
+  render() {
+    return (
+      <div>
+        <LandingHero animalsNumber={animalsNumber} randomAnimal={this.props.randomAnimal} />
+        <LandingWorkFlow />
+        <LandingAchievements />
+        <LandingPartners />
+      </div>
+    );
+  }
+}
+const mapStateToProps = state => {
+  const lang = getLang(state.locale);
+  const randomAnimal = state.randomAnimalData;
+  return { lang, randomAnimal };
+};
+const mapDispatchToProps = (dispatch: Function) => ({
+  getRandomAnimal(lang, type) {
+    dispatch(getRandomAnimalData(lang, type));
+  }
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Landing);

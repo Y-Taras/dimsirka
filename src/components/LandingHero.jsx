@@ -5,7 +5,13 @@ import { FormattedMessage } from 'react-intl';
 
 import AnimalCard from '../components/AnimalCard';
 
-const LandingHero = ({ animalsNumber }: { animalsNumber: { cats: number, dogs: number } }) => (
+const LandingHero = ({
+  animalsNumber,
+  randomAnimal
+}: {
+  animalsNumber: { cats: number, dogs: number },
+  randomAnimal: any
+}) => (
   <section className="hero">
     <div className="container hero__container">
       <div className="hero--left">
@@ -26,7 +32,7 @@ const LandingHero = ({ animalsNumber }: { animalsNumber: { cats: number, dogs: n
         </div>
       </div>
       <div className="hero--right">
-        <AnimalCard />
+        <AnimalCard randomAnimal={randomAnimal} />
       </div>
     </div>
   </section>

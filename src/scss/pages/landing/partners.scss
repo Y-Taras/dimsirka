@@ -8,11 +8,6 @@
     text-align: center;
   }
 
-  &__logos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
 
   &__logo {
     display: inline-block;
@@ -33,12 +28,5 @@
   }
 
   @media only screen and (max-width: 700px) {
-    &__title {
-      margin-top: 25px;
-    }
-
-    &__logo {
-      margin: 10px;
-    }
   }
 }

@@ -7,9 +7,9 @@ import uk_UA from 'rc-pagination/es/locale/uk_UA';
 import en_US from 'rc-pagination/es/locale/en_US';
 import ru_RU from 'rc-pagination/es/locale/ru_RU';
 
-import NewsCardItem from './NewsCardItem';
+import PostsCardItem from './PostsCardItem';
 
-const NewsCards = ({
+const PostsCards = ({
   onChange,
   posts,
   urlPrefix
@@ -37,11 +37,11 @@ const NewsCards = ({
   return (
     <section className={'news__cards'}>
       <div className="container">
-        {posts.apiData.map(item => <NewsCardItem key={item.id} urlPrefix={urlPrefix} {...item} />)}
+        {posts.apiData.map(item => <PostsCardItem key={item.id} urlPrefix={urlPrefix} {...item} />)}
       </div>
       <Pagination defaultCurrent={1} pageSize={4} onChange={onChange} total={posts.total} locale={locale} />
     </section>
   );
 };
 
-export default NewsCards;
+export default PostsCards;

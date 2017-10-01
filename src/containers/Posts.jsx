@@ -5,10 +5,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 
-import NewsCards from '../components/NewsCards';
-import { getPostList, setNewsCategory } from '../actions/actionCreators';
+import PostsCards from '../components/PostsCards';
+import { setNewsCategory } from '../actions/commonActions';
 import { getLang, getPrefix } from '../reducers/locale';
-import NewsNavigationItem from '../components/NewsNavigationItem';
+import PostsNavigation from '../components/PostsNavigation';
+import { getPostList } from '../actions/postsActions'
 
 type Props = {
   urlPrefix: string,
@@ -45,12 +46,12 @@ class News extends Component {
 
   render() {
     const { postList, urlPrefix } = this.props;
-    let renderNewsCards;
+    let renderPostsCards;
 
     if (!(Object.keys(postList).length === 0 && postList.constructor === Object)) {
-      renderNewsCards = <NewsCards onChange={this.onPageChange} posts={postList} urlPrefix={urlPrefix} />;
+      renderPostsCards = <PostsCards onChange={this.onPageChange} posts={postList} urlPrefix={urlPrefix} />;
     } else {
-      renderNewsCards = <p style={{ textAlign: 'center' }}>Loader...</p>;
+      renderPostsCards = <p style={{ textAlign: 'center' }}>Loader...</p>;
     }
     return (
       <section className={'news'}>
@@ -59,10 +60,10 @@ class News extends Component {
         </div>
         <div className={'news__nav-links'}>
           {['interesting', 'info', 'action', 'all'].map((item, index) => (
-            <NewsNavigationItem key={item} id={index + 3} text={item} onCategoryChange={this.onCategoryChange} />
+            <PostsNavigation key={item} id={index + 3} text={item} onCategoryChange={this.onCategoryChange} />
           ))}
         </div>
-        {renderNewsCards}
+        {renderPostsCards}
       </section>
     );
   }

@@ -55,6 +55,21 @@ export type Post = {
   }
 };
 
+export type RandomAnimal =  {
+  id: string,
+  type: string,
+  attributes: {
+    name: string,
+    images: Image[],
+    statuses: any[],
+    amount: string,
+    age: string,
+    gender: string,
+    sterilization: string,
+    breed: string,
+  }
+};
+
 declare var module: {
   hot: {
     accept(path: string, callback: () => void): void

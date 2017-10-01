@@ -7,7 +7,7 @@ import en from 'react-intl/locale-data/en';
 import uk from 'react-intl/locale-data/uk';
 import ru from 'react-intl/locale-data/ru';
 import { connect } from 'react-redux';
-import { setLocale } from './actions/actionCreators';
+import { setLocale } from './actions/commonActions';
 
 import { flattenMessages } from './utils';
 import messages from './constants/messages';

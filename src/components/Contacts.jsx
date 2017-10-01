@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import type { RouterHistory, Location } from 'react-router-dom';
 
 import { getLang } from '../reducers/locale';
-import { setLocale } from '../actions/actionCreators';
+import { setLocale } from '../actions/commonActions';
 import { switchLangHepler } from '../utils';
 
 const Contacts = ({

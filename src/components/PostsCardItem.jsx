@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FormattedDate } from 'react-intl';
 
-const NewsCardItem = (props: any) => {
+const PostsCardItem = (props: any) => {
   const { image, title } = props.attributes;
   return (
     <article className={'news__card'}>
@@ -24,4 +24,4 @@ const NewsCardItem = (props: any) => {
   );
 };
 
-export default NewsCardItem;
+export default PostsCardItem;
