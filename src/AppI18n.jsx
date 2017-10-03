@@ -37,7 +37,8 @@ const AppI18n = (props: { setLocaleData: Function, locale: string, lang: string 
   }
   return (
     <h1 style={{ display: 'flex', justifyContent: 'center', color: 'grey', fontSize: '1.4rem' }}>
-      Oops something is wrong...{JSON.stringify(props)}
+      Oops something is wrong...
+      props:{JSON.stringify(props, null, 4)}
     </h1>
   );
 };

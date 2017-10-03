@@ -10,7 +10,21 @@ export function addPostListData(apiData: Array<Content>, total: string) {
 }
 
 
-export function getPostList(locale: string, page?: number | null = null, categoryId?: number | null = null) {
+export function getPostList(locale: string, page?: number | null = null, category?: string | null = null) {
+  let categoryId;
+  switch (category) {
+    case ('our'):
+      categoryId = 3;
+      break;
+    case ('actions'):
+      categoryId = 4;
+      break;
+    case ('info'):
+      categoryId = 5;
+      break;
+    default:
+      categoryId = null;
+  }
   let REQURL;
   if (categoryId === null && page === null) {
     REQURL = `${SERVER}/api/v1/posts?locale=${locale}`;

@@ -9,7 +9,7 @@
   }
 
 
-  &__logo {
+  &__sponsors-logo {
     display: inline-block;
     margin: 8px 55px 90px;
     vertical-align: top;
@@ -17,15 +17,29 @@
 
   &__logo--1st {
     background-image: url('/dist/images/logo_uteam.png');
+    background-repeat: no-repeat;
     height: 171px;
     width: 174px;
   }
 
   &__logo--2nd {
     background-image: url('/dist/images/logo_coax.png');
+    background-repeat: no-repeat;
     height: 167px;
     width: 192px;
   }
+
+  &__small-title {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 300;
+    opacity: 0.75;
+    color: #3B3B3B;
+    text-align: center;
+  }
+
+
+
 
   @media only screen and (max-width: 700px) {
   }

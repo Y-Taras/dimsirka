@@ -9,20 +9,19 @@ const LandingPartners = () => (
       <h3 className="partners__title">
         <FormattedMessage id="landing.partners.title" />
       </h3>
-      <h4 className="partners__sponsors-title">
+      <h4 className="partners__small-title">
         <FormattedMessage id="landing.partners.sponsors" />
       </h4>
-      <a href="https://uteam.ua" className="partners__sponsors-logo" target="_blank" rel="noopener noreferrer">
+      <a href="https://uteam.ua" className="partners__sponsors-logo partners__logo--1st" target="_blank" rel="noopener noreferrer">
         <span className={'visuallyhidden'}>Uteam link</span>
       </a>
-      <a href="https://coaxsoft.com" className="partners__sponsors-logo" target="_blank" rel="noopener noreferrer">
+      <a href="https://coaxsoft.com" className="partners__sponsors-logo partners__logo--2nd" target="_blank" rel="noopener noreferrer">
         <span className={'visuallyhidden'}>Coax link</span>
       </a>
-      <h4 className="patners__list-title">
+      <h4 className="partners__small-title">
         <FormattedMessage id={'landing.partners.projectPartners'} />
       </h4>
-      <div className="partners__list">list
-      </div>
+      <div className="partners__list">List would be here..</div>
     </div>
   </section>
 );

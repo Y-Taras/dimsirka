@@ -32,10 +32,10 @@ export default {
     },
     landing: {
       animalCard: {
-        breed: 'breed',
-        sex: 'sex',
-        color: 'coloration',
-        birthday: 'Date of birth',
+        breed: 'Breed',
+        age: 'Age',
+        gender: 'Gender',
+        unknown: 'unknown',
         toHelp: 'help'
       },
       hero: {
@@ -50,7 +50,7 @@ export default {
           link1: 'опіка',
           link2: 'адопція'
         },
-        title: 'Як це працює?',
+        title: 'Як ми допомагаємо тваринам?',
         card: {
           title1: 'Притулок для тварин',
           title2: 'Стерилізація',
@@ -162,9 +162,9 @@ export default {
     landing: {
       animalCard: {
         breed: 'Порода',
-        sex: 'Пол',
-        color: 'Окраска',
-        birthday: 'Дата рождения',
+        age: 'Возраст',
+        gender: 'Пол',
+        unknown: 'неизвестно',
         toHelp: 'помочь'
       },
       hero: {
@@ -291,9 +291,9 @@ export default {
       landing: {
         animalCard: {
           breed: 'Порода',
-          sex: 'Стать',
-          color: 'Окрас',
-          birthday: 'Дата народження',
+          age: 'Вік',
+          gender: 'Стать',
+          unknown: 'невідомо',
           toHelp: 'допомогти'
         },
         hero: {

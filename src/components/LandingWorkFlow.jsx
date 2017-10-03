@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 
-const icons = ['house', 'syringe', 'cross'];
+const icons = ['house', 'steril', 'curring'];
 
 const LandingWorkFlow = () => (
   <section className="work-flow">
@@ -24,7 +24,7 @@ const LandingWorkFlow = () => (
         <ul className="work-flow__list">
           {icons.map((iconName, index) => (
             <li className="work-flow__item" key={iconName}>
-              <div className={`icon sprites icon_${iconName}`} />
+              <div className={`landing__icon landing__icon--${iconName}`} />
               <h3 className="work-flow__item-header">
                 <FormattedMessage id={`landing.workFlow.card.title${index + 1}`} />
               </h3>

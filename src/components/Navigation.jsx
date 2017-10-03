@@ -3,9 +3,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
-/*
-import CSSTransitionGroup from 'react-addons-css-transition-group';
-*/
+import AccordionSection from './NavigationAccordion';
 
 const Navigation = ({ urlPrefix }: { urlPrefix: string }) => (
   <div className="header__bottom">
@@ -16,72 +14,47 @@ const Navigation = ({ urlPrefix }: { urlPrefix: string }) => (
     </div>
     <div className="nav-container">
       <nav className="nav nav-left">
-        <div className="dropdown">
-          <span className="nav__link">
-            <FormattedMessage id="header.ourAnimals.title" />
-          </span>
-          <div className="dropdown__content">
-            <NavLink className="dropdown__link" to={`/${urlPrefix}takeDog`}>
-              <FormattedMessage id="header.ourAnimals.takeDog" />
-            </NavLink>
-            <NavLink className="dropdown__link" to={`/${urlPrefix}takeCat`}>
-              <FormattedMessage id="header.ourAnimals.takeCat" />
-            </NavLink>
-            <NavLink className="dropdown__link" to={`/${urlPrefix}onlineCare`}>
-              <FormattedMessage id="header.ourAnimals.careOnline" />
-            </NavLink>
-          </div>
-        </div>
+        <AccordionSection title={'ourAnimals'}>
+          <NavLink className="dropdown__link" to={`/${urlPrefix}takeDog`}>
+            <FormattedMessage id="header.ourAnimals.takeDog" />
+          </NavLink>
+          <NavLink className="dropdown__link" to={`/${urlPrefix}takeCat`}>
+            <FormattedMessage id="header.ourAnimals.takeCat" />
+          </NavLink>
+          <NavLink className="dropdown__link" to={`/${urlPrefix}onlineCare`}>
+            <FormattedMessage id="header.ourAnimals.careOnline" />
+          </NavLink>
+        </AccordionSection>
         <NavLink className="nav__link" to={`/${urlPrefix}projects`}>
           <FormattedMessage id="header.projects" />
         </NavLink>
-        <div className="dropdown">
-          <NavLink className="nav__link" to={`/${urlPrefix}ourAnimals`}>
-            <FormattedMessage id="header.search.title" />
+        <AccordionSection title={'search'}>
+          <NavLink className="dropdown__link" to={`/${urlPrefix}#`}>
+            <FormattedMessage id="header.search.lost" />
           </NavLink>
-{/*          <CSSTransitionGroup transitionName="accordion"
-                              transitionEnterTimeout={300}
-                              transitionLeaveTimeout={300}> */}
-            <div className="dropdown__content">
-              <NavLink className="dropdown__link" to={`/${urlPrefix}takeDog`}>
-                <FormattedMessage id="header.search.lost" />
-              </NavLink>
-              <NavLink className="dropdown__link" to={`/${urlPrefix}takeCat`}>
-                <FormattedMessage id="header.search.found" />
-              </NavLink>
-            </div>
-{/*
-          </CSSTransitionGroup>
-*/}
-        </div>
+          <NavLink className="dropdown__link" to={`/${urlPrefix}#`}>
+            <FormattedMessage id="header.search.found" />
+          </NavLink>
+        </AccordionSection>
       </nav>
     </div>
     <div className="nav-container">
       <nav className="nav nav-right">
-        <div className="dropdown">
-          <span className="nav__link">
-            <FormattedMessage id="header.news.title" />
-          </span>
-          <div className="dropdown__content">
-            <NavLink className="dropdown__link" to={`/${urlPrefix}ourNews`}>
+        <AccordionSection title={'news'}>
+            <NavLink className="dropdown__link" to={`/${urlPrefix}news/our`}>
               <FormattedMessage id="header.news.ourNews" />
             </NavLink>
-            <NavLink className="dropdown__link" to={`/${urlPrefix}actions`}>
+            <NavLink className="dropdown__link" to={`/${urlPrefix}news/actions`}>
               <FormattedMessage id="header.news.actions" />
             </NavLink>
-            <NavLink className="dropdown__link" to={`/${urlPrefix}useful`}>
+            <NavLink className="dropdown__link" to={`/${urlPrefix}news/info`}>
               <FormattedMessage id="header.news.useful" />
             </NavLink>
-          </div>
-        </div>
+        </AccordionSection>
         <NavLink className="nav__link" to={`/${urlPrefix}shop`}>
           <FormattedMessage id="header.shop" />
         </NavLink>
-        <div className="dropdown">
-          <span className="nav__link">
-            <FormattedMessage id="header.aboutUs.title" />
-          </span>
-          <div className="dropdown__content">
+        <AccordionSection title={'aboutUs'}>
             <NavLink className="dropdown__link" to={`/${urlPrefix}name`}>
               <FormattedMessage id="header.aboutUs.name" />
             </NavLink>
@@ -91,8 +64,7 @@ const Navigation = ({ urlPrefix }: { urlPrefix: string }) => (
             <NavLink className="dropdown__link" to={`/${urlPrefix}partners`}>
               <FormattedMessage id="header.aboutUs.partners" />
             </NavLink>
-          </div>
-        </div>
+        </AccordionSection>
       </nav>
       <NavLink className="nav__link nav__button" to={`/${urlPrefix}support`}>
         <FormattedMessage id="header.support" />

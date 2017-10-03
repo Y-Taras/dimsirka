@@ -16,11 +16,8 @@
   }
 
   &__icon {
-    background: url('/dist/images/achievements_sign.png') no-repeat;
     display: inline-block;
-    height: 109px;
-    margin: 41px 0 33px;
-    width: 107px;
+      margin: 41px 0 33px;
   }
 
   &__success {
@@ -80,8 +77,6 @@
   }
 
   @media only screen and (max-width: 1024px) {
-    &__list {
-    }
 
     &__category-data {
       font-size: 4rem;

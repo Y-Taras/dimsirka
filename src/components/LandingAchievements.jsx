@@ -13,7 +13,7 @@ const LandingAchievements = () => (
   <section className="achievements">
     <div className="container achievements__flex">
       <div className="achievements__success">
-        <div className="achievements__icon" />
+        <div className="achievements__icon landing__icon landing__icon--medal" />
         <h3 className="achievements__success-title">
           <FormattedMessage id="landing.achievements.title.header" />
         </h3>
