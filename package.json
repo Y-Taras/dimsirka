@@ -22,6 +22,7 @@
     "react-addons-transition-group": "15.6.2",
     "react-collapse": "^4.0.3",
     "react-dom": "15.6.2",
+    "react-icons": "^2.2.5",
     "react-intl": "^2.4.0",
     "react-loaders": "2.6.0",
     "react-media": "^1.6.1",

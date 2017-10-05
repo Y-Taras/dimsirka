@@ -4,6 +4,10 @@
     flex-basis: 50%;
   }
 
+  &__bar-button {
+    display: none;
+  }
+
   &-left {
     display: flex;
     flex-basis: 555px;
@@ -71,7 +75,22 @@
 }
 
 @media only screen and (max-width: 425px) {
-  .nav__link {
+  .nav__bar-button {
+    border: 0;
+    display: inline-block;
+    padding: 0;
+  }
+
+  .nav-open {
+    height: 100%;
+  }
+
+  .nav-closed {
+    height: 0;
+    overflow: hidden;
+  }
+
+    .nav__link {
     border: 1px #6f6f6f solid;
     border-collapse: collapse;
     display: block;

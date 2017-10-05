@@ -50,7 +50,6 @@
   &__list-item {
     display: flex;
     flex-direction: column;
-    width: 25%;
   }
 
   &__list-icon {
@@ -78,27 +77,37 @@
     padding-left: 30px;
     padding-right: 30px;
   }
-}
 
-@media only screen and (max-width: 1024px) {
-}
-
-@media only screen and (max-width: 700px) {
-  .achievements {
-    background: #44bca9;
-  }
-
-  .achievements__list {
-    align-items: center;
-    flex-direction: column;
-  }
-}
-
-@media only screen and (max-width: 425px) {
-  .achievements {
+  @media only screen and (max-width: 1024px) {
     &__success-million {
-      font-size: 4rem;
-      line-height: 4.5rem;
+      font-size: 6rem;
+      line-height: 6.5rem;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    & {
+      background: #44bca9;
+    }
+
+    &__success-million {
+      font-size: 5rem;
+      line-height: 5.5rem;
+    }
+
+    &__list {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    &__success-million {
+      font-size: 3.5rem;
+      line-height: 4rem;
+    }
+    &__success-title {
+      font-size: 1.8rem;
     }
   }
 }
