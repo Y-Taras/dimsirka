@@ -1,41 +1,15 @@
 .work-flow {
-  &__header {
-    color: $color-main-landing-workflow-header-blue;
-    font-size: 2.25rem;
-    font-weight: 700;
-    line-height: 1.1;
-    padding-left: 60px;
-    text-transform: uppercase;
-  }
-
-  &__header-link {
-    border-radius: 8px;
-    display: inline-block;
-    margin: 60px 40px;
-    text-decoration: none;
-    transition: 0.3s;
-
-    &:hover {
-      background: darken(#fff, 7%);
-    }
-
-    &:link,
-    &:visited {
-      color: $color-main-landing-workflow-header-blue;
-    }
-  }
-
   &__main {
-    padding: 77px 0 80px;
-    text-align: left;
+    padding: 105px 0;
+    text-align: center;
   }
 
   &__title {
     color: $color-main-landing-text-black;
-    font-size: 2.625rem;
-    font-weight: bold;
-    line-height: 0.74;
-    margin: 0 0 45px;
+    font-size: 2.875rem;
+    font-weight: 300;
+    line-height: 3.5rem;
+    margin: 10px 0 90px;
     text-align: center;
   }
 
@@ -51,19 +25,37 @@
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 1px 2px 9px 1px rgba(0, 0, 0, 0.16);
+    display: flex;
+    flex-direction: column;
     padding: 21px 26px 30px;
     width: 28.5%;
+
+  }
+
+  &__image-container {
+    align-items: center;
+    background-color: rgba(236,248,246,0.5);
+    border-radius: 50%;
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    margin: 0 auto;
+    width: 150px;
   }
 
   &__item-header {
-    color: $color-secondary-workflow-title-green;
+    color: #3b3b3b;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5rem;
   }
 
   &__description {
-    color: $color-main-landing-text-black;
-    font-size: 14px;
+    color: #4d4d4d;
+    font-size: 0.875rem;
     font-weight: 300;
-    line-height: 1.29;
+    line-height: 1.25rem;
+    margin-bottom: auto;
   }
 
   @media only screen and (max-width: 1024px) {

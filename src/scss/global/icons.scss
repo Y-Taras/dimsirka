@@ -34,44 +34,44 @@
   }
 
   &--house {
-    width: 80px;
-    height: 80px;
     background-position: 0 0;
+    height: 80px;
+    width: 80px;
   }
 
   &--steril {
-    width: 80px;
-    height: 79px;
     background-position: -80px 0;
+    height: 79px;
+    width: 80px;
   }
 
   &--curring {
-    width: 56px;
-    height: 80px;
     background-position: -160px 0;
+    height: 80px;
+    width: 56px;
   }
 
   &--medal {
-    width: 55px;
-    height: 60px;
     background-position: -216px 0;
+    height: 60px;
+    width: 55px;
   }
 
   &--placed {
-    width: 150px;
-    height: 150px;
     background-position: -271px 0;
+    height: 150px;
+    width: 150px;
   }
 
   &--sterilized {
-    width: 150px;
-    height: 150px;
     background-position: -421px 0;
+    height: 150px;
+    width: 150px;
   }
 
   &--cured {
-    width: 150px;
-    height: 150px;
     background-position: -571px 0;
+    height: 150px;
+    width: 150px;
   }
 }

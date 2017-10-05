@@ -1,129 +1,104 @@
 .achievements {
-  /*
-  background-color: $color-main-landing-hero-green;
-  */
-  background-color: #daf9f4;
-  background-image: url('/dist/images/achievements_background.png');
+  background: linear-gradient(to bottom, #ecf8f6 0%, #ecf8f6 59%, #44bca9 59%, #44bca9 59%, #44bca9 100%); /* W3C */
+  text-align: center;
 
-  &__flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
-  &__success {
-    text-align: center;
+  &__title {
+    background-color: #fff;
+    border-radius: 100px;
+    box-shadow: 0 9px 25px 0 rgba(68, 188, 169, 0.19);
+    display: inline-block;
+    margin: 110px 0 55px;
+    padding: 13px 12px;
   }
 
   &__icon {
     display: inline-block;
-      margin: 41px 0 33px;
-  }
-
-  &__success {
-    flex-basis: 29%;
-  }
-
-  &__stats {
-    align-items: center;
-    display: flex;
-    flex-basis: 64%;
+    margin: 0 12px;
+    vertical-align: middle;
   }
 
   &__success-title {
-    color: $color-main-landing-text-black;
-    font-size: 2.625rem;
-    font-weight: bold;
-    line-height: 0.74;
-    margin: 0;
-    white-space: nowrap;
-  }
-
-  &__success-text {
-    color: $color-main-landing-text-black;
-    font-size: 1.25rem;
-    font-weight: bold;
-    line-height: 1.55;
-    margin: 57px 0 21px;
-    white-space: nowrap;
+    color: #3b3b3b;
+    font-size: 2.25rem;
+    font-weight: 300;
+    line-height: 2.6875rem;
+    margin: 0 12px;
+    vertical-align: middle;
   }
 
   &__success-million {
-    color: $color-secondary-achieves-million-orange;
-    font-size: 3.5rem;
-    font-weight: bold;
-    line-height: 0.55;
-    margin-bottom: 67px;
-    white-space: nowrap;
+    color: #273a74;
+    font-size: 8rem;
+    font-weight: 500;
+    line-height: 9.5rem;
+  }
+
+  &__success-text {
+    color: #3b3b3b;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.375rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+  }
+
+  &__list-item {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+  }
+
+  &__list-icon {
+    display: inline-block;
+    margin: 0 auto;
   }
 
   &__category-data {
-    color: $color-secondary-achieves-data-green;
-    font-size: 5.125rem;
-    font-weight: bold;
-    line-height: 1.59;
-    padding-left: 75px;
-    vertical-align: middle;
+    color: #fff;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 76px;
   }
 
-  &__category {
-    color: $color-main-landing-text-black;
-    font-size: 1.5rem;
-    font-weight: bold;
-    line-height: 1.29;
-    padding-left: 50px;
-    vertical-align: middle;
-    white-space: nowrap;
+  &__category-text {
+    color: #3b3b3b;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
   }
 
-  @media only screen and (max-width: 1024px) {
+  &__button-report {
+    display: inline-block;
+    margin: 50px 0;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
 
-    &__category-data {
+@media only screen and (max-width: 1024px) {
+}
+
+@media only screen and (max-width: 700px) {
+  .achievements {
+    background: #44bca9;
+  }
+
+  .achievements__list {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .achievements {
+    &__success-million {
       font-size: 4rem;
-    }
-
-    &__success-million {
-      font-size: 3rem;
-    }
-  }
-  @media only screen and (max-width: 700px) {
-    &__list {
-      padding-left: 15px;
-    }
-
-    &__category-data {
-      font-size: 3rem;
-      padding-left: 0;
-    }
-
-    &__category {
-      padding-left: 15px;
-    }
-
-    &__success-million {
-      font-size: 2.5rem;
-      margin-bottom: 40px;
-    }
-  }
-
-  @media only screen and (max-width: 500px) {
-    &__item {
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-    }
-
-    &__category-data,
-    &__category {
-      display: block;
-    }
-
-    &__category {
-      font-size: 1.3rem;
-    }
-
-    &__success-million {
-      margin-bottom: 20px;
+      line-height: 4.5rem;
     }
   }
 }

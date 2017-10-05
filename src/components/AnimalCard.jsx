@@ -7,13 +7,15 @@ import { Link } from 'react-router-dom';
 
 const AnimalCard = (props: { randomAnimal: RandomAnimal }) => {
 
-  const { breed, age, gender } = props.randomAnimal.attributes;
+  const { breed, age, gender, name } = props.randomAnimal.attributes;
 
   return (
 
     <div className="animal-card">
       <div className="animal-card__image" />
-      <span className="animal-card__icon--dog" />
+      <span className="animal-card__dog-name">
+        {name}
+      </span>
       <table className="animal-card__table">
         <tbody>
           <tr>
@@ -36,7 +38,7 @@ const AnimalCard = (props: { randomAnimal: RandomAnimal }) => {
           </tr>
         </tbody>
       </table>
-      <Link to="#" className="button-card button--text-uppercase">
+      <Link to="#dogsid" className="button-card button--text-uppercase">
         <FormattedMessage id="landing.animalCard.toHelp" />
       </Link>
     </div>

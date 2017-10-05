@@ -20,11 +20,9 @@ class Post extends Component {
   }
 
   props: {
-    post: Content,
     getPostData: Function,
     lang: string,
     history: RouterHistory,
-    match: Match,
     urlPrefix: string
   };
 

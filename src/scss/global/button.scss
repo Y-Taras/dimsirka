@@ -15,21 +15,52 @@
     }
   }
 
+  &--blue {
+    background-color: #273a74;
+
+    &:hover {
+      background: lighten(#273a74, 7%);
+    }
+  }
+
   &--text-uppercase {
     text-transform: uppercase;
   }
 }
 
 .button-card {
-  background-color: $color-main-landing-workflow-button-orange;
-  border-radius: 10px;
+  background-color: #f49837;
+  border-radius: 5px;
   color: #fff;
-  display: inline-block;
-  font-size: 1.25rem;
-  font-weight: 700;
-  line-height: 2.65;
-  margin: auto 28px;
-  padding: 0 79px;
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.375rem;
+  margin: 0 40px;
+  padding: 15px;
   text-align: center;
   text-decoration: none;
 }
+
+.button-work-flow {
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.1875rem;
+  padding: 13px 0;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .button-work-flow {
+    margin: 10px 40px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .button-work-flow {
+    margin: 10px;
+  }
+}
+

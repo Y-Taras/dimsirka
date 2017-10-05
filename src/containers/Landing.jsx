@@ -4,13 +4,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import LandingHero from '../components/LandingHero';
+import LandingAnimalsSummary from '../components/LandingAnimalsSummary'
 import LandingWorkFlow from '../components/LandingWorkFlow';
 import LandingAchievements from '../components/LandingAchievements';
 import LandingPartners from '../components/LandingPartners';
 
 import { getRandomAnimalData } from '../actions/landingActions';
 import { getLang } from '../reducers/locale';
-import randomAnimalData from '../reducers/landing'
+import randomAnimalData from '../reducers/landing';
 
 const animalsNumber = {
   cats: 123,
@@ -33,7 +34,8 @@ class Landing extends Component {
   render() {
     return (
       <div>
-        <LandingHero animalsNumber={animalsNumber} randomAnimal={this.props.randomAnimal} />
+        <LandingHero randomAnimal={this.props.randomAnimal} />
+        <LandingAnimalsSummary animalsNumber={animalsNumber} />
         <LandingWorkFlow />
         <LandingAchievements />
         <LandingPartners />

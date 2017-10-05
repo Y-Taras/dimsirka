@@ -2,34 +2,44 @@
   background-color: #f6f6f6;
   border-radius: 10px;
   box-shadow: 4px 6px 26px 1px rgba(0, 0, 0, 0.16);
+  padding-bottom: 40px;
   position: relative;
   top: 143px;
-  padding-bottom: 40px;
+  width: 360px;
 
   &__image {
     background: url('/dist/images/photo_dog_1.png') no-repeat center;
     background-size: cover;
+    border-radius: 8px;
     height: 250px;
     position: relative;
     width: 100%;
   }
 
+  &__dog-name {
+    display: block;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    margin: 10px auto;
+    text-align: center;
+  }
+
   &__table {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     line-height: 2.58;
-    margin: 34px auto 54px;
+    margin: 0 auto;
     width: 80%;
   }
 
   &__props {
     color: #959595;
-    font-weight: 400;
+    font-weight: 300;
+    opacity: 0.7;
     padding-left: 6px;
   }
 
   &__data {
     color: #404040;
-    font-weight: 700;
     padding-left: 18px;
   }
 }
@@ -37,5 +47,10 @@
 @media only screen and (max-width: 1024px) {
   .animal-card {
     position: static;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .animal-card {
+    width: 280px;
   }
 }
