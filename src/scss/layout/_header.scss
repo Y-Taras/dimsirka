@@ -86,6 +86,14 @@
     flex-direction: column;
   }
 
+  .header-fixed {
+    position: static;
+  }
+
+  .header-block {
+    display: none;
+  }
+
   .header__logo {
     position: static;
     transform: none;
@@ -93,10 +101,6 @@
 
   .header__logo-image {
     width: 60px;
-  }
-
-  .header-block {
-    height: 284px;
   }
 
   .contacts::before,
@@ -112,13 +116,7 @@
     flex-direction: column;
   }
 
-  .header-fixed {
-    position: static;
-  }
 
-  .header-block {
-    display: none;
-  }
 
   .header__logo-image {
     width: 50px;

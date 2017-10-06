@@ -55,7 +55,7 @@ export type Post = {
   }
 };
 
-export type RandomAnimal =  {
+export type RandomAnimal = {
   id: string,
   type: string,
   attributes: {
@@ -66,8 +66,18 @@ export type RandomAnimal =  {
     age: string,
     gender: string,
     sterilization: string,
-    breed: string,
+    breed: string
   }
+};
+
+export type FittedImgType = {
+  alt: string,
+  className: string,
+  fit: 'fill' | 'contain' | 'cover' | 'none',
+  height: string | number,
+  position: string,
+  src: string,
+  width: string | number
 };
 
 declare var module: {

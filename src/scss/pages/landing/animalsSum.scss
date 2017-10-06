@@ -26,8 +26,8 @@
 
   @media only screen and (max-width: 425px) {
     &__numbers {
-      flex-direction: column;
       align-items: center;
+      flex-direction: column;
     }
   }
 }
