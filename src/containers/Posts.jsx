@@ -4,6 +4,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
+import { Loader } from 'react-loaders'
 import type { Match } from 'react-router-dom';
 
 import PostsCards from '../components/PostsCards';
@@ -46,7 +47,7 @@ class Posts extends Component {
     if (!(Object.keys(postList).length === 0 && postList.constructor === Object)) {
       renderPostsCards = <PostsCards onChange={this.onPageChange} posts={postList} urlPrefix={urlPrefix} />;
     } else {
-      renderPostsCards = <p style={{ textAlign: 'center' }}>Loader...</p>;
+      renderPostsCards = <Loader type="line-scale-pulse-out-rapid" active />;
     }
     return (
       <section className={'news'}>

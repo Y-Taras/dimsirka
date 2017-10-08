@@ -126,6 +126,7 @@ export default {
       readMore: 'more',
       post: {
         back: 'Back',
+        readAll: 'Read all',
         share: 'Share'
       }
     }
@@ -257,6 +258,7 @@ export default {
       readMore: 'читать дальше',
       post: {
         back: 'Назад',
+        readAll: 'Читать все',
         share: 'Поделиться'
       }
     }
@@ -388,6 +390,7 @@ export default {
       readMore: 'читати далі',
       post: {
         back: 'Назад',
+        readAll: 'Читати всі',
         share: 'Поділитись'
       }
     }

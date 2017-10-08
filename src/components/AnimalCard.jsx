@@ -9,6 +9,7 @@ const AnimalCard = (props: { randomAnimal: RandomAnimal }) => {
 
   const { breed, age, gender, name } = props.randomAnimal.attributes;
 
+
   return (
 
     <div className="animal-card">

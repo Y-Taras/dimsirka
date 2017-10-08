@@ -9,7 +9,7 @@ import { getPrefix } from './reducers/locale';
 import Landing from './containers/Landing';
 import Webcams from './containers/Webcams';
 import Posts from './containers/Posts';
-import Post from './containers/Post';
+import PostsItem from './containers/PostsItem';
 import Header from './containers/Header';
 import Footer from './components/Footer';
 import RootRouter from './components/RootRouter';
@@ -25,7 +25,7 @@ const Routes = ({ urlPrefix }: { urlPrefix: string }) => (
         <Route path={'/:lang(en|ru)?/webcams'} component={Webcams} />
         <Route exact path={'/:lang(en|ru)?/news'} component={Posts} />
         <Route exact path={'/:lang(en|ru)?/news/:category(our|actions|info)'} component={Posts} />
-        <Route exact path={'/:lang(en|ru)?/news/:id'} component={Post} />
+        <Route exact path={'/:lang(en|ru)?/news/:id'} component={PostsItem} />
         <Route path={'/:lang(en|ru)?/shop'} component={FourOhFour} />
         <Route component={FourOhFour} />
       </Switch>
