@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 
 type Props = {
-  urlPrefix: string,
+  urlPrefix: string
 };
 
 const PostsNavigation = (props: Props) => (
@@ -13,16 +13,24 @@ const PostsNavigation = (props: Props) => (
     <NavLink activeClassName={'news__nav-link--active'} className={'news__nav-link'} to={`/${props.urlPrefix}news/our`}>
       <FormattedMessage id={`news.navigation.interesting`} />
     </NavLink>
-    <NavLink activeClassName={'news__nav-link--active'} className={'news__nav-link'} to={`/${props.urlPrefix}news/info`}>
+    <NavLink
+      activeClassName={'news__nav-link--active'}
+      className={'news__nav-link'}
+      to={`/${props.urlPrefix}news/info`}
+    >
       <FormattedMessage id={`news.navigation.info`} />
     </NavLink>
-    <NavLink activeClassName={'news__nav-link--active'} className={'news__nav-link'} to={`/${props.urlPrefix}news/actions`}>
+    <NavLink
+      activeClassName={'news__nav-link--active'}
+      className={'news__nav-link'}
+      to={`/${props.urlPrefix}news/actions`}
+    >
       <FormattedMessage id={`news.navigation.action`} />
     </NavLink>
     <NavLink activeClassName={'news__nav-link--active'} className={'news__nav-link'} to={`/${props.urlPrefix}news`}>
       <FormattedMessage id={`news.navigation.all`} />
     </NavLink>
-   </div>
+  </div>
 );
 
 export default PostsNavigation;

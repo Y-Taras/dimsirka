@@ -4,7 +4,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
-import { Loader } from 'react-loaders'
+import { Loader } from 'react-loaders';
 import type { Match } from 'react-router-dom';
 
 import PostsCards from '../components/PostsCards';

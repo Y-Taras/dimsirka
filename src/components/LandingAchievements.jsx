@@ -48,8 +48,7 @@ const LandingAchievements = () => (
           </span>
         </li>
       </ul>
-      <a className={'achievements__button-report button-work-flow' +
-      ' button--blue'} href="https://drive.google.com/#">
+      <a className="achievements__button-report button-work-flow button--blue" href="https://drive.google.com/#">
         <FormattedMessage id={'landing.achievements.viewReport'} />
       </a>
     </div>

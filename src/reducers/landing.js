@@ -8,7 +8,7 @@ const initialState = {
     gender: '',
     breed: ''
   }
-}
+};
 
 const randomAnimalData = (state = initialState, action) => {
   if (action.type === GET_RANDOM_ANIMAL) {

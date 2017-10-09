@@ -16,8 +16,8 @@ const FooterContacts = () => (
         <span className="footer__address-postal">
           <FormattedMessage id={'footer.contacts.adr'} />
         </span>
-        <a href="tel:+380997124680" className="footer__address-phone">
-          (099)&nbsp;71&nbsp;24&nbsp;680
+        <a href="tel:+380342756421" className="footer__address-phone">
+          (0342)&nbsp;75&nbsp;64&nbsp;21
         </a>
       </address>
     </div>

@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import LandingHero from '../components/LandingHero';
-import LandingAnimalsSummary from '../components/LandingAnimalsSummary'
+import LandingAnimalsSummary from '../components/LandingAnimalsSummary';
 import LandingWorkFlow from '../components/LandingWorkFlow';
 import LandingAchievements from '../components/LandingAchievements';
 import LandingPartners from '../components/LandingPartners';

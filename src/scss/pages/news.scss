@@ -96,7 +96,8 @@
       width: 45%;
     }
 
-    &__cards  &__card:only-child {                /*  added rule  */
+    &__cards &__card:only-child {
+      /*  added rule  */
       margin-left: 50%;
       transform: translateX(-50%);
     }
@@ -104,7 +105,5 @@
     &__card {
       width: 45%;
     }
-
-
   }
 }

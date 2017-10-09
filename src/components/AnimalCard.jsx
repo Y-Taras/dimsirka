@@ -6,17 +6,12 @@ import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
 
 const AnimalCard = (props: { randomAnimal: RandomAnimal }) => {
-
   const { breed, age, gender, name } = props.randomAnimal.attributes;
 
-
   return (
-
     <div className="animal-card">
       <div className="animal-card__image" />
-      <span className="animal-card__dog-name">
-        {name}
-      </span>
+      <span className="animal-card__dog-name">{name}</span>
       <table className="animal-card__table">
         <tbody>
           <tr>

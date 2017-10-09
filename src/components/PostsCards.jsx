@@ -35,14 +35,14 @@ const PostsCards = ({
   console.log(locale);
   console.log(urlPrefix);
   return (
-      <div className="container">
-        <div className="news__cards">
-          {posts.apiData.map(item => <PostsCardItem key={item.id} urlPrefix={urlPrefix} {...item} />)}
-        </div>
-        <div className="news__pagination">
-          <Pagination defaultCurrent={1} pageSize={4} onChange={onChange} total={posts.total} locale={locale} />
-        </div>
+    <div className="container">
+      <div className="news__cards">
+        {posts.apiData.map(item => <PostsCardItem key={item.id} urlPrefix={urlPrefix} {...item} />)}
       </div>
+      <div className="news__pagination">
+        <Pagination defaultCurrent={1} pageSize={4} onChange={onChange} total={posts.total} locale={locale} />
+      </div>
+    </div>
   );
 };
 

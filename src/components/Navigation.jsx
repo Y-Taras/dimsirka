@@ -7,20 +7,20 @@ import FaBars from 'react-icons/lib/fa/bars';
 import AccordionSection from './NavigationAccordion';
 
 type Props = {
-  urlPrefix: string,
-}
+  urlPrefix: string
+};
 
 class Navigation extends React.Component {
   state = {
-      open: false
-  }
+    open: false
+  };
 
-  handleNavClick = (e) => {
+  handleNavClick = e => {
     e.preventDefault();
     this.setState({
       open: !this.state.open
     });
-  }
+  };
 
   props: Props;
 
@@ -32,7 +32,9 @@ class Navigation extends React.Component {
           <Link to={`/${this.props.urlPrefix}`}>
             <img className={'header__logo-image'} src="/dist/images/logo.png" alt="site logo" />
           </Link>
-          <button type={'button'} onClick={this.handleNavClick} className={'nav__bar-button'}><FaBars size={'40'}/></button>
+          <button type={'button'} onClick={this.handleNavClick} className={'nav__bar-button'}>
+            <FaBars size={'40'} />
+          </button>
         </div>
         <div className={`nav-container ${navToggle}`}>
           <nav className="nav nav-left">
@@ -77,13 +79,13 @@ class Navigation extends React.Component {
               <FormattedMessage id="header.shop" />
             </NavLink>
             <AccordionSection title={'aboutUs'}>
-              <NavLink className="dropdown__link" to={`/${this.props.urlPrefix}name`}>
-                <FormattedMessage id="header.aboutUs.name" />
+              <NavLink className="dropdown__link" to={`/${this.props.urlPrefix}about/organization`}>
+                <FormattedMessage id="header.aboutUs.org" />
               </NavLink>
-              <NavLink className="dropdown__link" to={`/${this.props.urlPrefix}team`}>
+              <NavLink className="dropdown__link" to={`/${this.props.urlPrefix}about/team`}>
                 <FormattedMessage id="header.aboutUs.team" />
               </NavLink>
-              <NavLink className="dropdown__link" to={`/${this.props.urlPrefix}partners`}>
+              <NavLink className="dropdown__link" to={`/${this.props.urlPrefix}about/partners`}>
                 <FormattedMessage id="header.aboutUs.partners" />
               </NavLink>
             </AccordionSection>

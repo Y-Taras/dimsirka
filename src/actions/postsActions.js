@@ -9,17 +9,16 @@ export function addPostListData(apiData: Array<Content>, total: string) {
   return { type: ADD_POSTLIST_DATA, payload: { apiData, total } };
 }
 
-
 export function getPostList(locale: string, page?: number | null = null, category?: string | null = null) {
   let categoryId;
   switch (category) {
-    case ('our'):
+    case 'our':
       categoryId = 3;
       break;
-    case ('actions'):
+    case 'actions':
       categoryId = 4;
       break;
-    case ('info'):
+    case 'info':
       categoryId = 5;
       break;
     default:
@@ -42,13 +41,13 @@ export function getPostList(locale: string, page?: number | null = null, categor
   console.log(REQURL);
   return (dispatch: Function) => {
     axios
-    .get(REQURL)
-    .then(response => {
-      console.log('axios (response.headers): ', response.data);
-      dispatch(addPostListData(response.data.data, response.data.meta.total));
-    })
-    .catch(error => {
-      console.error('axios error', error); // eslint-disable-line no-console
-    });
+      .get(REQURL)
+      .then(response => {
+        console.log('axios (response.headers): ', response.data);
+        dispatch(addPostListData(response.data.data, response.data.meta.total));
+      })
+      .catch(error => {
+        console.error('axios error', error); // eslint-disable-line no-console
+      });
   };
 }

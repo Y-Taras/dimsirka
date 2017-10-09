@@ -1,15 +1,14 @@
 // @flow
 
 import React from 'react';
-import FooterContacts from './FooterContacts'
-import FooterSitemap from './FooterSitemap'
+import FooterContacts from './FooterContacts';
+import FooterSitemap from './FooterSitemap';
 
-
-const Footer = () => (
+const Footer = ({ urlPrefix }: { urlPrefix: string }) => (
   <footer className="footer">
     <div className="container footer--flex">
       <FooterContacts />
-      <FooterSitemap />
+      <FooterSitemap urlPrefix={urlPrefix} />
     </div>
   </footer>
 );

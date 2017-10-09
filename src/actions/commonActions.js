@@ -11,9 +11,6 @@ export function setNewsCategory(newsCategory: string | null) {
   return { type: SET_POSTS_CATEGORY, payload: newsCategory };
 }
 
-
-
-
 /*
 /api/v1/posts?locale=uk - 4 posts depending on locale
 /api/v1/posts?locale=uk&category_id=3&page=1 - Interesting
