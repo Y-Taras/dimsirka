@@ -43,7 +43,7 @@ declare module 'axios' {
     proxy?: ProxyConfig;
     responseType?: 'arraybuffer' | 'blob' | 'document' | 'json' | 'text' | 'stream';
     timeout?: number;
-    transformRequest?: Array<<U>(data: T) => U|Array<<U>(data: T) => U>>;
+    transformRequest?: Array<<U>(data: T) => U | Array<<U>(data: T) => U>>;
     transformResponse?: Array<<U>(data: T) => U>;
     validateStatus?: (status: number) => boolean,
     withCredentials?: boolean;

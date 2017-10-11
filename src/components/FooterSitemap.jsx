@@ -9,74 +9,74 @@ const FooterSitemap = ({ urlPrefix }: { urlPrefix: string }) => (
     <div className="footer__sitemap-container">
       <div className="footer__sitemap-col">
         <span className="footer__category-title">
-          <FormattedMessage id={'footer.ourAnimals.title'} />
+          <FormattedMessage id="footer.ourAnimals.title" />
         </span>
-        <Link to={'#'} className="footer__sitemap-link">
-          <FormattedMessage id={'footer.ourAnimals.takeDog'} />
+        <Link to="#" className="footer__sitemap-link">
+          <FormattedMessage id="footer.ourAnimals.takeDog" />
         </Link>
-        <Link to={'#'} className="footer__sitemap-link">
-          <FormattedMessage id={'footer.ourAnimals.takeCat'} />
+        <Link to="#" className="footer__sitemap-link">
+          <FormattedMessage id="footer.ourAnimals.takeCat" />
         </Link>
-        <Link to={'#'} className="footer__sitemap-link">
-          <FormattedMessage id={'footer.ourAnimals.careOnline'} />
+        <Link to="#" className="footer__sitemap-link">
+          <FormattedMessage id="footer.ourAnimals.careOnline" />
         </Link>
       </div>
     </div>
     <div className="footer__sitemap-container">
       <div className="footer__sitemap-col">
         <span className="footer__category-title">
-          <FormattedMessage id={'footer.search.title'} />
+          <FormattedMessage id="footer.search.title" />
         </span>
-        <Link to={'#'} className="footer__sitemap-link">
-          <FormattedMessage id={'footer.search.lost'} />
+        <Link to="#" className="footer__sitemap-link">
+          <FormattedMessage id="footer.search.lost" />
         </Link>
-        <Link to={'#'} className="footer__sitemap-link">
-          <FormattedMessage id={'footer.search.found'} />
+        <Link to="#" className="footer__sitemap-link">
+          <FormattedMessage id="footer.search.found" />
         </Link>
       </div>
     </div>
     <div className="footer__sitemap-container">
       <div className="footer__sitemap-col">
         <span className="footer__category-title">
-          <FormattedMessage id={'footer.aboutUs.title'} />
+          <FormattedMessage id="footer.aboutUs.title" />
         </span>
         <Link to={`/${urlPrefix}about/organization`} className="footer__sitemap-link">
-          <FormattedMessage id={'footer.aboutUs.org'} />
+          <FormattedMessage id="footer.aboutUs.org" />
         </Link>
-        <Link to={'#'} className="footer__sitemap-link">
-          <FormattedMessage id={'footer.aboutUs.team'} />
+        <Link to="#" className="footer__sitemap-link">
+          <FormattedMessage id="footer.aboutUs.team" />
         </Link>
-        <Link to={'#'} className="footer__sitemap-link">
-          <FormattedMessage id={'footer.aboutUs.partners'} />
+        <Link to="#" className="footer__sitemap-link">
+          <FormattedMessage id="footer.aboutUs.partners" />
         </Link>
       </div>
     </div>
     <div className="footer__sitemap-container">
       <div className="footer__sitemap-col">
         <span className="footer__category-title">
-          <FormattedMessage id={'footer.news.title'} />
+          <FormattedMessage id="footer.news.title" />
         </span>
-        <Link to={'#'} className="footer__sitemap-link">
-          <FormattedMessage id={'footer.news.ourNews'} />
+        <Link to="#" className="footer__sitemap-link">
+          <FormattedMessage id="footer.news.ourNews" />
         </Link>
-        <Link to={'#'} className="footer__sitemap-link">
-          <FormattedMessage id={'footer.news.actions'} />
+        <Link to="#" className="footer__sitemap-link">
+          <FormattedMessage id="footer.news.actions" />
         </Link>
-        <Link to={'#'} className="footer__sitemap-link">
-          <FormattedMessage id={'footer.news.useful'} />
+        <Link to="#" className="footer__sitemap-link">
+          <FormattedMessage id="footer.news.useful" />
         </Link>
       </div>
     </div>
     <div className="footer__sitemap-container">
       <div className="footer__sitemap-col">
-        <Link to={'#'} className="footer__sitemap-bold-link">
-          <FormattedMessage id={'footer.projects'} />
+        <Link to="#" className="footer__sitemap-bold-link">
+          <FormattedMessage id="footer.projects" />
         </Link>
-        <Link to={'#'} className="footer__sitemap-bold-link">
-          <FormattedMessage id={'footer.shop'} />
+        <Link to="#" className="footer__sitemap-bold-link">
+          <FormattedMessage id="footer.shop" />
         </Link>
-        <Link to={'#'} className="footer__sitemap-bold-link">
-          <FormattedMessage id={'footer.webcams'} />
+        <Link to="#" className="footer__sitemap-bold-link">
+          <FormattedMessage id="footer.webcams" />
         </Link>
       </div>
     </div>

@@ -37,7 +37,13 @@
     margin: 0 0 5px 6px;
     padding: 3px;
     transform: rotate(45deg);
+    transition: 0.2s;
     vertical-align: middle;
+  }
+
+  &__link:hover:first-child::after {
+    margin-bottom: 0;
+    transform: rotate(225deg);
   }
 
   &__link:hover {

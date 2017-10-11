@@ -10,25 +10,25 @@ type Props = {
 
 const PostsNavigation = (props: Props) => (
   <div>
-    <NavLink activeClassName={'news__nav-link--active'} className={'news__nav-link'} to={`/${props.urlPrefix}news/our`}>
-      <FormattedMessage id={`news.navigation.interesting`} />
+    <NavLink activeClassName="news__nav-link--active" className="news__nav-link" to={`/${props.urlPrefix}news/our`}>
+      <FormattedMessage id="news.navigation.interesting" />
     </NavLink>
     <NavLink
-      activeClassName={'news__nav-link--active'}
-      className={'news__nav-link'}
+      activeClassName="news__nav-link--active"
+      className="news__nav-link"
       to={`/${props.urlPrefix}news/info`}
     >
-      <FormattedMessage id={`news.navigation.info`} />
+      <FormattedMessage id="news.navigation.info" />
     </NavLink>
     <NavLink
-      activeClassName={'news__nav-link--active'}
-      className={'news__nav-link'}
+      activeClassName="news__nav-link--active"
+      className="news__nav-link"
       to={`/${props.urlPrefix}news/actions`}
     >
-      <FormattedMessage id={`news.navigation.action`} />
+      <FormattedMessage id="news.navigation.action" />
     </NavLink>
-    <NavLink activeClassName={'news__nav-link--active'} className={'news__nav-link'} to={`/${props.urlPrefix}news`}>
-      <FormattedMessage id={`news.navigation.all`} />
+    <NavLink exact activeClassName="news__nav-link--active" className="news__nav-link" to={`/${props.urlPrefix}news`}>
+      <FormattedMessage id="news.navigation.all" />
     </NavLink>
   </div>
 );

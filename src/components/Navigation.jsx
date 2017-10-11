@@ -30,15 +30,15 @@ class Navigation extends React.Component {
       <div className="header__bottom">
         <div className="header__logo">
           <Link to={`/${this.props.urlPrefix}`}>
-            <img className={'header__logo-image'} src="/dist/images/logo.png" alt="site logo" />
+            <img className="header__logo-image" src="/dist/images/logo.png" alt="site logo" />
           </Link>
-          <button type={'button'} onClick={this.handleNavClick} className={'nav__bar-button'}>
-            <FaBars size={'40'} />
+          <button type="button" onClick={this.handleNavClick} className="nav__bar-button">
+            <FaBars size="40" />
           </button>
         </div>
         <div className={`nav-container ${navToggle}`}>
           <nav className="nav nav-left">
-            <AccordionSection title={'ourAnimals'}>
+            <AccordionSection title="ourAnimals">
               <NavLink className="dropdown__link" to={`/${this.props.urlPrefix}takeDog`}>
                 <FormattedMessage id="header.ourAnimals.takeDog" />
               </NavLink>
@@ -52,7 +52,7 @@ class Navigation extends React.Component {
             <NavLink className="nav__link" to={`/${this.props.urlPrefix}projects`}>
               <FormattedMessage id="header.projects" />
             </NavLink>
-            <AccordionSection title={'search'}>
+            <AccordionSection title="search">
               <NavLink className="dropdown__link" to={`/${this.props.urlPrefix}#`}>
                 <FormattedMessage id="header.search.lost" />
               </NavLink>
@@ -64,7 +64,7 @@ class Navigation extends React.Component {
         </div>
         <div className={`nav-container ${navToggle}`}>
           <nav className="nav nav-right">
-            <AccordionSection title={'news'}>
+            <AccordionSection title="news">
               <NavLink className="dropdown__link" to={`/${this.props.urlPrefix}news/our`}>
                 <FormattedMessage id="header.news.ourNews" />
               </NavLink>
@@ -78,7 +78,7 @@ class Navigation extends React.Component {
             <NavLink className="nav__link" to={`/${this.props.urlPrefix}shop`}>
               <FormattedMessage id="header.shop" />
             </NavLink>
-            <AccordionSection title={'aboutUs'}>
+            <AccordionSection title="aboutUs">
               <NavLink className="dropdown__link" to={`/${this.props.urlPrefix}about/organization`}>
                 <FormattedMessage id="header.aboutUs.org" />
               </NavLink>
@@ -90,7 +90,7 @@ class Navigation extends React.Component {
               </NavLink>
             </AccordionSection>
           </nav>
-          <NavLink className="nav__link nav__button" to={`/${this.props.urlPrefix}support`}>
+          <NavLink className="nav__link nav__button" to={`/${this.props.urlPrefix}help`}>
             <FormattedMessage id="header.support" />
           </NavLink>
         </div>

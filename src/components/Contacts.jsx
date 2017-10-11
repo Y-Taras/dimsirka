@@ -36,13 +36,13 @@ const Contacts = ({
   return (
     <div className="contacts">
       <div className="contacts-left">
-        <div className="contact" onClick={changeLang('uk')} role={'button'} tabIndex={0}>
+        <div className="contact" onClick={changeLang('uk')} role="button" tabIndex={0}>
           <span className={lang === 'uk' ? langClass : ''}>укр</span>
         </div>
-        <div className="contact" onClick={changeLang('en')} role={'button'} tabIndex={0}>
+        <div className="contact" onClick={changeLang('en')} role="button" tabIndex={0}>
           <span className={lang === 'en' ? langClass : ''}>eng</span>
         </div>
-        <div className="contact" onClick={changeLang('ru')} role={'button'} tabIndex={0}>
+        <div className="contact" onClick={changeLang('ru')} role="button" tabIndex={0}>
           <span className={lang === 'ru' ? langClass : ''}>рус</span>
         </div>
         <a className="contact contact--mobile" href="tel:+380997124680">

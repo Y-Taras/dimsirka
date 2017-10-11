@@ -79,7 +79,7 @@
   &__pagination {
     display: flex;
     justify-content: flex-end;
-    margin: 40px 0;
+    margin: 20px 10%;
   }
 
   @media only screen and (min-width: 700px) {
@@ -104,6 +104,11 @@
 
     &__card {
       width: 45%;
+    }
+
+    &__pagination {
+
+      margin: 30px 2.5%;
     }
   }
 }

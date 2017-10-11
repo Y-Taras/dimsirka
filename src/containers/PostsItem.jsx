@@ -57,38 +57,38 @@ class PostsItem extends Component {
     }
 
     return (
-      <section className={'post'}>
-        <div className={'post__header'}>
+      <section className="post">
+        <div className="post__header">
           <div className="post__header-container">
             <div className="post__back-button-container">
-              <button type={'button'} className={'post__back-button'} onClick={history.goBack}>
-                <FormattedMessage id={'news.post.back'} />
+              <button type="button" className="post__back-button" onClick={history.goBack}>
+                <FormattedMessage id="news.post.back" />
               </button>
             </div>
             <span className="post__title">
-              <FormattedMessage id={'news.title'} />
+              <FormattedMessage id="news.title" />
             </span>
           </div>
         </div>
-        <div className={'post__nav-links'}>
+        <div className="post__nav-links">
           <PostsNavigation urlPrefix={urlPrefix} />
         </div>
-        <article className={'post__article-container'}>
+        <article className="post__article-container">
           <picture className="post__picture">
-            <img className={'post__image'} src={post.attributes.image.file.url} alt={post.attributes.image.alt} />
+            <img className="post__image" src={post.attributes.image.file.url} alt={post.attributes.image.alt} />
           </picture>
           <div className="post__content">
-            <h2 className={'post__content-header'}>{post.attributes.title}</h2>
-            <span className={'post__content-date'}>
+            <h2 className="post__content-header">{post.attributes.title}</h2>
+            <span className="post__content-date">
               <FormattedDate value={post.attributes.image.created_at} />
             </span>
-            <div className={'post__content-data'} dangerouslySetInnerHTML={{ __html: post.attributes.description }} />
-            <Link className={'post__content-link'} to={`/${urlPrefix}news`}>
-              <FormattedMessage id={'news.post.readAll'} />
+            <div className="post__content-data" dangerouslySetInnerHTML={{ __html: post.attributes.description }} />
+            <Link className="post__content-link" to={`/${urlPrefix}news`}>
+              <FormattedMessage id="news.post.readAll" />
             </Link>
-            <button type={'button'} className={'post__content-share-button'}>
+            <button type="button" className="post__content-share-button">
               <FaShareAlt size={24} />
-              <FormattedMessage id={'news.post.share'} />
+              <FormattedMessage id="news.post.share" />
             </button>
           </div>
         </article>

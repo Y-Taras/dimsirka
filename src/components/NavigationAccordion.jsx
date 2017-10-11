@@ -33,7 +33,7 @@ class AccordionSection extends Component {
   render() {
     return (
       <div className="dropdown">
-        <span className="nav__link" onClick={this.handleClick} role={'button'} tabIndex={0}>
+        <span className="nav__link" onClick={this.handleClick} role="button" tabIndex={0}>
           <FormattedMessage id={`header.${this.props.title}.title`} />
         </span>
         <div className={`dropdown__content ${this.state.class}`}>{this.props.children}</div>

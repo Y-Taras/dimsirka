@@ -11,16 +11,16 @@ const LandingAnimalsSummary = ({
     dogs: string
   }
 }) => (
-  <section className={'landing-animals'}>
+  <section className="landing-animals">
     <div className="container">
       <div className="landing-animals__numbers">
         <span className="landing-animals__typed">
-          <span className={'landing-animals__number'}>{animalsNumber.cats}</span>
+          <span className="landing-animals__number">{animalsNumber.cats}</span>
           <span className="sprites units_cat" />
           <FormattedMessage id="landing.animalNumbers.unit_cats" />
         </span>
         <span className="landing-animals__typed">
-          <span className={'landing-animals__number'}>{animalsNumber.dogs}</span>
+          <span className="landing-animals__number">{animalsNumber.dogs}</span>
           <span className="sprites units_dog" />
           <FormattedMessage id="landing.animalNumbers.unit_dogs" />
         </span>

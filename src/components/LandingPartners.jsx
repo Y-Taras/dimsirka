@@ -27,22 +27,22 @@ const LandingPartners = () => (
       </h4>
       <div className="partners__logos">
         <a href="https://uteam.ua" className="partners__logo" target="_blank" rel="noopener noreferrer">
-          <span className={'visuallyhidden'}>Uteam link</span>
+          <span className="visuallyhidden">Uteam link</span>
         </a>
         <a href="https://coaxsoft.com" className="partners__logo" target="_blank" rel="noopener noreferrer">
-          <span className={'visuallyhidden'}>Coax link</span>
+          <span className="visuallyhidden">Coax link</span>
         </a>
       </div>
       <h4 className="partners__small-title">
-        <FormattedMessage id={'landing.partners.projectPartners'} />
+        <FormattedMessage id="landing.partners.projectPartners" />
       </h4>
       <div className="partners__list">
         {partners.map(item => (
-          <div key={item.id} className={'partners__list-item'} style={{ backgroundImage: `url('${item.logo}')` }} />
+          <div key={item.id} className="partners__list-item" style={{ backgroundImage: `url('${item.logo}')` }} />
         ))}
         <div className="partners__list-item">
-          <Link className={'partners__additon-button'} to={'#'}>
-            <FormattedMessage id={'landing.partners.join'} />
+          <Link className="partners__additon-button" to="#">
+            <FormattedMessage id="landing.partners.join" />
           </Link>
         </div>
       </div>

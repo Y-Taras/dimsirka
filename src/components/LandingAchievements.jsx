@@ -14,7 +14,7 @@ const LandingAchievements = () => (
   <section className="achievements">
     <div className="container">
       <div className="achievements__success">
-        <h3 className={'achievements__title'}>
+        <h3 className="achievements__title">
           <span className="achievements__icon landing__icon landing__icon--medal" />
           <span className="achievements__success-title">
             <FormattedMessage id="landing.achievements.title.header" />
@@ -49,7 +49,7 @@ const LandingAchievements = () => (
         </li>
       </ul>
       <a className="achievements__button-report button-work-flow button--blue" href="https://drive.google.com/#">
-        <FormattedMessage id={'landing.achievements.viewReport'} />
+        <FormattedMessage id="landing.achievements.viewReport" />
       </a>
     </div>
   </section>

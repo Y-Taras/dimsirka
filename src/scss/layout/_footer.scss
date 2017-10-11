@@ -63,10 +63,20 @@
     font-weight: 500;
     line-height: 2.2;
     text-transform: uppercase;
+    transition: 0.3s;
+  }
+
+  &__sitemap-bold-link:hover {
+    background: darken($color-main-landing-hero-green, 7%);
   }
 
   &__sitemap-link {
     opacity: 0.75;
+    transition: 0.3s;
+  }
+
+  &__sitemap-link:hover {
+    background: darken($color-main-landing-hero-green, 7%);
   }
 
   &__social {

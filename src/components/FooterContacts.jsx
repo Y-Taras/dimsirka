@@ -7,14 +7,14 @@ const FooterContacts = () => (
   <div className="footer__contacts">
     <div className="footer__address">
       <span className="footer__category-title">
-        <FormattedMessage id={'footer.contacts.title'} />
+        <FormattedMessage id="footer.contacts.title" />
       </span>
       <address className="footer__address-content">
         <a href="mailto:dimsirka@gmail.com" className="footer__address-email">
           dimsirka@gmail.com
         </a>
         <span className="footer__address-postal">
-          <FormattedMessage id={'footer.contacts.adr'} />
+          <FormattedMessage id="footer.contacts.adr" />
         </span>
         <a href="tel:+380342756421" className="footer__address-phone">
           (0342)&nbsp;75&nbsp;64&nbsp;21
@@ -28,7 +28,7 @@ const FooterContacts = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        <span className={'visuallyhidden'}>Facebook page link</span>
+        <span className="visuallyhidden">Facebook page link</span>
       </a>
       <a
         href="https://www.instagram.com/dim__sirka"
@@ -36,7 +36,7 @@ const FooterContacts = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        <span className={'visuallyhidden'}>Instagram posts link</span>
+        <span className="visuallyhidden">Instagram posts link</span>
       </a>
       <a
         href="https://www.gofundme.com/DimSirkaIF"
@@ -44,7 +44,7 @@ const FooterContacts = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        <span className={'visuallyhidden'}>GoFundMe fundraising link</span>
+        <span className="visuallyhidden">GoFundMe fundraising link</span>
       </a>
     </div>
   </div>

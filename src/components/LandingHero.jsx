@@ -15,11 +15,11 @@ const LandingHero = ({ randomAnimal }: { randomAnimal: RandomAnimal }) => (
           <FormattedMessage id="landing.hero.title" />
         </h1>
         <div className="hero__links">
-          <Link className={'hero__link'} to={'#'}>
-            <FormattedMessage id={'landing.hero.care'} />
+          <Link className="hero__link" to="#">
+            <FormattedMessage id="landing.hero.care" />
           </Link>
-          <Link className={'hero__link'} to={'#'}>
-            <FormattedMessage id={'landing.hero.adoption'} />
+          <Link className="hero__link" to="#">
+            <FormattedMessage id="landing.hero.adoption" />
           </Link>
         </div>
       </div>

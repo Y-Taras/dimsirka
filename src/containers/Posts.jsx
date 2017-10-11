@@ -50,11 +50,11 @@ class Posts extends Component {
       renderPostsCards = <Loader type="line-scale-pulse-out-rapid" active />;
     }
     return (
-      <section className={'news'}>
-        <div className={'news__title'}>
-          <FormattedMessage id={'news.title'} />
+      <section className="news">
+        <div className="news__title">
+          <FormattedMessage id="news.title" />
         </div>
-        <div className={'news__nav-links'}>
+        <div className="news__nav-links">
           <PostsNavigation urlPrefix={urlPrefix} category={match.params.category} />
         </div>
         {renderPostsCards}
