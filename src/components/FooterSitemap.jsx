@@ -11,13 +11,13 @@ const FooterSitemap = ({ urlPrefix }: { urlPrefix: string }) => (
         <span className="footer__category-title">
           <FormattedMessage id="footer.ourAnimals.title" />
         </span>
-        <Link to="#" className="footer__sitemap-link">
+        <Link to={`/${urlPrefix}#`} className="footer__sitemap-link">
           <FormattedMessage id="footer.ourAnimals.takeDog" />
         </Link>
-        <Link to="#" className="footer__sitemap-link">
+        <Link to={`/${urlPrefix}#`} className="footer__sitemap-link">
           <FormattedMessage id="footer.ourAnimals.takeCat" />
         </Link>
-        <Link to="#" className="footer__sitemap-link">
+        <Link to={`/${urlPrefix}#`} className="footer__sitemap-link">
           <FormattedMessage id="footer.ourAnimals.careOnline" />
         </Link>
       </div>
@@ -27,10 +27,10 @@ const FooterSitemap = ({ urlPrefix }: { urlPrefix: string }) => (
         <span className="footer__category-title">
           <FormattedMessage id="footer.search.title" />
         </span>
-        <Link to="#" className="footer__sitemap-link">
+        <Link to={`/${urlPrefix}#`} className="footer__sitemap-link">
           <FormattedMessage id="footer.search.lost" />
         </Link>
-        <Link to="#" className="footer__sitemap-link">
+        <Link to={`/${urlPrefix}#`} className="footer__sitemap-link">
           <FormattedMessage id="footer.search.found" />
         </Link>
       </div>
@@ -43,10 +43,10 @@ const FooterSitemap = ({ urlPrefix }: { urlPrefix: string }) => (
         <Link to={`/${urlPrefix}about/organization`} className="footer__sitemap-link">
           <FormattedMessage id="footer.aboutUs.org" />
         </Link>
-        <Link to="#" className="footer__sitemap-link">
+        <Link to={`/${urlPrefix}about/team`} className="footer__sitemap-link">
           <FormattedMessage id="footer.aboutUs.team" />
         </Link>
-        <Link to="#" className="footer__sitemap-link">
+        <Link to={`/${urlPrefix}about/partners`} className="footer__sitemap-link">
           <FormattedMessage id="footer.aboutUs.partners" />
         </Link>
       </div>
@@ -56,26 +56,26 @@ const FooterSitemap = ({ urlPrefix }: { urlPrefix: string }) => (
         <span className="footer__category-title">
           <FormattedMessage id="footer.news.title" />
         </span>
-        <Link to="#" className="footer__sitemap-link">
+        <Link to={`/${urlPrefix}news/our`} className="footer__sitemap-link">
           <FormattedMessage id="footer.news.ourNews" />
         </Link>
-        <Link to="#" className="footer__sitemap-link">
+        <Link to={`/${urlPrefix}news/actions`} className="footer__sitemap-link">
           <FormattedMessage id="footer.news.actions" />
         </Link>
-        <Link to="#" className="footer__sitemap-link">
+        <Link to={`/${urlPrefix}news/info`} className="footer__sitemap-link">
           <FormattedMessage id="footer.news.useful" />
         </Link>
       </div>
     </div>
     <div className="footer__sitemap-container">
       <div className="footer__sitemap-col">
-        <Link to="#" className="footer__sitemap-bold-link">
+        <Link to={`/${urlPrefix}projects`} className="footer__sitemap-bold-link">
           <FormattedMessage id="footer.projects" />
         </Link>
-        <Link to="#" className="footer__sitemap-bold-link">
+        <Link to={`/${urlPrefix}shop`} className="footer__sitemap-bold-link">
           <FormattedMessage id="footer.shop" />
         </Link>
-        <Link to="#" className="footer__sitemap-bold-link">
+        <Link to={`/${urlPrefix}webcams`} className="footer__sitemap-bold-link">
           <FormattedMessage id="footer.webcams" />
         </Link>
       </div>

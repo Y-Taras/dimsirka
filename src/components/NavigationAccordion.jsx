@@ -6,25 +6,40 @@ import { FormattedMessage } from 'react-intl';
 
 type Props = {
   children: Children,
-  title: string
+  title: string,
+  handleNavClick: Function,
+  navBarOpened: boolean
 };
 
 class AccordionSection extends Component {
   state = {
-    open: false,
-    class: 'close'
+    open: false
   };
+
+  componentWillReceiveProps(nextProps) {
+    if (!nextProps.navBarOpened) {
+      this.setState({ open: false });
+    }
+  }
+
   handleClick = () => {
-    if (this.state.open) {
-      this.setState({
-        open: false,
-        class: 'close'
-      });
-    } else {
-      this.setState({
-        open: true,
-        class: 'open'
-      });
+    this.setState(prevState => ({
+      open: !prevState.open
+    }));
+  };
+
+  handleKeyToggle = evt => {
+    if (evt.key === 'ArrowDown') {
+      this.setState({ open: true });
+    }
+    if (evt.key === 'ArrowUp') {
+      this.setState({ open: false });
+    }
+  };
+
+  handleEnterKey = evt => {
+    if (evt.key === 'Enter') {
+      this.props.handleNavClick();
     }
   };
 
@@ -33,12 +48,27 @@ class AccordionSection extends Component {
   render() {
     return (
       <div className="dropdown">
-        <span className="nav__link" onClick={this.handleClick} role="button" tabIndex={0}>
+        <span
+          className="nav__link"
+          onClick={this.handleClick}
+          onKeyDown={this.handleKeyToggle}
+          role="button"
+          tabIndex={0}
+        >
           <FormattedMessage id={`header.${this.props.title}.title`} />
         </span>
-        <div className={`dropdown__content ${this.state.class}`}>{this.props.children}</div>
+        <div
+          className={`dropdown__content ${this.state.open ? 'dropdown__open' : 'dropdown__close'}`}
+          onClick={this.props.handleNavClick}
+          onKeyUp={this.handleEnterKey}
+          role="button"
+          tabIndex={0}
+        >
+          {this.props.children}
+        </div>
       </div>
     );
   }
 }
+
 export default AccordionSection;

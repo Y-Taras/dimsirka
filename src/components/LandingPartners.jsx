@@ -16,7 +16,7 @@ const partners = [
   { logo: 'http://via.placeholder.com/220x110', id: '9' }
 ];
 
-const LandingPartners = () => (
+const LandingPartners = ({urlPrefix}: {urlPrefix: string}) => (
   <section className="partners">
     <div className="container">
       <h3 className="partners__title">
@@ -41,7 +41,7 @@ const LandingPartners = () => (
           <div key={item.id} className="partners__list-item" style={{ backgroundImage: `url('${item.logo}')` }} />
         ))}
         <div className="partners__list-item">
-          <Link className="partners__additon-button" to="#">
+          <Link className="partners__additon-button" to={`/${urlPrefix}/#`}>
             <FormattedMessage id="landing.partners.join" />
           </Link>
         </div>

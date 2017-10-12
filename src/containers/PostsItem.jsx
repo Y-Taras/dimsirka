@@ -106,7 +106,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = (dispatch: Function, ownProps) => ({
   getPostData(locale) {
-    const id: string = ownProps.match.params.id;
+    const { id }: string = ownProps.match.params.id;
     dispatch(getPost(locale, id));
   }
 });

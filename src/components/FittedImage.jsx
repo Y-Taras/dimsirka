@@ -5,6 +5,16 @@ import React from 'react';
 const supports =
   window.CSS && CSS.supports && CSS.supports('object-fit', 'cover') && CSS.supports('object-position', '0 0');
 
+type FittedImgType = {
+  alt: string,
+  className: string,
+  fit?: 'fill' | 'contain' | 'cover' | 'none',
+  height: string | number,
+  position?: string,
+  src: string,
+  width: string | number
+};
+
 const FittedImage = (props: FittedImgType) => {
   const { alt, className, fit, height, position, src, width } = props;
   return supports ? (
@@ -29,8 +39,8 @@ const FittedImage = (props: FittedImgType) => {
         backgroundPosition: position,
         backgroundSize: fit.replace('fill', '100% 100%').replace('none', 'auto'),
         display: 'inline-block',
-        height: isFinite(height) ? `${height}px` : height,
-        width: isFinite(width) ? `${width}px` : width
+        height: Number.isFinite(height) ? `${height}px` : height,
+        width: Number.isFinite(width) ? `${width}px` : width
       }}
     />
   );

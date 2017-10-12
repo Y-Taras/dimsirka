@@ -7,7 +7,7 @@ import { FormattedMessage } from 'react-intl';
 
 import AnimalCard from '../components/AnimalCard';
 
-const LandingHero = ({ randomAnimal }: { randomAnimal: RandomAnimal }) => (
+const LandingHero = ({ randomAnimal, urlPrefix }: { randomAnimal: RandomAnimal, urlPrefix: string }) => (
   <section className="hero">
     <div className="container hero__container">
       <div className="hero--left">
@@ -15,10 +15,10 @@ const LandingHero = ({ randomAnimal }: { randomAnimal: RandomAnimal }) => (
           <FormattedMessage id="landing.hero.title" />
         </h1>
         <div className="hero__links">
-          <Link className="hero__link" to="#">
+          <Link className="hero__link" to={`/${urlPrefix}#`}>
             <FormattedMessage id="landing.hero.care" />
           </Link>
-          <Link className="hero__link" to="#">
+          <Link className="hero__link" to={`/${urlPrefix}#`}>
             <FormattedMessage id="landing.hero.adoption" />
           </Link>
         </div>

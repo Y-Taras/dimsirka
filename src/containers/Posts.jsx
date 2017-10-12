@@ -21,9 +21,6 @@ type Props = {
 };
 
 class Posts extends Component {
-  static defaultProps = {
-    postList: { apiData: [], total: '3' }
-  };
 
   componentDidMount() {
     this.props.getPostListData(this.props.lang, null, this.props.match.params.category);

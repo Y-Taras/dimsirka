@@ -10,7 +10,7 @@ import LandingAchievements from '../components/LandingAchievements';
 import LandingPartners from '../components/LandingPartners';
 
 import { getRandomAnimalData } from '../actions/landingActions';
-import { getLang } from '../reducers/locale';
+import { getLang, getPrefix } from '../reducers/locale'
 import randomAnimalData from '../reducers/landing';
 
 const animalsNumber = {
@@ -21,6 +21,7 @@ const animalsNumber = {
 type Props = {
   getRandomAnimal: Function,
   lang: string,
+  urlPrefix: string,
   randomAnimal: randomAnimalData
 };
 
@@ -34,19 +35,20 @@ class Landing extends Component {
   render() {
     return (
       <div>
-        <LandingHero randomAnimal={this.props.randomAnimal} />
+        <LandingHero randomAnimal={this.props.randomAnimal} urlPrefix={this.props.urlPrefix} />
         <LandingAnimalsSummary animalsNumber={animalsNumber} />
         <LandingWorkFlow />
         <LandingAchievements />
-        <LandingPartners />
+        <LandingPartners urlPrefix={this.props.urlPrefix} />
       </div>
     );
   }
 }
 const mapStateToProps = state => {
   const lang = getLang(state.locale);
+  const urlPrefix = getPrefix(state.locale);
   const randomAnimal = state.randomAnimalData;
-  return { lang, randomAnimal };
+  return { lang, randomAnimal, urlPrefix };
 };
 const mapDispatchToProps = (dispatch: Function) => ({
   getRandomAnimal(lang, type) {

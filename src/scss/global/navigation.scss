@@ -48,6 +48,7 @@
 
   &__link:hover {
     background: darken(#fff, 7%);
+    cursor: pointer;
   }
 
   &__button {
@@ -59,59 +60,6 @@
 
   &__button:hover {
     background: lighten($color-secondary-header-bottom-button-orange, 7%);
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  .nav-container {
-    align-items: center;
-    flex-basis: auto;
-    flex-direction: column;
-  }
-
-  .nav-left {
-    flex-basis: auto;
-    margin-left: 0;
-  }
-
-  .nav-right,
-  .nav__button {
-    flex-basis: auto;
-  }
-}
-
-@media only screen and (max-width: 425px) {
-  .nav__bar-button {
-    border: 0;
-    display: inline-block;
-    padding: 0;
-  }
-
-  .nav-open {
-    height: 100%;
-  }
-
-  .nav-closed {
-    height: 0;
-    overflow: hidden;
-  }
-
-  .nav__link {
-    border: 1px #6f6f6f solid;
-    border-collapse: collapse;
-    display: block;
-  }
-
-  .nav-container {
-    width: 100%;
-  }
-
-  .nav-right,
-  .nav-left,
-  .nav__button {
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
   }
 }
 
@@ -145,7 +93,60 @@
   }
 }
 
+@media only screen and (max-width: 1024px) {
+  .nav-container {
+    align-items: center;
+    flex-basis: auto;
+    flex-direction: column;
+  }
+
+  .nav-left {
+    flex-basis: auto;
+    margin-left: 0;
+  }
+
+  .nav-right,
+  .nav__button {
+    flex-basis: auto;
+  }
+}
+
 @media only screen and (max-width: 425px) {
+  .nav {
+    &__bar-button {
+      border: 0;
+      display: inline-block;
+      padding: 0;
+    }
+
+    &-open {
+      height: 100%;
+    }
+
+    &-closed {
+      height: 0;
+      overflow: hidden;
+    }
+
+    &__link {
+      border: 1px #6f6f6f solid;
+      border-collapse: collapse;
+      display: block;
+    }
+
+    &-container {
+      width: 100%;
+    }
+
+    &-right,
+    &-left,
+    &__button {
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
   .dropdown {
     display: block;
     overflow: hidden;
@@ -154,13 +155,13 @@
       display: block;
       position: static;
     }
-  }
 
-  .open {
-    height: 100%;
-  }
+    &__open {
+      height: 100%;
+    }
 
-  .close {
-    height: 0;
+    &__close {
+      height: 0;
+    }
   }
 }

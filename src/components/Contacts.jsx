@@ -23,12 +23,17 @@ const Contacts = ({
   location: Location,
   history: RouterHistory
 }) => {
-  const changeLang = newLang => () => {
-    if (lang !== newLang) {
-      const newUrl = switchLangHepler(lang, newLang, location.pathname);
-      setLocaleData(newLang);
-      localStorage.setItem('lang', String(newLang));
-      history.replace(newUrl);
+  const changeLang = evt => {
+    evt.preventDefault();
+    evt.stopPropagation();
+    if (evt.type === 'click' || evt.key === 'Enter') {
+      const newLang = evt.target.getAttribute('value');
+      if (lang !== newLang) {
+        const newUrl = switchLangHepler(lang, newLang, location.pathname);
+        setLocaleData(newLang);
+        localStorage.setItem('lang', String(newLang));
+        history.replace(newUrl);
+      }
     }
   };
 
@@ -36,13 +41,13 @@ const Contacts = ({
   return (
     <div className="contacts">
       <div className="contacts-left">
-        <div className="contact" onClick={changeLang('uk')} role="button" tabIndex={0}>
+        <div className="contact" value="uk" onClick={changeLang} onKeyUp={changeLang} role="button" tabIndex={0}>
           <span className={lang === 'uk' ? langClass : ''}>укр</span>
         </div>
-        <div className="contact" onClick={changeLang('en')} role="button" tabIndex={0}>
+        <div className="contact" value="en" onClick={changeLang} onKeyUp={changeLang} role="button" tabIndex={0}>
           <span className={lang === 'en' ? langClass : ''}>eng</span>
         </div>
-        <div className="contact" onClick={changeLang('ru')} role="button" tabIndex={0}>
+        <div className="contact" value="ru" onClick={changeLang} onKeyUp={changeLang} role="button" tabIndex={0}>
           <span className={lang === 'ru' ? langClass : ''}>рус</span>
         </div>
         <a className="contact contact--mobile" href="tel:+380997124680">
@@ -58,7 +63,7 @@ const Contacts = ({
             <FormattedMessage id="header.webcams" />
           </span>
         </Link>
-        <Link className="contact" to="#">
+        <Link className="contact" to={`/${urlPrefix}register`}>
           <span className="contact__text">
             <FormattedMessage id="header.register" />
           </span>

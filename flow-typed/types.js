@@ -70,16 +70,6 @@ export type RandomAnimal = {
   }
 };
 
-export type FittedImgType = {
-  alt: string,
-  className: string,
-  fit: 'fill' | 'contain' | 'cover' | 'none',
-  height: string | number,
-  position: string,
-  src: string,
-  width: string | number
-};
-
 declare var module: {
   hot: {
     accept(path: string, callback: () => void): void
