@@ -3,6 +3,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
+import type { MapStateToProps } from 'react-redux';
 
 import { getPrefix } from './reducers/locale';
 
@@ -14,9 +15,13 @@ import Header from './containers/Header';
 import Footer from './components/Footer';
 import RootRouter from './components/RootRouter';
 import AboutUs from './components/AboutUs';
-import Help from './containers/Help'
+import Help from './containers/Help';
 
 const FourOhFour = () => <h1>404</h1>;
+
+type StateType = {
+  locale: string
+};
 
 const Routes = ({ urlPrefix }: { urlPrefix: string }) => (
   <BrowserRouter>
@@ -37,7 +42,9 @@ const Routes = ({ urlPrefix }: { urlPrefix: string }) => (
     </div>
   </BrowserRouter>
 );
-
-const mapStateToProps = state => ({ urlPrefix: getPrefix(state.locale) });
+const mapStateToProps: MapStateToProps<*, *, *> = (state: StateType) => {
+  const urlPrefix = getPrefix(state.locale);
+  return { urlPrefix };
+};
 
 export default connect(mapStateToProps)(Routes);

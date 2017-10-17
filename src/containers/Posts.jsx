@@ -20,8 +20,7 @@ type Props = {
   match: Match
 };
 
-class Posts extends Component {
-
+class Posts extends Component<Props> {
   componentDidMount() {
     this.props.getPostListData(this.props.lang, null, this.props.match.params.category);
   }

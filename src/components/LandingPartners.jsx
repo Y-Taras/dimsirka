@@ -16,7 +16,7 @@ const partners = [
   { logo: 'http://via.placeholder.com/220x110', id: '9' }
 ];
 
-const LandingPartners = ({urlPrefix}: {urlPrefix: string}) => (
+const LandingPartners = ({ urlPrefix }: { urlPrefix: string }) => (
   <section className="partners">
     <div className="container">
       <h3 className="partners__title">

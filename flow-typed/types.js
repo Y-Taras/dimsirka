@@ -84,3 +84,7 @@ declare type ActionT<A: ActionType, P> = {|
 |};
 
 export type Action = ActionT<'ADD_POST_DATA', Post> | ActionT<'ADD_POSTLIST_DATA', Array<Post>>;
+
+declare var CSS: {
+  supports(propertyName: string, value: string) : boolean
+};

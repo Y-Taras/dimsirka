@@ -10,12 +10,12 @@ import LandingAchievements from '../components/LandingAchievements';
 import LandingPartners from '../components/LandingPartners';
 
 import { getRandomAnimalData } from '../actions/landingActions';
-import { getLang, getPrefix } from '../reducers/locale'
+import { getLang, getPrefix } from '../reducers/locale';
 import randomAnimalData from '../reducers/landing';
 
 const animalsNumber = {
-  cats: 123,
-  dogs: 529
+  cats: '123',
+  dogs: '529'
 };
 
 type Props = {
@@ -25,7 +25,7 @@ type Props = {
   randomAnimal: randomAnimalData
 };
 
-class Landing extends Component {
+class Landing extends Component<Props> {
   componentDidMount() {
     this.props.getRandomAnimal(this.props.lang, 'dog');
   }

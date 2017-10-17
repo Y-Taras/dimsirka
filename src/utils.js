@@ -12,7 +12,7 @@ export function flattenMessages(nestedMessages, prefix = '') {
     return messages;
   }, {});
 }
-export function switchLangHepler(oldLang, newLang, path) {
+export function switchLangHelper(oldLang, newLang, path) {
   const extractedPath = n =>
     path
       .split('/')

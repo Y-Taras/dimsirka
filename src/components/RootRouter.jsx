@@ -1,8 +1,8 @@
 // @flow
 
 import React from 'react';
-import type { ContextRouter } from 'react-router-dom';
 import { Redirect, Route } from 'react-router-dom';
+import type { ContextRouter } from 'react-router-dom';
 
 const RootRouter = ({
   component: Component,
@@ -10,7 +10,7 @@ const RootRouter = ({
   path,
   urlPrefix
 }: {
-  component: ReactClass<*>,
+  component: React$ComponentType<*>,
   exact: boolean,
   path: string,
   urlPrefix: string

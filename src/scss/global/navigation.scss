@@ -129,9 +129,12 @@
     }
 
     &__link {
-      border: 1px #6f6f6f solid;
+      border: 1px rgba(111, 111, 111, 0.54) dashed;
       border-collapse: collapse;
       display: block;
+      padding: 10px 15px;
+      transition: 0.3s;
+
     }
 
     &-container {
@@ -154,6 +157,12 @@
     &__content {
       display: block;
       position: static;
+    }
+
+    &__link {
+      border: 1px rgba(111, 111, 111, 0.54) dashed;
+      border-collapse: collapse;
+      padding: 10px;
     }
 
     &__open {

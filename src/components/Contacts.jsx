@@ -8,7 +8,7 @@ import type { RouterHistory, Location } from 'react-router-dom';
 
 import { getLang } from '../reducers/locale';
 import { setLocale } from '../actions/commonActions';
-import { switchLangHepler } from '../utils';
+import { switchLangHelper } from '../utils';
 
 const Contacts = ({
   lang,
@@ -29,7 +29,7 @@ const Contacts = ({
     if (evt.type === 'click' || evt.key === 'Enter') {
       const newLang = evt.target.getAttribute('value');
       if (lang !== newLang) {
-        const newUrl = switchLangHepler(lang, newLang, location.pathname);
+        const newUrl = switchLangHelper(lang, newLang, location.pathname);
         setLocaleData(newLang);
         localStorage.setItem('lang', String(newLang));
         history.replace(newUrl);

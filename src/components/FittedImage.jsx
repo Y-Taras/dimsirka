@@ -2,15 +2,14 @@
 
 import React from 'react';
 
-const supports =
-  window.CSS && CSS.supports && CSS.supports('object-fit', 'cover') && CSS.supports('object-position', '0 0');
+const supports = CSS.supports && CSS.supports('object-fit', 'cover') && CSS.supports('object-position', '0 0');
 
 type FittedImgType = {
   alt: string,
   className: string,
-  fit?: 'fill' | 'contain' | 'cover' | 'none',
+  fit: 'fill' | 'contain' | 'cover' | 'none',
   height: string | number,
-  position?: string,
+  position: string,
   src: string,
   width: string | number
 };
@@ -44,11 +43,6 @@ const FittedImage = (props: FittedImgType) => {
       }}
     />
   );
-};
-
-FittedImage.defaultProps = {
-  fit: 'fill',
-  position: '50% 50%'
 };
 
 export default FittedImage;

@@ -1,22 +1,25 @@
 // @flow
 
 import React, { Component } from 'react';
-import type { Children } from 'react';
+import type { Node } from 'react';
 import { FormattedMessage } from 'react-intl';
 
 type Props = {
-  children: Children,
+  children: Node,
   title: string,
   handleNavClick: Function,
   navBarOpened: boolean
 };
+type State = {
+  open: boolean
+}
 
-class AccordionSection extends Component {
+class AccordionSection extends Component <Props, State> {
   state = {
     open: false
   };
 
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps: Props) {
     if (!nextProps.navBarOpened) {
       this.setState({ open: false });
     }
@@ -28,16 +31,13 @@ class AccordionSection extends Component {
     }));
   };
 
-  handleKeyToggle = evt => {
+  handleKeyToggle = (evt: SyntheticKeyboardEvent<>) => {
     if (evt.key === 'ArrowDown') {
       this.setState({ open: true });
     }
     if (evt.key === 'ArrowUp') {
       this.setState({ open: false });
     }
-  };
-
-  handleEnterKey = evt => {
     if (evt.key === 'Enter') {
       this.props.handleNavClick();
     }
@@ -60,7 +60,7 @@ class AccordionSection extends Component {
         <div
           className={`dropdown__content ${this.state.open ? 'dropdown__open' : 'dropdown__close'}`}
           onClick={this.props.handleNavClick}
-          onKeyUp={this.handleEnterKey}
+          onKeyUp={this.handleKeyToggle}
           role="button"
           tabIndex={0}
         >

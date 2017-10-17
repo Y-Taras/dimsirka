@@ -17,6 +17,7 @@ const PostsCardItem = (props: any) => {
           fit="cover"
           width="100%"
           height="190px"
+          position="50% 50%"
         />
       </picture>
       <div className="news__card-content">

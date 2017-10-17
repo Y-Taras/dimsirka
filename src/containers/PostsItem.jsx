@@ -14,6 +14,8 @@ import { getLang, getPrefix } from '../reducers/locale';
 import PostsNavigation from '../components/PostsNavigation';
 import { getPost } from '../actions/postActions';
 
+import type { Post } from '../../flow-typed/types';
+
 type Props = {
   getPostData: Function,
   lang: string,
@@ -22,33 +24,13 @@ type Props = {
   post: Post
 };
 
-type DefaultProps = {
-  post: {
-    id: '',
-    type: '',
-    attributes: {
-      image: {
-        file: { url: '' }
-      },
-      title: '',
-      'short-description': '',
-      description: '',
-      'category-id': 0
-    }
-  }
-};
-
-class PostsItem extends Component {
-  defaultProps: DefaultProps;
-
+class PostsItem extends Component<Props, void> {
   componentDidMount() {
     /* if (!this.props.post[this.props.match.params.id]) {
       this.props.getPostData();
     } */
     this.props.getPostData(this.props.lang);
   }
-
-  props: Props;
 
   render() {
     const { history, post, urlPrefix } = this.props;
@@ -106,7 +88,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = (dispatch: Function, ownProps) => ({
   getPostData(locale) {
-    const { id }: string = ownProps.match.params.id;
+    const { id } = ownProps.match.params;
     dispatch(getPost(locale, id));
   }
 });

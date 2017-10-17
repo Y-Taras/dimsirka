@@ -32,8 +32,7 @@ const PostsCards = ({
     default:
       locale = uk_UA;
   }
-  console.log(locale);
-  console.log(urlPrefix);
+
   return (
     <div className="container">
       <div className="news__cards">
