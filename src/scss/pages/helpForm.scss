@@ -1,0 +1,190 @@
+.help-form {
+  &__title {
+    color: #4c4c4c;
+    font-size: 2.625rem;
+    font-weight: 700;
+    text-align: center;
+
+    &--green {
+      background-color: #3ab8a4;
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.02) 0%, rgba(255, 255, 255, 0.02) 100%);
+      color: #fff;
+      margin: 0;
+      padding: 60px 0;
+    }
+  }
+
+  &__container {
+    margin: 0 auto;
+    max-width: 810px;
+  }
+
+  &__caption {
+    color: #4f4f4f;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    margin: 20px 50px;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.125rem;
+    margin-bottom: 5px;
+  }
+
+  &__inputs-wrapper {
+    margin: 0 15px;
+  }
+
+  &__info-wrapper {
+    display: flex;
+  }
+
+  &__info {
+    flex: 1;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+
+  &__column-wrapper {
+    display: flex;
+  }
+
+  &__column {
+    color: #4f4f4f;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin-right: 10%;
+  }
+
+  &__input {
+    background-color: #f3f3f3;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    border-radius: 5px;
+    line-height: 2.1rem;
+    margin-bottom: 18px;
+  }
+
+  &__payment-details {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10%;
+  }
+
+  &__sum {
+    line-height: 2.1rem;
+    margin: 5px 10% 20px 0;
+  }
+
+  &__radio {
+    background-color: #fff;
+    border: 2px solid #4f4f4f;
+    margin: 0 7px 0 15px;
+    vertical-align: middle;
+  }
+
+  &__sum-value {
+    font-weight: 300;
+  }
+
+  &__sum-number {
+    font-size: 1.5rem;
+    vertical-align: middle;
+  }
+
+  &__sum-currency {
+    font-variant: small-caps;
+    margin: 0 5px;
+  }
+
+  &__text[for='sumOther'] {
+    margin-left: 30px;
+  }
+
+  &__input--sum {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 0;
+    max-width: 85px;
+    vertical-align: middle;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    border: 0;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 16px 60px;
+
+    &:first-child {
+      background-color: #ff9400;
+    }
+
+    &:last-child {
+      background-color: #fdbd65;
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    &__payment-details,
+    &__sum {
+      margin-right: 0;
+    }
+
+    &__button {
+      margin-bottom: 20px;
+      padding: 15px 30px;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    &__column-wrapper {
+      flex-wrap: wrap;
+    }
+
+    &__sum {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__buttons {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__button {
+      padding: 15px 0;
+      width: 75%;
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    &__info-wrapper {
+      flex-direction: column;
+      text-align: center;
+    }
+
+
+    &__sum-number,
+    &__input--sum {
+      font-size: 1.2rem;
+    }
+
+    &__text[for='sumOther'] {
+      margin-left: 10px;
+    }
+  }
+}

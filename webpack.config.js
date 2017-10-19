@@ -20,6 +20,7 @@ const config = {
     hot: true,
     publicPath: '/dist/',
     historyApiFallback: true,
+    overlay: false,
     proxy: {
       '/uploads': {
         target: 'http://localhost:3000',

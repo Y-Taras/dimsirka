@@ -15,7 +15,7 @@ import Header from './containers/Header';
 import Footer from './components/Footer';
 import RootRouter from './components/RootRouter';
 import AboutUs from './components/AboutUs';
-import Help from './containers/Help';
+import HelpForm from './containers/HelpForm';
 
 const FourOhFour = () => <h1>404</h1>;
 
@@ -31,8 +31,8 @@ const Routes = ({ urlPrefix }: { urlPrefix: string }) => (
         <RootRouter exact path="/:lang(en|ru)?" urlPrefix={urlPrefix} component={Landing} />
         <Route path="/:lang(en|ru)?/webcams" component={Webcams} />
         <Route exact path="/:lang(en|ru)?/about/organization" component={AboutUs} />
+        <Route exact path="/:lang(en|ru)?/help" component={HelpForm} />
         <Route exact path="/:lang(en|ru)?/news" component={Posts} />
-        <Route exact path="/:lang(en|ru)?/help" component={Help} />
         <Route exact path="/:lang(en|ru)?/news/:category(our|actions|info)" component={Posts} />
         <Route exact path="/:lang(en|ru)?/news/:id" component={PostsItem} />
         <Route path="/:lang(en|ru)?/shop" component={FourOhFour} />

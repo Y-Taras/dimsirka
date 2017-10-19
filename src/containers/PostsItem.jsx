@@ -14,8 +14,6 @@ import { getLang, getPrefix } from '../reducers/locale';
 import PostsNavigation from '../components/PostsNavigation';
 import { getPost } from '../actions/postActions';
 
-import type { Post } from '../../flow-typed/types';
-
 type Props = {
   getPostData: Function,
   lang: string,

@@ -42,16 +42,14 @@ export type PostListData = {
 };
 
 export type Post = {
-  data: {
-    id: string,
-    type: string,
-    attributes: {
-      image: Image,
-      title: string,
-      'short-description': string,
-      description: string,
-      'category-id': number
-    }
+  id: string,
+  type: string,
+  attributes: {
+    image: Image,
+    title: string,
+    'short-description': string,
+    description: string,
+    'category-id': number
   }
 };
 
@@ -86,5 +84,39 @@ declare type ActionT<A: ActionType, P> = {|
 export type Action = ActionT<'ADD_POST_DATA', Post> | ActionT<'ADD_POSTLIST_DATA', Array<Post>>;
 
 declare var CSS: {
-  supports(propertyName: string, value: string) : boolean
+  supports(propertyName: string, value: string): boolean
+};
+
+export type InnerFromProps = {
+  dirty: boolean,
+  isValid: boolean,
+  // Formik state and state helpers
+  values: Values,
+  setValues: (values: Values) => void,
+  setFieldValue: <K: $Keys<Values>>(field: K, value: any) => void,
+
+  errors: $ObjMap<Values, <K>(k: K) => ?string>,
+  setErrors: (errors: { [key: $Keys<Values>]: string }) => void,
+  setFieldError: <K: $Keys<Values>>(field: K, message: string) => void,
+
+  touched: $ObjMap<Values, <K>(k: K) => boolean | void>,
+  setTouched: (touched: { [key: $Keys<Values>]: boolean }) => void,
+  setFieldTouched: <K: $Keys<Values>>(field: K, isTouched?: boolean) => void,
+
+  isSubmitting: boolean,
+  setSubmitting: (isSubmitting: boolean) => void,
+
+  status?: any,
+  setStatus: (status: any) => void,
+
+  resetForm: (nextProps?: Enhanced) => void,
+  submitForm: () => void,
+
+  // FormikHandlers
+
+  handleSubmit: (e: SyntheticEvent<EventTarget>) => void,
+  handleChange: (e: SyntheticEvent<EventTarget>) => void,
+  handleChangeValue: (name: string, value: any) => void,
+  handleBlur: (e: SyntheticEvent<EventTarget>) => void,
+  handleReset: () => void
 };
