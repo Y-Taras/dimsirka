@@ -17,7 +17,7 @@ const FooterContacts = () => (
           <FormattedMessage id="footer.contacts.adr" />
         </span>
         <a href="tel:+380342756421" className="footer__address-phone">
-          (0342)&nbsp;75&nbsp;64&nbsp;21
+          {`(0342) 75 64 21`}
         </a>
       </address>
     </div>

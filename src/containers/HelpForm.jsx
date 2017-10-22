@@ -15,7 +15,7 @@ const HelpForm = () => (
         <FormattedMessage id="helpForm.finance.description" />
       </p>
       <HelpFormFinance />
-      <h3 className="help-form__title">
+      <h3 className="help-form__title help-form__title--zero-bottom">
         <FormattedMessage id="helpForm.volunteer.title" />
       </h3>
       <p className="help-form__caption">

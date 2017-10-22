@@ -1,0 +1,59 @@
+.help-form {
+  &__checkboxes {
+    background-color: #fff;
+    box-shadow: 1px 2px 9px 1px rgba(0, 0, 0, 0.16);
+    margin-bottom: 30px;
+    padding: 18px 5%;
+  }
+
+  &__volunteer-check-item {
+    display: flex;
+  }
+
+  &__volunteer-checkbox {
+    margin-right: 25px;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  &__volunteer-item {
+    display: flex;
+    flex-direction: column;
+    width: 245px;
+  }
+
+  &__volunteer-buttons {
+    margin: 40px 0;
+    text-align: center;
+  }
+
+  &__volunteer-button {
+    background-color: #ff9400;
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1rem;
+    padding: 11px;
+    text-align: center;
+    width: 250px;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    &__volunteer-item {
+      margin: 0 12px;
+    }
+  }
+
+  @media only screen and (max-width: 550px) {
+    &__volunteer-item {
+      margin: 0;
+      width: 80%;
+    }
+  }
+}

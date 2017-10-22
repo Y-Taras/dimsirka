@@ -15,6 +15,10 @@
     color: #fff;
   }
 
+  *:visited {
+    color: #d8efea;
+  }
+
   &--flex {
     display: flex;
     flex-wrap: wrap;
@@ -66,17 +70,31 @@
     transition: 0.3s;
   }
 
-  &__sitemap-bold-link:hover {
-    background: darken($color-main-landing-hero-green, 7%);
+  &__sitemap-bold-link > * {
+    border-radius: 2px;
+    padding: 3px;
+
+    &:hover {
+      background: darken($color-main-landing-hero-green, 7%);
+    }
   }
 
   &__sitemap-link {
     opacity: 0.75;
-    transition: 0.3s;
+    transition: 2s;
   }
 
-  &__sitemap-link:hover {
-    background: darken($color-main-landing-hero-green, 7%);
+  &__sitemap-link > * {
+    border-radius: 2px;
+    padding: 3px;
+
+    &:hover {
+      background: darken($color-main-landing-hero-green, 7%);
+    }
+  }
+
+  &__sitemap-link > * &__social {
+    margin: 55px 0;
   }
 
   &__social {

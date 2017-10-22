@@ -12,6 +12,10 @@
       margin: 0;
       padding: 60px 0;
     }
+
+    &--zero-bottom {
+      margin-bottom: 0;
+    }
   }
 
   &__container {
@@ -36,30 +40,31 @@
   }
 
   &__inputs-wrapper {
-    margin: 0 15px;
+    margin: 0 5%;
   }
 
   &__info-wrapper {
     display: flex;
+    justify-content: space-between;
   }
 
   &__info {
-    flex: 1;
     font-size: 0.875rem;
     font-weight: 500;
     margin-bottom: 15px;
+    width: 45%;
   }
 
   &__column-wrapper {
     display: flex;
+    justify-content: space-between;
   }
 
   &__column {
     color: #4f4f4f;
     display: flex;
-    flex: 1;
     flex-direction: column;
-    margin-right: 10%;
+    width: 45%;
   }
 
   &__input {
@@ -73,18 +78,35 @@
   &__payment-details {
     display: flex;
     flex-direction: column;
-    margin-right: 10%;
   }
 
   &__sum {
+    display: flex;
+    flex-wrap: wrap;
     line-height: 2.1rem;
-    margin: 5px 10% 20px 0;
+    margin: 5px 0 20px;
+  }
+
+  &__sum-values {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__sum-pairs {
+    display: flex;
+    justify-content: space-around;
+    max-width: 45%;
+  }
+
+  &__text--sum {
+    align-self: center;
+    margin: 0;
   }
 
   &__radio {
     background-color: #fff;
     border: 2px solid #4f4f4f;
-    margin: 0 7px 0 15px;
+    margin: 0 11px;
     vertical-align: middle;
   }
 
@@ -103,20 +125,36 @@
   }
 
   &__text[for='sumOther'] {
-    margin-left: 30px;
+    margin: 0 11px;
   }
 
   &__input--sum {
     font-size: 1.5rem;
     font-weight: 300;
     margin-bottom: 0;
-    max-width: 85px;
+    max-width: 145px;
+    text-indent: 5px;
     vertical-align: middle;
+  }
+
+  &__agreement {
+    margin-bottom: 35px;
+  }
+
+  &__check-agreement {
+    margin: 0 10px 0 0;
+  }
+
+  &__agreement-link {
+    &:link {
+      color: inherit;
+      text-decoration: underline;
+    }
   }
 
   &__buttons {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   &__button {
@@ -125,7 +163,8 @@
     color: #fff;
     font-size: 1.5rem;
     font-weight: 500;
-    padding: 16px 60px;
+    padding: 16px 0;
+    width: 45%;
 
     &:first-child {
       background-color: #ff9400;
@@ -137,54 +176,105 @@
   }
 
   @media only screen and (max-width: 1024px) {
-    &__payment-details,
-    &__sum {
-      margin-right: 0;
+    &__sum-values {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
     }
 
-    &__button {
-      margin-bottom: 20px;
-      padding: 15px 30px;
+    &__sum-pairs {
+      max-width: 25%;
+    }
+
+    &__text--sum {
     }
   }
 
   @media only screen and (max-width: 700px) {
-    &__column-wrapper {
-      flex-wrap: wrap;
+    &__column,
+    &__info {
+      width: 47%;
     }
 
-    &__sum {
-      align-items: center;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+    &__sum-values {
+      justify-content: flex-start;
+    }
+
+    &__sum-pairs {
+      margin-bottom: 10px;
+      max-width: 45%;
     }
 
     &__buttons {
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &__button {
+      margin: 15px 0;
+      width: 60%;
+    }
+  }
+
+  @media only screen and (max-width: 550px) {
+    &__info-wrapper {
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+
+    &__column-wrapper {
       flex-wrap: wrap;
       justify-content: center;
     }
 
+    &__column,
+    &__info {
+      width: 80%;
+    }
+
+    &__payment-details,
+    &__agreement {
+      margin: auto;
+      width: 80%;
+    }
+
+    &__sum {
+      margin: 5px auto 20px;
+      width: 80%;
+    }
+
+    &__sum-values {
+      justify-content: space-around;
+    }
+
+    &__sum-currency {
+      margin: 0 10px;
+    }
+
     &__button {
-      padding: 15px 0;
-      width: 75%;
+      width: 85%;
     }
   }
 
   @media only screen and (max-width: 425px) {
-    &__info-wrapper {
-      flex-direction: column;
-      text-align: center;
-    }
-
-
-    &__sum-number,
-    &__input--sum {
-      font-size: 1.2rem;
+    &__column,
+    &__info,
+    &__payment-details,
+    &__sum {
+      width: 90%;
     }
 
     &__text[for='sumOther'] {
-      margin-left: 10px;
+      margin: 0 5px;
+    }
+
+    &__sum-pairs {
+      max-width: 100%;
+    }
+
+    &__button {
+      font-size: 1.2rem;
     }
   }
 }

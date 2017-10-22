@@ -3,6 +3,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Formik } from 'formik';
+import { Link } from 'react-router-dom';
 
 const HelpFormFinance = () => (
   <Formik
@@ -12,7 +13,8 @@ const HelpFormFinance = () => (
       phone: '',
       email: '',
       purpose: '',
-      sum: 0
+      sum: 0,
+      formAgreement: false
     }}
     validate={values => {
       // same as above, but feel free to move this into a class method now.
@@ -22,6 +24,11 @@ const HelpFormFinance = () => (
       } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
         errors.email = 'Invalid email address';
       }
+
+      if (!values.formAgreement) {
+        errors.formAgreement = 'Required'
+      }
+
       return errors;
     }}
     onSubmit={values => {
@@ -121,93 +128,115 @@ const HelpFormFinance = () => (
             {touched.purpose && errors.purpose && <div>{errors.purpose}</div>}
           </div>
           <div className="help-form__sum">
-            <span className="help-form__text">
+            <span className="help-form__text help-form__text--sum">
               <FormattedMessage id="helpForm.finance.form.sum" />
             </span>
-            <span className="help-form__row">
-              <input
-                type="radio"
-                className="help-form__radio"
-                name="sum"
-                checked={values.sum === '50'}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value="50"
-                id="sum1"
-              />
-              <label htmlFor="sum1" className="help-form__sum-value">
-                <span className="help-form__sum-number">50</span>
+            <div className="help-form__sum-values">
+              <div className="help-form__sum-pairs">
+                <span className="help-form__sum-item">
+                  <input
+                    type="radio"
+                    className="help-form__radio"
+                    name="sum"
+                    checked={values.sum === '50'}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value="50"
+                    id="sum1"
+                  />
+                  <label htmlFor="sum1" className="help-form__sum-value">
+                    <span className="help-form__sum-number">50</span>
+                    <span className="help-form__sum-currency">
+                      <FormattedMessage id="helpForm.finance.form.currency" />
+                    </span>
+                  </label>
+                </span>
+                <span className="help-form__sum-item">
+                  <input
+                    type="radio"
+                    className="help-form__radio"
+                    name="sum"
+                    checked={values.sum === '100'}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value="100"
+                    id="sum2"
+                  />
+                  <label htmlFor="sum2" className="help-form__sum-value">
+                    <span className="help-form__sum-number">100</span>
+                    <span className="help-form__sum-currency">
+                      <FormattedMessage id="helpForm.finance.form.currency" />
+                    </span>
+                  </label>
+                </span>
+              </div>
+              <div className="help-form__sum-pairs">
+                <span className="help-form__sum-item">
+                  <input
+                    type="radio"
+                    className="help-form__radio"
+                    name="sum"
+                    checked={values.sum === '200'}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value="200"
+                    id="sum3"
+                  />
+                  <label htmlFor="sum3" className="help-form__sum-value">
+                    <span className="help-form__sum-number">200</span>
+                    <span className="help-form__sum-currency">
+                      <FormattedMessage id="helpForm.finance.form.currency" />
+                    </span>
+                  </label>
+                </span>
+                <span className="help-form__sum-item">
+                  <input
+                    type="radio"
+                    className="help-form__radio"
+                    name="sum"
+                    checked={values.sum === '500'}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value="500"
+                    id="sum4"
+                  />
+                  <label htmlFor="sum4" className="help-form__sum-value">
+                    <span className="help-form__sum-number">500</span>
+                    <span className="help-form__sum-currency">
+                      <FormattedMessage id="helpForm.finance.form.currency" />
+                    </span>
+                  </label>
+                </span>
+              </div>
+              <span className="help-form__sum-item">
+                <label htmlFor="sumOther" className="help-form__text">
+                  <FormattedMessage id="helpForm.finance.form.otherSum" />
+                </label>
+                <input
+                  type="number"
+                  className="help-form__input help-form__input--sum"
+                  min="0"
+                  name="sum"
+                  id="sumOther"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.sum}
+                />
                 <span className="help-form__sum-currency">
                   <FormattedMessage id="helpForm.finance.form.currency" />
                 </span>
-              </label>
-              <input
-                type="radio"
-                className="help-form__radio"
-                name="sum"
-                checked={values.sum === '100'}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value="100"
-                id="sum2"
-              />
-              <label htmlFor="sum2" className="help-form__sum-value">
-                <span className="help-form__sum-number">100</span>
-                <span className="help-form__sum-currency">
-                  <FormattedMessage id="helpForm.finance.form.currency" />
-                </span>
-              </label>
-              <input
-                type="radio"
-                className="help-form__radio"
-                name="sum"
-                checked={values.sum === '200'}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value="200"
-                id="sum3"
-              />
-              <label htmlFor="sum3" className="help-form__sum-value">
-                <span className="help-form__sum-number">200</span>
-                <span className="help-form__sum-currency">
-                  <FormattedMessage id="helpForm.finance.form.currency" />
-                </span>
-              </label>
-            </span>
-            <span className="help-form__row">
-              <input
-                type="radio"
-                className="help-form__radio"
-                name="sum"
-                checked={values.sum === '500'}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value="500"
-                id="sum4"
-              />
-              <label htmlFor="sum4" className="help-form__sum-value">
-                <span className="help-form__sum-number">500</span>
-                <span className="help-form__sum-currency">
-                  <FormattedMessage id="helpForm.finance.form.currency" />
-                </span>
-              </label>
-              <label htmlFor="sumOther" className="help-form__text" >
-                <FormattedMessage id="helpForm.finance.form.otherSum" />
-              </label>
-              <input
-                type="number"
-                className="help-form__input help-form__input--sum"
-                min="0"
-                name="sum"
-                id="sumOther"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.sum}
-              />
-                <span className="help-form__sum-currency">
-                  <FormattedMessage id="helpForm.finance.form.currency" />
-                </span>
-            </span>
+              </span>
+            </div>
+          </div>
+          <div className="help-form__agreement">
+            <input type="checkbox" className="help-form__check-agreement" id="formAgreement" name="formAgreement" value={values.formAgreement} />
+            <label htmlFor="formAgreement" className="help-form__text">
+              <FormattedMessage id="helpForm.finance.form.agreementPart1" />
+              <Link className="help-form__agreement-link" to="/agreement">
+                <FormattedMessage id="helpForm.finance.form.agreementLink" />
+              </Link>
+              <FormattedMessage id="helpForm.finance.form.agreementPart2" />
+            </label>
           </div>
         </div>
         <div className="help-form__buttons">

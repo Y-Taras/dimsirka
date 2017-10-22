@@ -35,13 +35,13 @@ const AboutUs = () => (
           <FaPhone size={16} style={{ color: '#40b09f', marginTop: '3px' }} />
           <span className="aboutUs__invitation-tels">
             <a href="tel:+380997124680" className="aboutUs__invitation-link">
-              099&nbsp;712&nbsp;46&nbsp;80&nbsp;-&nbsp;<span className="aboutUs__invitation-name">
+              {`099 712 46 80 - `}<span className="aboutUs__invitation-name">
                 <FormattedMessage id="aboutUs.name_1" />
               </span>
             </a>
             <a href="tel:+380674087199" className="aboutUs__invitation-link">
-              067&nbsp;408&nbsp;71&nbsp;99&nbsp;-&nbsp;<span className="aboutUs__invitation-name">
-                <FormattedMessage style id="aboutUs.name_2" />
+              {`067 408 71 99 - `}<span className="aboutUs__invitation-name">
+                <FormattedMessage id="aboutUs.name_2" />
               </span>
             </a>
           </span>
